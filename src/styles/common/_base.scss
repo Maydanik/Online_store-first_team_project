@@ -1,0 +1,47 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  
+  &_flexfix {
+    display: flex;
+  }
+}
+
+.header,
+.footer {
+	flex-shrink: 1;
+	width: 100%;
+}
+
+.main {
+	flex-grow: 1;
+  width: 100%;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+
+  >li{
+    padding-left: 20px;
+    position: relative;
+
+    &:before{
+      content: '\f105';
+      font-family: 'FontAwesome';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $main-color;
+    }
+  }
+}
+
+/*навесить на input в search-block*/
+//   box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);

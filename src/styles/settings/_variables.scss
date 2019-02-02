@@ -1,0 +1,62 @@
+// 1. Basic variables
+	// 1.1 Colors
+$black: #000;
+$white: #fff;
+$green: #8bc34a;
+$red: #ea6557;
+$dark-grey: #707070;
+$grey: #dcdcdc;
+$light-grey: #f9f9f9;
+
+	// 1.2 Other
+
+// 2. Work variables
+	// 2.1 Colors
+$main-color: $green;
+$add-color: $red;
+
+	// 2.2 Typography (fonts and text variables)
+$main-text-color: $black;
+$add-text-color: $white;
+$input-text-color: $dark-grey;
+
+$f-family-base: 'Roboto', Arial, sans-serif;
+$f-size-base: 14px;
+
+	// 2.3 Media
+		// 2.3.1 Mobile first
+$desktop: 1024px;
+$tablet: 768px;
+$phone: 640px;
+
+		// 2.3.2 Desktop first
+$desktop-df: 1023px;
+$tablet-df: 767px;
+$phone-df: 639px;
+
+	// 2.4 Other
+$b-radius-base: 4px;
+
+	// 2.5 Forms
+$input-color: $input-text-color;
+$input-border-color: $grey;
+$input-border-focus: $white;
+$input-body-bg: $light-grey;
+
+	// 2.6 Nav and links
+$link-main-color: $add-color;
+$link-main-hover: darken($link-main-color, 20%);
+$link-active-hover: darken($link-main-color, 20%);
+
+$nav-color: $white;
+// $nav-hover: darken($nav-color, 20%);
+
+	// 2.7 Buttons
+$btn-main-color: $white;
+// $btn-main-border: $black;
+$btn-main-bg: $green;
+// $btn-main-hover: darken($btn-main-bg, 20%);
+
+$btn-add-color: $white;
+$btn-add-bg: $red;
+
