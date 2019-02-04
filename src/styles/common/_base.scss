@@ -21,16 +21,16 @@
   width: 100%;
 }
 
-// .container{
-//   max-width: 1200px;
-//   width: 100%;
-//   padding: 0 15px;
-//   margin-right: auto;
-//   margin-left: auto;
-//   margin-top: 0;
-//   margin-bottom: 0;
-//   display: flex;
-// }
+ .container{
+   max-width: 1200px;
+   width: 100%;
+   padding: 0 15px;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 0;
+   margin-bottom: 0;
+   display: flex;
+ }
 
 a {
   color:$white;
@@ -38,9 +38,9 @@ a {
   transition: all 0.3s linear 0s;
 }
 
-// li > a:hover {
-//   color:$main-color;
-// }
+ li > a:hover {
+   color:$main-color;
+ }
 
 .text--top{
   font-family: $f-family-base;
@@ -102,11 +102,7 @@ ul{
   .logo{
     height: 40px;
     width: 140px;
-    background: url("../img/logo.png");
-<<<<<<< HEAD
-=======
-    background-color: $gray;
->>>>>>> b2ae8a75f19a9e4eaf9ca871e97eae1d535bd8ff
+    background: url(../img/logo.png);
     display: block;
   }
 
@@ -141,10 +137,6 @@ ul{
       font-size: $f-size-base;
     }
     
-<<<<<<< HEAD
-=======
-    /*
->>>>>>> b2ae8a75f19a9e4eaf9ca871e97eae1d535bd8ff
     .btn--circle::before{
       width: 18px;
       height: 18px;
@@ -192,7 +184,7 @@ ul{
 /* Серая полоса с поиском */
 .header_search{
   background-image: url("/img/header_baner.png");
-  background-color: $gray;
+  background-color: $grey;
   height: 532px;
 
   .text_on_header{
@@ -230,14 +222,7 @@ ul{
         right: 0;
         color: #78909c;
         margin-top: 17px;
-<<<<<<< HEAD
         margin-right: 17px;
-=======
-        
-        i{
-         
-        }
->>>>>>> b2ae8a75f19a9e4eaf9ca871e97eae1d535bd8ff
       } 
       
       #search{
