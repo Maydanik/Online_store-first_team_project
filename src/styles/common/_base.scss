@@ -103,7 +103,6 @@ ul{
     height: 40px;
     width: 140px;
     background: url("../img/logo.png");
-    background-color: gray;
     display: block;
   }
 
@@ -136,18 +135,22 @@ ul{
 
      
     }
-    /*
+    
     .btn--circle::before{
       width: 18px;
       height: 18px;
       background-color: $red;
       border-radius: 50%;
       position: absolute;
-      top:-50%;
+      top: 0;
+      margin-top: 20px;
+      margin-left: 9px;
       z-index: 1;
-      content:'8'
+      content:'8';
+      text-align: center;
+      padding-top: 1px;
       }
-      */
+      
   }
 }
 
@@ -213,11 +216,10 @@ ul{
       width: 670px;
       .lupa{
         position: absolute;
+        right: 0;
         color: #78909c;
         margin-top: 17px;
-        i{
-         
-        }
+        margin-right: 17px;
       } 
       #search{
         background: white;
