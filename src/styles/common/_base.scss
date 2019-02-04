@@ -21,25 +21,225 @@
   width: 100%;
 }
 
+// .container{
+//   max-width: 1200px;
+//   width: 100%;
+//   padding: 0 15px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   display: flex;
+// }
+
+a {
+  color:$white;
+  text-decoration: none;
+  transition: all 0.3s linear 0s;
+}
+
+// li > a:hover {
+//   color:$main-color;
+// }
+
+.text--top{
+  font-family: $f-family-base;
+  font-size: 15px;
+  font-weight: 400;
+  color: #263238;
+  line-height: 24px;
+}
+
 ul{
   margin: 0;
   padding: 0;
   list-style: none;
 
-
+  /* мне в навигации мешает */
+/*
   >li{
     padding-left: 20px;
     position: relative;
+      &:before{
+        content: '\f105';
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        
+        transform: translateY(-50%);
+        color: $main-color;
+      }
+  }*/
+}
 
-    &:before{
-      content: '\f105';
-      font-family: 'FontAwesome';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      color: $main-color;
+.btn{
+   width: 72px;
+   height: 32px;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 12px;
+   color: $white;
+}
+
+/* Header */
+
+/* Белая полоса с самого верха */
+.header_top{
+  background-color: $white;
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .header_top--fix{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+
+  .logo{
+    height: 40px;
+    width: 140px;
+    background: url("../img/logo.png");
+    background-color: $gray;
+    display: block;
+  }
+
+  .header_top_rigth{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .text--red{
+      color: $red;
+      
     }
+    .btn--login{
+      background-color: $main-color;
+      margin-left: 26px;
+    }
+    
+    .btn--register{
+      background-color: $red;
+      margin-left: 7px;
+      
+    }
+    .btn--circle{
+      width: 35px;
+      height: 35px;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      margin-left: 26px;
+      color: #a0a0a0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $f-size-base;
+    }
+    
+    /*
+    .btn--circle::before{
+      width: 18px;
+      height: 18px;
+      background-color: $red;
+      border-radius: 50%;
+      position: absolute;
+      top:-50%;
+      z-index: 1;
+      content:'8'
+      }
+      */
+  }
+}
+
+/* Синяя полоса навигации */
+.header_nav{
+  background-color: #263238;
+  height: 60px;
+
+  .navigation{
+
+     ul{
+       display: flex;
+       flex-wrap: wrap;
+       padding-top: 22px;
+
+       li{
+         padding-right: 40px;
+          
+         .nav-item{
+          font-family: $f-family-base;
+          font-size: $f-size-base;
+          font-weight: 500;
+         }
+       }
+     }
+      
+  }
+}
+
+/* Серая полоса с поиском */
+.header_search{
+  background-image: url("/img/header_baner.png");
+  background-color: $gray;
+  height: 532px;
+
+  .text_on_header{
+    font-family: $f-family-base;
+    font-size: 48px;
+    font-weight: 700;
+    color: #263238;
+    line-height: 30px;
+    color: $white;
+    padding-bottom: 35px;
+    padding-top: 156px;
+  }
+  
+  .text--top{
+    color: $white;
+    font-size: 20px;
+  }
+  
+  .area_header_search{
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  
+    .search_box{
+      vertical-align: middle;
+      margin-right: auto;
+      margin-left: auto;
+      white-space: nowrap;
+      position: relative;
+      padding-top: 57px;
+      width: 670px;
+      
+      .lupa{
+        position: absolute;
+        color: #78909c;
+        margin-top: 17px;
+        
+        i{
+         
+        }
+      } 
+      
+      #search{
+        background: $white;
+        width: 670px;
+        height: 56px;
+        border:none;
+        padding-left: 22px;
+        box-shadow: 0 0 10px 2px $main-color;
+        
+        #search::placeholder{
+          font-size: $f-size-base;
+          font-family: $f-family-base;
+          font-weight: 700;
+        }
+      }
+     } 
   }
 }
 

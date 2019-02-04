@@ -2,11 +2,12 @@
 	// 1.1 Colors
 $black: #000;
 $white: #fff;
+$red: #e74c3c;
 $green: #8bc34a;
-$red: #ea6557;
 $dark-grey: #707070;
 $grey: #dcdcdc;
 $light-grey: #f9f9f9;
+
 
 	// 1.2 Other
 
@@ -14,6 +15,7 @@ $light-grey: #f9f9f9;
 	// 2.1 Colors
 $main-color: $green;
 $add-color: $red;
+
 
 	// 2.2 Typography (fonts and text variables)
 $main-text-color: $black;
@@ -45,7 +47,7 @@ $input-body-bg: $light-grey;
 
 	// 2.6 Nav and links
 $link-main-color: $add-color;
-$link-main-hover: darken($link-main-color, 20%);
+$link-main-hover: $main-color;
 $link-active-hover: darken($link-main-color, 20%);
 
 $nav-color: $white;
