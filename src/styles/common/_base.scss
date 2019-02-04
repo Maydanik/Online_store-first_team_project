@@ -18,34 +18,35 @@
 
 .main {
 	flex-grow: 1;
-	width: 100%;
+  width: 100%;
 }
 
-.container{
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 15px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-}
+// .container{
+//   max-width: 1200px;
+//   width: 100%;
+//   padding: 0 15px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   display: flex;
+// }
 
 a {
-  color:WHITE;
+  color:$white;
   text-decoration: none;
   transition: all 0.3s linear 0s;
 }
-li > a:hover {
-  color:$main-color;
-}
+
+// li > a:hover {
+//   color:$main-color;
+// }
 
 .text--top{
-  font-family: 'Roboto', sans-serif;
+  font-family: $f-family-base;
   font-size: 15px;
   font-weight: 400;
-  color: $headerc;
+  color: #263238;
   line-height: 24px;
 }
 
@@ -53,6 +54,7 @@ ul{
   margin: 0;
   padding: 0;
   list-style: none;
+
   /* мне в навигации мешает */
 /*
   >li{
@@ -71,7 +73,6 @@ ul{
   }*/
 }
 
-
 .btn{
    width: 72px;
    height: 32px;
@@ -80,15 +81,14 @@ ul{
    justify-content: center;
    align-items: center;
    font-size: 12px;
-   color: white;
+   color: $white;
 }
-
 
 /* Header */
 
 /* Белая полоса с самого верха */
 .header_top{
-  background-color: white;
+  background-color: $white;
   height: 90px;
   display: flex;
   flex-wrap: wrap;
@@ -103,6 +103,10 @@ ul{
     height: 40px;
     width: 140px;
     background: url("../img/logo.png");
+<<<<<<< HEAD
+=======
+    background-color: $gray;
+>>>>>>> b2ae8a75f19a9e4eaf9ca871e97eae1d535bd8ff
     display: block;
   }
 
@@ -112,14 +116,17 @@ ul{
     justify-content: flex-end;
     .text--red{
       color: $red;
+      
     }
     .btn--login{
       background-color: $main-color;
       margin-left: 26px;
     }
+    
     .btn--register{
       background-color: $red;
       margin-left: 7px;
+      
     }
     .btn--circle{
       width: 35px;
@@ -131,11 +138,13 @@ ul{
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
-
-     
+      font-size: $f-size-base;
     }
     
+<<<<<<< HEAD
+=======
+    /*
+>>>>>>> b2ae8a75f19a9e4eaf9ca871e97eae1d535bd8ff
     .btn--circle::before{
       width: 18px;
       height: 18px;
@@ -156,7 +165,7 @@ ul{
 
 /* Синяя полоса навигации */
 .header_nav{
-  background-color: $headerc;
+  background-color: #263238;
   height: 60px;
 
   .navigation{
@@ -170,8 +179,8 @@ ul{
          padding-right: 40px;
           
          .nav-item{
-          font-family: 'Roboto', sans-serif;
-          font-size: 14px;
+          font-family: $f-family-base;
+          font-size: $f-size-base;
           font-weight: 500;
          }
        }
@@ -183,29 +192,30 @@ ul{
 /* Серая полоса с поиском */
 .header_search{
   background-image: url("/img/header_baner.png");
-  background-color: gray;
+  background-color: $gray;
   height: 532px;
 
   .text_on_header{
-    font-family: 'Roboto', sans-serif;
+    font-family: $f-family-base;
     font-size: 48px;
     font-weight: 700;
-    color: $headerc;
+    color: #263238;
     line-height: 30px;
-    color: white;
+    color: $white;
     padding-bottom: 35px;
     padding-top: 156px;
   }
+  
   .text--top{
-    color: white;
+    color: $white;
     font-size: 20px;
   }
+  
   .area_header_search{
   margin-right: auto;
   margin-left: auto;
   text-align: center;
   
-
     .search_box{
       vertical-align: middle;
       margin-right: auto;
@@ -214,23 +224,33 @@ ul{
       position: relative;
       padding-top: 57px;
       width: 670px;
+      
       .lupa{
         position: absolute;
         right: 0;
         color: #78909c;
         margin-top: 17px;
+<<<<<<< HEAD
         margin-right: 17px;
+=======
+        
+        i{
+         
+        }
+>>>>>>> b2ae8a75f19a9e4eaf9ca871e97eae1d535bd8ff
       } 
+      
       #search{
-        background: white;
+        background: $white;
         width: 670px;
         height: 56px;
         border:none;
         padding-left: 22px;
         box-shadow: 0 0 10px 2px $main-color;
+        
         #search::placeholder{
-          font-size: 14px;
-          font-family: "Roboto", sans-serif;
+          font-size: $f-size-base;
+          font-family: $f-family-base;
           font-weight: 700;
         }
       }
@@ -238,9 +258,5 @@ ul{
   }
 }
 
-
-/*
-.input{
-  box-shadow: 1px 0 10px rgba(139, 145, 74, .75)
-}
-*/
+/*навесить на input в search-block*/
+//   box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);
