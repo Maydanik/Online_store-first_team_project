@@ -33,7 +33,7 @@
  }
 
 a {
-  color:$white;
+  color: $black;
   text-decoration: none;
   transition: all 0.3s linear 0s;
 }
@@ -102,7 +102,7 @@ ul{
   .logo{
     height: 40px;
     width: 140px;
-    background: url(../img/logo.png);
+    background: url(../images/logo.png);
     display: block;
   }
 
@@ -183,7 +183,7 @@ ul{
 
 /* Серая полоса с поиском */
 .header_search{
-  background-image: url("/img/header_baner.png");
+  background-image: url("/images/header_baner.png");
   background-color: $grey;
   height: 532px;
 
@@ -245,3 +245,71 @@ ul{
 
 /*навесить на input в search-block*/
 //   box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);
+
+.tabs{
+
+  &_tab{
+
+    &:not(:first-child){
+      display: none;
+    }
+  }
+}
+
+.product{
+
+  &_card{
+
+    position: relative;
+
+    &img{
+      display: block;
+    }
+
+    &-info{
+
+      display: flex;
+      border-bottom: 1px solid #e7ecf2;
+      padding: 25px 25px 15px;
+    }
+  }
+
+  &_label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 64px 64px 0 0;
+    }
+
+    &:after{
+      color: $white;
+      font-family: "FontAwesome";
+    }
+
+    &--hit{
+
+      &:before{
+        border-color: $main-color transparent transparent transparent;
+      }
+
+      &:after{
+        content: '\f0e7';
+        position: absolute;
+        top: 12px;
+        left: 15px;
+      }
+    }
+  }
+}

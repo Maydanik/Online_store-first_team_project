@@ -14,6 +14,8 @@ nbproject
 .idea/*
 .idea
 
+package-lock.json
+
 # Env
 .htaccess
 .gitkeep
