@@ -4,5 +4,6 @@ $(document).on('click', '.tabs_nav-link', function(e){
     $(this).addClass('active');
     $(this).parent('li').siblings().find('.tabs_nav-link').removeClass('active');
     $(tabId).show(400);
-    $(tabId).siblings('.tabs_tab').hide(400);
+    $(tabId).siblings('.tab_tab').hide(400);
+
   });

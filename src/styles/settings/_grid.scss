@@ -6,6 +6,10 @@
         width: 100%;
         padding: 0 15px;
         margin: 0, auto;
+
+        &--fw{
+            max-width: 9999px;
+        }
     }
 
     &_row{
@@ -27,7 +31,13 @@
 
         &--1-4{
             width: 25%;
+
         }
+
+        // &-holder{
+        //     display: flex;
+        //     flex-wrap: wrap;
+        // }
     }
 }
 
