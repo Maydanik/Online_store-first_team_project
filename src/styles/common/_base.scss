@@ -211,7 +211,7 @@ ul{
 
 /* Серая полоса с поиском */
 .header_search{
-  background-image: url("/images/header_baner.png");
+  background-image: url("../images/header_baner.png");
   background-color: $grey;
   height: 532px;
 
@@ -344,7 +344,7 @@ ul{
     z-index: 2;
     width: 64px;
     height: 64px;
-    
+
     &:before{
       content: '';
       position: absolute;
@@ -484,5 +484,86 @@ ul{
   
  }
 
+/*блок "стать автором" кнопкой*/
+ 
+.section_author{
+  padding:105px 207px;
+  background-color: #f4f6f5;
+}
+
+.section_author-grey{
+  background-color: #b5b5b5;
+  padding:100px 100px;
+}
+
+.section_author-green{
+  margin: auto;
+  background-color: $main-color;
+  width:450px;
+  display: flex;
+  padding: 50px 50px;
+}
 
 
+
+.author_text{
+  padding-right:20px;
+  font-family: $f-family-base;
+  font-size: 18px;
+  color: $white;
+}
+
+.become_author{
+  font-family: $f-family-base;
+  font-size: 12px;
+  width:150px;
+  color:#263238;
+  background-color: $white;
+  border: none;
+  
+}
+.author_text p{
+  margin: 0;
+}
+
+/*tutorials*/
+
+.section_free{
+  font-family: $f-family-base;
+  color: $black;
+  font-weight: 600;
+  padding-bottom: 100px;
+}
+
+.free_text{
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 22px;
+  
+}
+
+.tutorials{
+  margin: 0 auto;
+  width:690px;
+  justify-content:space-between;
+}
+
+.tutorial{
+  background-color: #d4d4d4;
+  width: 220px;
+  height: 150px;
+}
+
+.tutorial_info{
+  width: 220px;
+  height: 50px;
+  background-color: #f8f8f8;
+}
+
+.info_text{
+  text-align: center;
+  padding-top:20px;
+  font-size: 15px;
+  
+}
