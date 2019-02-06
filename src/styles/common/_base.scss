@@ -130,7 +130,7 @@ ul{
   .logo{
     height: 40px;
     width: 140px;
-    background: url(../images/logo.png);
+    background: url(/images/logo.png);
     display: block;
   }
 
@@ -211,7 +211,7 @@ ul{
 
 /* Серая полоса с поиском */
 .header_search{
-  background-image: url(../images/banner_image.jpg);
+  background-image: url(/images/banner_image.jpg);
   background-color: $grey;
   height: 532px;
 
