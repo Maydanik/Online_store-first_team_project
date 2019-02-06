@@ -33,7 +33,7 @@
  }
 
 a {
-  color:black;
+  color: $black;
   text-decoration: none;
   transition: all 0.3s linear 0s;
 }
@@ -49,7 +49,8 @@ a {
 
  li > a:hover {
    color:$main-color;
- }}
+ }
+}
 
 .text--top{
   font-family: $f-family-base;
@@ -129,7 +130,7 @@ ul{
   .logo{
     height: 40px;
     width: 140px;
-    background: url(../img/logo.png);
+    background: url(../images/logo.png);
     display: block;
   }
 
@@ -210,7 +211,7 @@ ul{
 
 /* Серая полоса с поиском */
 .header_search{
-  background-image: url("/img/header_baner.png");
+  background-image: url("/images/header_baner.png");
   background-color: $grey;
   height: 532px;
 
@@ -258,7 +259,8 @@ ul{
         height: 56px;
         border:none;
         padding-left: 22px;
-        box-shadow: 0 0 10px 2px $main-color;
+        //box-shadow: 0 0 10px 2px $main-color;
+        box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);
         
         #search::placeholder{
           font-size: $f-size-base;
@@ -270,20 +272,19 @@ ul{
   }
 }
 
-
-
-
-/*навесить на input в search-block*/
-//   box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);
-
-
-
-
 /* Product card */
 
-.product{
+.tabs{
 
-  
+  &_tab{
+
+    &:not(:first-child){
+      display: none;
+    }
+  }
+}
+
+.product{
 
   &_card{
     margin-right: 30px;
@@ -304,20 +305,19 @@ ul{
       justify-content: space-between;
     }
 
-
     &-heading{
       font-family: $f-family-base;
       font-size: 18px;
       font-weight: 500;
-      color:$product-name_color;
+      color: $product-name_color;
       padding-top: 5px;
     }
 
     &-type{
       font-family: $f-family-base;
-      font-size: 14px;
+      font-size: $f-size-base;
       font-weight: 500;
-      color:$main-color;
+      color: $main-color;
       padding-top: 16px;
       padding-bottom: 5px;
     }
@@ -335,9 +335,7 @@ ul{
       font-weight: 700;
       color: $product-name_color;
       font-size: 20px;
-
     }
-
   }
 
   &_label{
@@ -347,22 +345,21 @@ ul{
     z-index: 2;
     width: 64px;
     height: 64px;
-
-    &::before{
+    
+    &:before{
       content: '';
       position: absolute;
-      top: 0;
       left: 0;
+      top: 0;
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 64px 64px 0 0;
     }
-
-    &::after{
-      color:$white;
-      font-family: "FontAwesome";
       
+    &:after{
+      color: $white;
+      font-family: "FontAwesome";
     }
 
     &--hit{
@@ -376,18 +373,15 @@ ul{
         position: absolute;
         top: 12px;
         left: 15px;
-        
       }
     }
   }
-
-
-  &_author{
+   &_author{
     display: flex;
     flex-wrap: wrap;
   }
 
-  &-icon{
+  &_author-icon{
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 30px;
@@ -403,21 +397,17 @@ ul{
     align-items: center;
     padding-left: 14px;
     font-family: $f-family-base;
-    font-size: 14px;
+    font-size: $f-size-base;
     font-weight: 500;
-    color:#546e7a;
+    color: #546e7a;
   }
-
-
-
-
+      
   &_rating{
 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     
-
     &-stars{
       display: flex;
       color: $stars_color;
@@ -434,3 +424,66 @@ ul{
     }
   }
 }
+
+/*why choose*/
+
+.why_choose-wrapper {
+    width: 100%;
+    align-items: center;
+}
+
+.why-choose-container {
+    background: #263238;
+    color: $white;
+    height: 618px;
+    padding: 92px 0 114px;
+}
+
+.white_title-text {
+    font-size: 36px;
+    font-family: $f-family-base;
+    color: $white;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 86px;
+}
+
+
+.why-choose-col {
+    padding: 0 42px;
+    text-align: center;
+  
+    h3 a {
+    font-size: 24px;
+    color: $white;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: $f-family-base;
+  }
+
+    p {
+    color: #b0bec5;
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    font-family: $f-family-base;
+    line-height: 24px;
+  }
+}
+ .link_icon {
+    margin-bottom: 14px;
+    background: #d4d4d4;
+    color: $white;
+    font-size: 56px;
+    height: 114px;
+    width: 114px;
+    line-height: 114px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: inline-flex;
+    /*border: 2px solid $main-color;*/
+  
+ }
+
+
+
