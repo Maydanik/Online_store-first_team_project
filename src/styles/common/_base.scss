@@ -47,7 +47,7 @@ a {
     transition: all 0.3s linear 0s;
   }
 
- li > a:hover {
+  li > a:hover {
    color:$main-color;
  }
 }
@@ -99,13 +99,8 @@ ul{
   &_tab{
 
     display: flex;
-
-    &:first-child{
-      margin-left: 30px;
-    }
-
-  
-
+    margin-left: 30px;
+    
     &:not(:first-child){
       display: none;
     }
@@ -121,6 +116,7 @@ ul{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   .header_top--fix{
     display: flex;
     justify-content: space-between;
@@ -178,8 +174,7 @@ ul{
       content:'8';
       text-align: center;
       padding-top: 1px;
-      }
-      
+      }  
   }
 }
 
@@ -291,6 +286,7 @@ ul{
     margin-bottom: 30px;
     position: relative;
     border: 1px solid #e7ecf2;
+
     
     /* Before footer of product */
     &-img{
@@ -512,8 +508,6 @@ ul{
   padding: 50px 50px;
 }
 
-
-
 .author_text{
   padding-right:20px;
   font-family: $f-family-base;
@@ -548,7 +542,6 @@ ul{
   padding-bottom: 50px;
   text-align: center;
   font-size: 22px;
-  
 }
 
 .tutorials{
@@ -573,7 +566,6 @@ ul{
   text-align: center;
   padding-top:20px;
   font-size: 15px;
-  
 }
 
 /*Footer*/
