@@ -1,0 +1,97 @@
+/* Header */
+
+/* Белая полоса с самого верха */
+.header_top{
+    background-color: $white;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    .header_top--fix{
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 100%;
+    }
+  
+    .logo{
+      height: 40px;
+      width: 140px;
+      background: url(/images/logo.png);
+      display: block;
+    }
+  
+    .header_top_rigth{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .text--red{
+        color: $red;
+        
+      }
+      .btn--login{
+        background-color: $main-color;
+        margin-left: 26px;
+      }
+      
+      .btn--register{
+        background-color: $red;
+        margin-left: 7px;
+        
+      }
+      .btn--circle{
+        width: 35px;
+        height: 35px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        margin-left: 26px;
+        color: #a0a0a0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $f-size-base;
+      }
+      
+      .btn--circle::before{
+        width: 18px;
+        height: 18px;
+        background-color: $red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        margin-top: 20px;
+        margin-left: 9px;
+        z-index: 1;
+        content:'8';
+        text-align: center;
+        padding-top: 1px;
+        }  
+    }
+  }
+  
+  /* Синяя полоса навигации */
+  .header_nav{
+    background-color: #263238;
+    height: 60px;
+  
+    .navigation{
+  
+       ul{
+         display: flex;
+         flex-wrap: wrap;
+         padding-top: 22px;
+  
+         li{
+           padding-right: 40px;
+            
+           .nav-item{
+            font-family: $f-family-base;
+            font-size: $f-size-base;
+            font-weight: 500;
+           }
+         }
+       }
+        
+    }
+  }
+  
