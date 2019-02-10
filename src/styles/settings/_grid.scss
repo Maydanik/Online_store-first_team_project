@@ -15,6 +15,7 @@
     &_row{
         margin: 0 -15px;
         display: flex;
+        flex-wrap: wrap;
     }
 
     &_col{
@@ -31,6 +32,10 @@
 
         &--1-4{
             width: 25%;
+
+            @media(max-width: 767px){
+                width: 100%;
+            }
 
         }
 

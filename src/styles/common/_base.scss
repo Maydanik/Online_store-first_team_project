@@ -38,6 +38,16 @@ a {
   transition: all 0.3s linear 0s;
 }
 
+h2{
+  font-family: $f-family-base;
+  font-size: 36px;
+  font-weight: 700;
+  color: $product-name_color;
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
 //Не удалять этот блок
 .navigation{
 
@@ -83,6 +93,10 @@ ul{
   }*/
 }
 
+main{
+  background-color: $background_color;
+}
+
 .btn{
    width: 72px;
    height: 32px;
@@ -96,18 +110,48 @@ ul{
 
 .tabs{
 
+  
   &_tab{
+   
 
+
+    &:active{
     display: flex;
-
-    
-      margin-left: 30px;
-    
+    justify-content: center;
+    margin-left: 30px;
+    }
 
   
+    /* Скрыте блоки до нажатия таба */
+     &:not(:first-child){
+       display: none;
+      
+     }
 
-    &:not(:first-child){
-      display: none;
+
+  }
+
+  &_nav{
+
+    display: flex;
+    justify-content: center;
+   
+
+    &-item{
+     
+      background-color: white;
+      padding: 12px 23px;
+      margin: 0 3px ;
+    }
+
+
+
+    &-link{
+
+      font-family: $f-family-base;
+      color: $product-name_color;
+      font-weight: 500;
+      font-size: 14px;
     }
   }
 }
@@ -181,6 +225,12 @@ ul{
       }
       
   }
+}
+
+
+
+#popup{
+
 }
 
 /* Синяя полоса навигации */
@@ -272,17 +322,11 @@ ul{
   }
 }
 
+
+
 /* Product card */
 
-.tabs{
 
-  &_tab{
-
-    &:not(:first-child){
-      display: none;
-    }
-  }
-}
 
 .product{
 
