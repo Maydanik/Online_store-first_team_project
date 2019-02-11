@@ -19,6 +19,10 @@
 .main {
 	flex-grow: 1;
   width: 100%;
+
+  &_holder{
+    display: flex;
+  }
 }
 
  .container{
