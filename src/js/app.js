@@ -12,14 +12,29 @@ $(document).on('click', '.tabs_nav-link', function(e){
     infinite: true,
     dots: true,
     autoplay: true,
+    speed: 1300,
+    autoplaySpeed: 3200,
     slidesToShow: 4,
+    arrows: false,
     responsive:[
       {
-        breakpoint: 375,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1
         }
-      }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
+        }
+      }     
     ]
     });
 
