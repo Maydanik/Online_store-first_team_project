@@ -420,15 +420,60 @@ ul{
   }
 }
 
-/*Carousel*/
+/*-------------Carousel styles----------*/
+
+.trending-products {
+  max-height: 824px;
+}
+
+.flex_title-text {
+  padding-bottom: 24px;
+  padding-top: 94px;
+  font-size: 36px;
+  font-family: $f-family-base;
+  text-align: center;
+  font-weight: 700;
+}
 
 .carousel{
-  &_slide{
-    padding: 0 20px;
+  &:not(:first-child){
+    padding-left: 31px;
   }
 }
 
-/*why choose*/
+.slick-dots {
+  list-style: none;
+  padding: 40px 0 120px;
+  text-align: center;
+  margin: 0;
+  }
+  
+  .slick-dots li {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  padding: 0 7px;
+  }
+  
+  .slick-dots li button {
+  background-color: #e8e8e8;
+  border: 1px solid transparent;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  outline: 0;
+  }
+  
+  .slick-dots li.slick-active button {
+  background-color: $main-color;
+  border-color: none;
+  }
+
+/*why choose -------------------------------start---*/
 
 .why_choose-wrapper {
     width: 100%;
@@ -438,19 +483,18 @@ ul{
 .why-choose-container {
     background: #263238;
     color: $white;
-    height: 618px;
+    min-height: 618px;
     padding: 92px 0 114px;
 }
 
 .white_title-text {
     font-size: 36px;
     font-family: $f-family-base;
-    color: $white;
     text-align: center;
-    font-weight: 500;
-    margin-bottom: 86px;
+    font-weight: 700;
+    padding-bottom: 86px;
+    color: $white;
 }
-
 
 .why-choose-col {
     padding: 0 42px;
@@ -473,20 +517,99 @@ ul{
     line-height: 24px;
   }
 }
+
  .link_icon {
-    margin-bottom: 14px;
-    background: #d4d4d4;
-    color: $white;
-    font-size: 56px;
-    height: 114px;
-    width: 114px;
-    line-height: 114px;
-    border-radius: 50%;
-    text-decoration: none;
-    display: inline-flex;
-    /*border: 2px solid $main-color;*/
+  margin-bottom: 14px;
+  background: #d4d4d4;
+  color: $white;
+  font-size: 56px;
+  height: 114px;
+  width: 114px;
+  line-height: 114px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+ .why-choose-col h3 a:hover {
+  color: #8bc34a;
+}
+
+
+.link_icon:hover {
+  background: transparent;
+  border: 2px solid $main-color;
+}
+
+.link_icon:active {
+  background: $main-color;
+}
+/* -----------Media quaries styles -----------------------*/ 
+
+@media (max-width: 1023px){
+  .why-choose-container {
+    padding: 70px 0 80px;
+  }
+
+  .white_title-text {
+    font-size: 28px;
+    padding-bottom: 34px;
+    font-weight: 500;
+  }
+
+  .why-choose-col h3 a{
+    font-size: 20px;
+  }
+  .why-choose-col p {
+    line-height: 20px;
+  }
   
- }
+
+  .flex_title-text {
+    font-weight: 500;
+    font-size: 28px;
+    padding: 44px 0 24px;
+  }
+
+  .slick-dots {
+    padding: 6px 0 50px;
+  }
+
+  .slick-dots li button {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 767px){ 
+
+  .why-choose-container {
+    padding: 50px 0 60px;
+  }
+
+  .white_title-text {
+    font-size: 28px;
+    padding-bottom: 30px;
+    
+  }
+
+  .flex_title-text {
+    font-weight: 500;
+    font-size: 28px;
+    padding: 36px 0 20px;
+  }
+
+  .slick-dots {
+    padding: 4px 0 34px;
+  }
+
+  .slick-dots li button {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+
+/*--------- Media quaries styles end -----------*/ 
 
 /*блок "стать автором" кнопкой*/
  
@@ -546,7 +669,7 @@ ul{
 
 .tutorials{
   margin: 0 auto;
-  width:690px;
+  max-width: 690px;    /*на адаптиве задавал скролл*/
   justify-content:space-between;
 }
 
