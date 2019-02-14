@@ -6,7 +6,7 @@
         width: 100%;
         padding: 0 15px;
         margin: 0 auto;
-
+        
         &--fw{
             max-width: 9999px;
         }
@@ -36,7 +36,6 @@
             @media(max-width: 767px){
                 width: 100%;
             }
-
         }
 
         &-holder{
@@ -46,3 +45,11 @@
     }
 }
 
+.content{
+    width: 100%;
+    max-width: calc(100% - 270px);
+
+    &:only-child{
+        max-width: 100%;
+    }
+}
