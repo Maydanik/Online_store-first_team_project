@@ -380,7 +380,7 @@ ul{
   border-color: none;
   }
 
-/*why choose -------------------------------start---*/
+/*-----------------------why choose start-------------*/
 
 .why_choose-wrapper {
     width: 100%;
@@ -407,7 +407,7 @@ ul{
     padding: 0 42px;
     text-align: center;
   
-    h3 a {
+    h3 {
     font-size: 24px;
     color: $white;
     font-weight: 500;
@@ -425,7 +425,7 @@ ul{
   }
 }
 
- .link_icon {
+ .why-chose-icon {
   margin-bottom: 14px;
   background: #d4d4d4;
   color: $white;
@@ -437,25 +437,16 @@ ul{
   text-decoration: none;
   display: inline-flex;
 }
-
- .why-choose-col h3 a:hover {
-  color: #8bc34a;
-}
+/*-----------------------why choose end-------------*/
 
 
-.link_icon:hover {
-  background: transparent;
-  border: 2px solid $main-color;
-}
 
-.link_icon:active {
-  background: $main-color;
-}
-/* -----------Media quaries styles -----------------------*/ 
+/* -----------Media quaries styles-----------------------*/ 
 
 @media (max-width: 1023px){
+  /*why choose start*/
   .why-choose-container {
-    padding: 70px 0 80px;
+    padding: 60px 0 70px;
   }
 
   .white_title-text {
@@ -464,14 +455,15 @@ ul{
     font-weight: 500;
   }
 
-  .why-choose-col h3 a{
+  .why-choose-col h3 {
     font-size: 20px;
   }
   .why-choose-col p {
     line-height: 20px;
   }
   
-
+/*why choose end*/
+/*carousel start*/
   .flex_title-text {
     font-weight: 500;
     font-size: 28px;
@@ -487,8 +479,9 @@ ul{
     height: 10px;
   }
 }
+/*carousel end*/
 @media (max-width: 767px){ 
-
+  /*@media why choose start*/
   .why-choose-container {
     padding: 50px 0 60px;
   }
@@ -498,7 +491,8 @@ ul{
     padding-bottom: 30px;
     
   }
-
+/*@media why choose end*/
+/*@media carousel start*/
   .flex_title-text {
     font-weight: 500;
     font-size: 28px;
@@ -514,7 +508,7 @@ ul{
     height: 8px;
   }
 }
-
+/*@media carousel end*/
 
 /*--------- Media quaries styles end -----------*/ 
 
