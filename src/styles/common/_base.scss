@@ -19,6 +19,10 @@
 .main {
 	flex-grow: 1;
   width: 100%;
+
+  &_holder {
+    display: flex;
+  }
 }
 
  .container{
@@ -465,7 +469,7 @@ ul{
     font-family: $f-family-base;
   }
 
-    p {
+    >p {
     color: #b0bec5;
     margin: 0 0 20px 0;
     font-size: 15px;
@@ -568,44 +572,4 @@ ul{
   font-size: 15px;
 }
 
-/*Footer*/
 
-.footer{
-  min-height: 650px;
-  background-color: #263238;
-  color: #b7c3c8;
-
-  &_col{
-
-    &-title{
-      font-size: 22px;
-      font-weight: bold;
-      text-transform: capitalize;
-      color: $white;
-      outline: none;
-      margin: 0;
-      background-color: transparent;
-      border: none;
-      padding: 25px 0;
-      position: relative;
-
-      &:after{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 100%;
-        height: 3px;
-        width: 50px;
-        background-color: $main-color;
-      }
-    }
-
-    &_main{
-      padding: 30px 0;
-
-      @media(max-width: 767px){
-        display: none;
-      }
-    }
-  }
-}
