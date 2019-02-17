@@ -598,3 +598,21 @@ ul{
   font-size: 15px;
 }
 
+/* Popap */
+.popup{
+  position: relative;
+  background-color: #fff;
+  height: 300px;
+  width: 300px;
+  padding: 30px;
+
+  .mfp-close{
+    color: $black;
+
+    &:before{
+      content: '\f00d';
+      font: 24px 'FontAwesome';
+    }
+  }
+}
+

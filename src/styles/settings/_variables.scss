@@ -1,6 +1,6 @@
 // 1. Basic variables
 	// 1.1 Colors
-$black: #000;
+$black: #263238;
 $white: #fff;
 $red: #e74c3c;
 $green: #8bc34a;
@@ -42,8 +42,10 @@ $phone-df: 639px;
 $b-radius-base: 4px;
 
 	// 2.5 Forms
+$form-border-color: #dcdcdc;
+
 $input-color: $input-text-color;
-$input-border-color: $grey;
+$input-border-color: $form-border-color;
 $input-border-focus: $white;
 $input-body-bg: $light-grey;
 
