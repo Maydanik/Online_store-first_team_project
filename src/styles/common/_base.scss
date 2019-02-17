@@ -383,6 +383,26 @@ main{
   }
 }
 
+.tabs_btn{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: calc(50% - 172px);
+
+  &-all,
+  &-popular{
+    width: 165px;
+    height: 55px;
+    background-color: $white;
+    border: none;
+    margin-right: 12px;
+    margin-bottom: 110px; 
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+}
+
 /*-------------Carousel styles----------*/
 
 .trending-products {
@@ -647,23 +667,19 @@ max-width: 600px;
 }
 
 .tutorials{
-  display: flex;
   margin: 0 auto;
-  //max-width: 690px;    /*на адаптиве задавал скролл*/
+  max-width: 690px;    /*на адаптиве задавал скролл*/
   justify-content:space-between;
 }
 
 .tutorial{
-  background-color: black;
-  width: 180px;
+  background-color: #d4d4d4;
+  width: 220px;
   height: 150px;
-  display: block;
 }
 
 .tutorial_info{
-  margin: 0;
-  display: block;
-  max-width: 180px;
+  width: 220px;
   height: 50px;
   background-color: #f8f8f8;
 }
@@ -673,6 +689,34 @@ max-width: 600px;
   padding-top:20px;
   font-size: 15px;
 }
+
+// .tutorials{
+//   display: flex;
+//   margin: 0 auto;
+//   //max-width: 690px;    /*на адаптиве задавал скролл*/
+//   justify-content:space-between;
+// }
+
+// .tutorial{
+//   background-color: #d4d4d4;
+//   width: 375px;
+//   height: 270px;
+//   display: block;
+// }
+
+// .tutorial_info{
+//   margin: 0;
+//   display: block;
+//   max-width: 180px;
+//   height: 50px;
+//   background-color: #f8f8f8;
+// }
+
+// .info_text{
+//   text-align: center;
+//   padding-top:20px;
+//   font-size: 15px;
+// }
 
 @media (max-width:767px) {
 
@@ -699,8 +743,6 @@ max-width: 600px;
       font-size: 15px;
       text-align: center;
     }
-
-
 
     .tutorial{
       max-width: 110px;

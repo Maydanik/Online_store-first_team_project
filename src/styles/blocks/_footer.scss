@@ -74,6 +74,7 @@
     .footer-links {
         margin: 0;
         list-style: none;
+        padding-top: 0;
         
         li {
           position: relative;
@@ -105,6 +106,7 @@
     .footer-social {
         display: flex;
         padding-bottom: 20px;
+        padding-top: 0;
 
       li {
         width: 28px;
