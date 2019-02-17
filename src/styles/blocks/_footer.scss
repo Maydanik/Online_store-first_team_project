@@ -1,12 +1,14 @@
-/*Footer*/
-
 .footer{
-    min-height: 650px;
     background-color: #263238;
     color: #b7c3c8;
+    font-family: $f-family-base;
   
+    &_inner {
+      padding: 85px 0 72px;
+    }
+
     &_col{
-  
+
       &-title{
         font-size: 22px;
         font-weight: bold;
@@ -18,7 +20,8 @@
         border: none;
         padding: 25px 0;
         position: relative;
-  
+        margin-bottom: 34px;
+
         &:after{
           content: '';
           position: absolute;
@@ -29,14 +32,237 @@
           background-color: $main-color;
         }
       }
+    }
+
+    .corporate-top_text {
+      line-height: 1.6;
+    }
+      
+    .corporate-address {
+      padding-top: 32px;
+      line-height: 1.6;
+      
+      li {
+        padding: 0 0 22px 20px;
+        position: relative;
+        font-size: 14px;
+      }
+
+      a {
+        color: $white;
+      }
+    
+      i {
+        color: #8bc34a;
+        padding-right: 15px;
+        position: absolute;
+        left: 0;
+        top: 3px;
+        font-size: 14px;
+      }   
+    }
   
-      &_main{
-        padding: 30px 0;
-  
-        @media(max-width: 767px){
-          display: none;
-        }
+
+    &_main{
+      padding: 30px 0;
+
+      @media(max-width: 767px){
+        display: none;
       }
     }
   }
+   
+    .footer-links {
+        margin: 0;
+        list-style: none;
+        
+        li {
+          position: relative;
+          font-size: 16px;
+          padding-left: 20px;
+          margin-bottom: 20px;
+
+        a {
+          color: #b7c3c8;
+        }
+          
+        &:before {
+          content: '\f105';
+          font-family: 'FontAwesome';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $main-color;
+        }
+
+        &:hover a{
+          color: $main-color;
+          transition: 1s;
+        }
+      }
+    } 
+
+    .footer-social {
+        display: flex;
+        padding-bottom: 20px;
+
+      li {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        margin-right: 7px;
+        font-size: 16px;
+        border-radius: 1px;
+        transition: opacity .5s;
+        
+        
+        &:before {
+          content: '';
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          left: 0;
+        } 
+        
+        &:nth-child(1n) {
+          background: #3b5998;
+        }
+
+        &:nth-child(2n) {
+          background: #55acee;
+        }
+
+        &:nth-child(3n) {
+          background: #e52d27;
+        }
+
+        &:nth-child(4n) {
+          background: #ffffff;
+          i{
+            color: #bd081c;
+          }
+        }
+          
+        &:nth-child(5n) {
+          background: #1565c0;
+        }
+
+        i {
+          color: $white;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    
+    .newsletter-text {
+        font-size: 20px;
+        color: $white;
+        font-weight: 400;
+    }
+    
+    .input-form {
+      display: flex;
+      box-shadow: -1px -2px 2px 0px rgba(0,0,0,0.5);
+      
+      input {
+        position: relative;
+        width: 100%;
+        border:none;
+        height: 42px;
+        font-size: 14px;
+        background-color: #2f3c43;
+        padding: 7px 14px;
+        
+      }
+
+      button {
+        border: 0;
+        padding: 13px 17px 14px 17px;
+        background-color: #8bc34a;
+        transition: .5s ease;
+        
+        i {
+          color: $white;
+        }
+        &:hover {
+          background-color: #e74c3c;
+        }
+      }
+      
+    &_main{
+      padding: 30px 0;
+
+        @media(max-width: 767px){
+          display: none;
+        }
+    }
+    
+}
+  .copy {
+    border-top: 1px solid #424d53;
+    background: #263238;
+    padding: 28px 0 34px 0;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+  }
   
+  /*-media*/
+
+
+@media(max-width: 1023px){
+
+  .footer{
+    
+    &_inner {
+      padding: 36px 0 50px;
+    }
+
+    &_col{
+
+      &-title{
+        padding: 30px 0;
+        margin-bottom: 35px;
+      }
+    }
+
+    .corporate-top_text {
+      max-width: 75%;
+    }
+
+    .corporate-address li {
+      max-width: 75%;
+    }
+  }
+}
+
+@media(max-width: 767px){
+
+  .footer{
+    
+    &_col{
+
+      &-title{
+        font-size: 20px;
+        padding: 30px 0 25px;
+        font-weight: 400;
+      }
+    }
+    
+    .footer-links li {
+      margin-bottom: 14px;
+    }
+    .newsletter-text {
+      margin: 10px 0 15px;
+    }
+    .corporate-address li {
+      padding-bottom: 14px;
+    }
+  }
+}  
+   
