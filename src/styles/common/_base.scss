@@ -19,6 +19,10 @@
 .main {
 	flex-grow: 1;
   width: 100%;
+
+  &_holder{
+    display: flex;
+  }
 }
 
  .container{
@@ -85,21 +89,21 @@ ul{
   list-style: none;
 
   /* мне в навигации мешает */
-/*
-  >li{
-    padding-left: 20px;
-    position: relative;
-      &:before{
-        content: '\f105';
-        font-family: 'FontAwesome';
-        position: absolute;
-        left: 0;
-        top: 50%;
+
+  // >li{
+  //   padding-left: 20px;
+  //   position: relative;
+  //     &:before{
+  //       content: '\f105';
+  //       font-family: 'FontAwesome';
+  //       position: absolute;
+  //       left: 0;
+  //       top: 50%;
         
-        transform: translateY(-50%);
-        color: $main-color;
-      }
-  }*/
+  //       transform: translateY(-50%);
+  //       color: $main-color;
+  //     }
+  // }
 }
 
 main{
@@ -125,11 +129,10 @@ main{
 }
 
 .tabs{
-
   
   &_tab{
-   
-
+    //display: flex;
+    //margin-left: 30px;
 
     &:active{
     display: flex;
@@ -137,14 +140,10 @@ main{
     margin-left: 30px;
     }
 
-  
     /* Скрыте блоки до нажатия таба */
      &:not(:first-child){
        display: none;
-      
      }
-
-
   }
 
   &_nav{
@@ -178,10 +177,6 @@ main{
       font-size: 14px;
     }
   }
-
-
-
-
 }
 
 /* Header */
@@ -193,8 +188,8 @@ main{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
- 
   }
+
   .fix-for-phone{
    display: flex;   
   }
@@ -218,8 +213,8 @@ main{
     justify-content: flex-end;
     .text--red{
       color: $red;
-      
     }
+    
     .btn--login{
       background-color: $main-color;
       margin-left: 26px;
@@ -227,9 +222,9 @@ main{
     
     .btn--register{
       background-color: $red;
-      margin-left: 7px;
-      
+      margin-left: 7px; 
     }
+    
     .btn--circle{
       min-width: 35px;
       height: 35px;
@@ -265,7 +260,6 @@ main{
     .header_top_rigth{
       display: block;
       margin: 0 auto;
-      
     }
     
     .header_top--fix{
@@ -275,34 +269,26 @@ main{
       flex-wrap: wrap;
       // margin-bottom: 10px;
       margin-top: 5px;
+      
     }
     .text--top{
       padding: 5px 0;
       justify-content: center;
-     
-
-    }
+     }
     
     .fix-for-phone{
       padding: 5px 0;
       justify-content: center;
     }
+    
     .logo--forphone{
       margin: 5px auto ;
-      
-    }
+      }
   }
 
-
-
 .popup{
-
-  
-  
   display:flex;
   justify-content: center;
-
-  
 
   .container_popup{
     max-width: 400px;
@@ -317,17 +303,16 @@ main{
     padding-right: 28px;
     color:white;
   }
-
- 
-
+  
   .window_login_popup{
     position: relative;
     max-width: 730px;
     width: 100%;
     background-color: $main-color;
+    
     .mfp-close{
+      
       &::before{
-        
         content: '\f00d';
         font: 24px 'FontAwesome';
         color:white;
@@ -340,13 +325,10 @@ main{
       margin: 4px 0;
     }
 
-    
-
     .span_in_input{
       position: relative;
       text-align: center;
       
-
       input{
       max-width: 400px;
       width: 100%;
@@ -369,7 +351,6 @@ main{
         color: white;
       }
     }
-
   }
 
   &_main_text{
@@ -389,10 +370,8 @@ main{
     margin-top: 15px;
     justify-content: space-between;
 
-
     .span_in_input{
       position: relative;
-
 
       span{
         position: absolute;
@@ -424,10 +403,7 @@ main{
       font-size: 14px;
       font-weight: bold;
       text-align: center;
-      
-    
     }
-
   }
 
   .popup_text{
@@ -438,17 +414,13 @@ main{
     font-weight: 500;
     font-size: 14px;
   }
-
- 
-
 }
 
 /* Синяя полоса навигации */
 .header_nav{
   background-color: #263238;
   height: 60px;
-
-
+  
   .navigation{
 
      ul{
@@ -465,8 +437,7 @@ main{
           font-weight: 500;
          }
        }
-     }
-      
+     }   
   }
 
   .nav-togle{
@@ -528,10 +499,12 @@ main{
         transform: rotate(45deg);
         top: 14px;
       }
+      
       &.active::after{
         transform: rotate(-45deg);
         top: 14px;
       }
+      
       &.active span{
         display: none;
     }
@@ -572,8 +545,6 @@ main{
 
 /* Серая полоса с поиском */
 .header_search{
-
-
   background-image: url(/images/banner_image.jpg);
   background-color: $grey;
   height: 532px;
@@ -663,7 +634,7 @@ main{
     
     /* Before footer of product */
     &-img{
-      display:block
+      display:block;
     }
 
     &-info{
@@ -793,15 +764,61 @@ main{
   }
 }
 
-/*Carousel*/
+/*-------------Carousel styles----------*/
+
+.trending-products {
+  max-height: 824px;
+}
+
+.flex_title-text {
+  padding-bottom: 24px;
+  padding-top: 94px;
+  font-size: 36px;
+  font-family: $f-family-base;
+  text-align: center;
+  font-weight: 700;
+}
 
 .carousel{
-  &_slide{
-    padding: 0 20px;
+  
+  &:not(:first-child){
+    padding-left: 31px;
   }
 }
 
-/*why choose*/
+.slick-dots {
+  list-style: none;
+  padding: 40px 0 120px;
+  text-align: center;
+  margin: 0;
+  }
+  
+  .slick-dots li {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  padding: 0 7px;
+  }
+  
+  .slick-dots li button {
+  background-color: #e8e8e8;
+  border: 1px solid transparent;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  outline: 0;
+  }
+  
+  .slick-dots li.slick-active button {
+  background-color: $main-color;
+  border-color: none;
+  }
+
+/*-----------------------why choose start-------------*/
 
 .why_choose-wrapper {
     width: 100%;
@@ -811,25 +828,24 @@ main{
 .why-choose-container {
     background: #263238;
     color: $white;
-    height: 618px;
+    min-height: 618px;
     padding: 92px 0 114px;
 }
 
 .white_title-text {
     font-size: 36px;
     font-family: $f-family-base;
-    color: $white;
     text-align: center;
-    font-weight: 500;
-    margin-bottom: 86px;
+    font-weight: 700;
+    padding-bottom: 86px;
+    color: $white;
 }
-
 
 .why-choose-col {
     padding: 0 42px;
     text-align: center;
   
-    h3 a {
+    h3 {
     font-size: 24px;
     color: $white;
     font-weight: 500;
@@ -838,7 +854,7 @@ main{
     font-family: $f-family-base;
   }
 
-    p {
+    >p {
     color: #b0bec5;
     margin: 0 0 20px 0;
     font-size: 15px;
@@ -846,20 +862,93 @@ main{
     line-height: 24px;
   }
 }
- .link_icon {
-    margin-bottom: 14px;
-    background: #d4d4d4;
-    color: $white;
-    font-size: 56px;
-    height: 114px;
-    width: 114px;
-    line-height: 114px;
-    border-radius: 50%;
-    text-decoration: none;
-    display: inline-flex;
-    /*border: 2px solid $main-color;*/
+
+ .why-chose-icon {
+  margin-bottom: 14px;
+  background: #d4d4d4;
+  color: $white;
+  font-size: 56px;
+  height: 114px;
+  width: 114px;
+  line-height: 114px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-flex;
+}
+/*-----------------------why choose end-------------*/
+
+
+
+/* -----------Media quaries styles-----------------------*/ 
+
+@media (max-width: 1023px){
+  /*why choose start*/
+  .why-choose-container {
+    padding: 60px 0 70px;
+  }
+
+  .white_title-text {
+    font-size: 28px;
+    padding-bottom: 34px;
+    font-weight: 500;
+  }
+
+  .why-choose-col h3 {
+    font-size: 20px;
+  }
+  .why-choose-col p {
+    line-height: 20px;
+  }
   
- }
+/*why choose end*/
+/*carousel start*/
+  .flex_title-text {
+    font-weight: 500;
+    font-size: 28px;
+    padding: 44px 0 24px;
+  }
+
+  .slick-dots {
+    padding: 6px 0 50px;
+  }
+
+  .slick-dots li button {
+    width: 10px;
+    height: 10px;
+  }
+}
+/*carousel end*/
+@media (max-width: 767px){ 
+  /*@media why choose start*/
+  .why-choose-container {
+    padding: 50px 0 60px;
+  }
+
+  .white_title-text {
+    font-size: 28px;
+    padding-bottom: 30px;
+    
+  }
+/*@media why choose end*/
+/*@media carousel start*/
+  .flex_title-text {
+    font-weight: 500;
+    font-size: 28px;
+    padding: 36px 0 20px;
+  }
+
+  .slick-dots {
+    padding: 4px 0 34px;
+  }
+
+  .slick-dots li button {
+    width: 8px;
+    height: 8px;
+  }
+}
+/*@media carousel end*/
+
+/*--------- Media quaries styles end -----------*/ 
 
 /*блок "стать автором" кнопкой*/
  
@@ -919,7 +1008,7 @@ main{
 
 .tutorials{
   margin: 0 auto;
-  width:690px;
+  max-width: 690px;    /*на адаптиве задавал скролл*/
   justify-content:space-between;
 }
 
@@ -941,50 +1030,21 @@ main{
   font-size: 15px;
 }
 
-/*Footer*/
+/* Popap */
+.popup{
+  position: relative;
+  background-color: #fff;
+  height: 300px;
+  width: 300px;
+  padding: 30px;
 
-.footer{
-  min-height: 650px;
-  background-color: #263238;
-  color: #b7c3c8;
+  .mfp-close{
+    color: $black;
 
-  &_col{
-
-    &-title{
-      font-size: 22px;
-      font-weight: bold;
-      text-transform: capitalize;
-      color: $white;
-      outline: none;
-      margin: 0;
-      background-color: transparent;
-      border: none;
-      padding: 25px 0;
-      position: relative;
-
-      &:after{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 100%;
-        height: 3px;
-        width: 50px;
-        background-color: $main-color;
-      }
-    }
-
-    &_main{
-      padding: 30px 0;
-
-      @media(max-width: 767px){
-        display: none;
-      }
+    &:before{
+      content: '\f00d';
+      font: 24px 'FontAwesome';
     }
   }
 }
-
-
-
-
-
 
