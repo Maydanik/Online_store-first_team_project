@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../styles/styles.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+        <link rel="stylesheet" href="../styles/styles.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        <title>Document</title>
+    </head>
 
 <body>
     <div class="wraper">
@@ -23,7 +25,11 @@
                             <div class="text--top"><span class="text--red">Need help?</span> Talk to an expert: +61 3
                                 8376 6284</div>
                             <div class="btn--circle"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                            <div class="btn btn--login text--top"><a href="#">Login</a></div>
+                            <div class="btn btn--login text--top js_login-popup"><a href="#">Login</a></div>
+
+                            
+                            <div id="popup" class="popup mfp-hide">Lorem ipsum</div>
+
                             <div class="btn btn--register text--top"><a href="#">Register</a></div>
                         </span>
                     </span>
@@ -50,7 +56,7 @@
             </div>
             <!--Серая полоса с поиском-->
             <div class="header_search">
-                <div class="container">
+                <div class="flex_container">
                     <div class="area_header_search">
                         <div class="text_on_header">Welcome To Foxtar Market Place!</div>
                         <div class="text--top">Premium WordPress Themes, Web Templates and Many More ...</div>
@@ -327,36 +333,144 @@
 
         </div>
 
-        <div class="section_free flex_container">
+        <div class="section_free flex_container_free">
             <div class="free_text">Free Monthly Tutorials To Help You With Your Project</div>
-            <div class="tutorials flex_row">
-                <a href="" class="tutorial">
+            <div class=" flex_row">
+                <div class="flex_col flex_col--1-3">
+                        <a href="" >
+                                <div class="tutorial"></div>
+                                   <div class="tutorial_info">
+                                           <div class="info_text">Web Design Tutorials</div>
+                                       </div>
+                            </a>
+                </div>
+                 <div class="flex_col flex_col--1-3">
+                     <a href="" >
+                         <div class="tutorial"></div>
+                            <div class="tutorial_info">
+                                    <div class="info_text">Web Design Tutorials</div>
+                                </div>
+                     </a>
 
-                </a>
-                <a href="" class="tutorial">
 
-                </a>
-                <a href="" class="tutorial">
-
-                </a>
+                     
+                </div>
+                <div class="flex_col flex_col--1-3">
+                        <a href="" >
+                                <div class="tutorial"></div>
+                                   <div class="tutorial_info">
+                                           <div class="info_text">Web Design Tutorials</div>
+                                       </div>
+                            </a>
+                </div>
             </div>
 
-            <div class="tutorials flex_row">
+            <!--<div class="tutorials flex_row">
+                    <div class="flex_col--1-3">
                 <div class="tutorial_info">
                     <div class="info_text">Web Design Tutorials</div>
                 </div>
+                    </div>
+                    <div class=" flex_col--1-3">
                 <div class="tutorial_info">
                     <div class="info_text">Web Design Tutorials</div>
                 </div>
+                    </div>
+                    <div class="flex_col--1-3">
                 <div class="tutorial_info">
                     <div class="info_text">HTML & CSS Tutorials</div>
+                    </div>
+
+                </div>-->
+            </div>
+
+        </div>
+    </div>
+    <!--Carousel-->
+    <div class="carousel">
+        <div class="carousel_slide">
+            <img src="https://via.placeholder.com/400x200/000000" alt="">
+        </div>
+        <div class="carousel_slide">
+            <img src="https://via.placeholder.com/400x200/000000" alt="">
+        </div>
+        <div class="carousel_slide">
+            <img src="https://via.placeholder.com/400x200/000000" alt="">
+        </div>
+        <div class="carousel_slide">
+            <img src="https://via.placeholder.com/400x200/000000" alt="">
+        </div>
+        
+        <div class="carousel_slide">
+            <img src="https://via.placeholder.com/400x200/000000" alt="">
+        </div>
+
+        <div class="carousel_slide">
+            <img src="https://via.placeholder.com/400x200/000000" alt="">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_inner">
+        <div class="flex_container">
+            <div class="flex_row">
+                <div class="flex_col flex_col--1-4">
+                    <div class="flex_col-content">
+                        <button class="footer_col-title js_collapse">about</button>
+                            <div class="footer_col-main">
+                                lorem lorem lore
+                            
+                        </div>
+                    </div>
+                    </div>
+
+
+                    <div class="flex_col flex_col--1-4">
+                            <div class="flex_col-content">
+                                <button class="footer_col-title js_collapse">about</button>
+                                    <div class="footer_col-main">
+                                        lorem lorem lore
+      
+                                </div>
+                            </div>
+                    </div>
+
+                            <div class="flex_col flex_col--1-4">
+                                    <div class="flex_col-content">
+                                        <button class="footer_col-title js_collapse">about</button>
+                                            <div class="footer_col-main">
+                                                lorem lorem lore
+                                            
+                                        </div>
+                                    </div>
+                            </div>
+
+                                    <div class="flex_col flex_col--1-4">
+                                            <div class="flex_col-content">
+                                                <button class="footer_col-title js_collapse">about</button>
+                                                    <div class="footer_col-main">
+                                                        lorem lorem lore
+                                                    
+                                                </div>
+                                            </div>
+
+                </div>
+                
+                       
                 </div>
             </div>
 
         </div>
     </div>
+        <div class="copyright">
+            <div class="flex_container"
+        </div>
+    </footer>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="../js/app.min.js"></script>
 
 </html>

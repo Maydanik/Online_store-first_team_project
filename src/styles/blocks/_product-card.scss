@@ -1,0 +1,27 @@
+
+.product{
+
+
+    &_card{
+            box-shadow:1px 1px 2px rgba(205,214,222,0.75);
+            padding: 20px;
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+
+        &-img{
+            min-width: 270px;
+        }
+
+        &-main{
+            flex-grow: 1;
+            padding: 20px;
+            min-width: 270px;
+        }
+
+        &_footer{
+            padding: 10px;
+        }
+    }
+
+}
