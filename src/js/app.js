@@ -1,4 +1,4 @@
-$(document).on('click', '.tabs_nav-link', function(){
+$(document).on('click', '.tabs_nav-link', function(e){
   e.preventDefault();
   var tabId = $(this).attr('href');
   $(this).addClass('active');

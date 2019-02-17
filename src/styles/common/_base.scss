@@ -85,7 +85,7 @@ h2{
 
 ul{
   margin: 0;
-  padding: 0;
+  padding-top: 60px;
   list-style: none;
 }
 
@@ -442,7 +442,7 @@ main{
     background: #263238;
     color: $white;
     min-height: 618px;
-    padding: 92px 0 114px;
+    padding: 0 0 114px;
 }
 
 .white_title-text {
@@ -467,7 +467,7 @@ main{
     font-family: $f-family-base;
   }
 
-    >p {
+    p {
     color: #b0bec5;
     margin: 0 0 20px 0;
     font-size: 15px;
@@ -512,6 +512,7 @@ main{
   }
   
 /*why choose end*/
+
 /*carousel start*/
   .flex_title-text {
     font-weight: 500;
@@ -528,9 +529,13 @@ main{
     height: 10px;
   }
 }
+
 /*carousel end*/
+
 @media (max-width: 767px){ 
+
   /*@media why choose start*/
+
   .why-choose-container {
     padding: 50px 0 60px;
   }
@@ -540,8 +545,11 @@ main{
     padding-bottom: 30px;
     
   }
+
 /*@media why choose end*/
+
 /*@media carousel start*/
+
   .flex_title-text {
     font-weight: 500;
     font-size: 28px;

@@ -7,15 +7,15 @@
         align-items: stretch;
         flex-wrap: wrap;
 
-        &-img{
-        min-width: 270px;
-        }
+        // &-img{
+        // min-width: 270px; - мешает в home
+        // }
        
         &-main{
             flex-grow: 1;
             padding: 20px;
             // border: 1px solid $black;
-            min-width: 270px;
+            //min-width: 270px; - мешает в home
         }
 
         &-footer{
