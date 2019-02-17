@@ -1,4 +1,4 @@
-$(document).on('click', '.tabs_nav-link', function (e) {
+$(document).on('click', '.tabs_nav-link', function(){
   e.preventDefault();
   var tabId = $(this).attr('href');
   $(this).addClass('active');
@@ -8,7 +8,7 @@ $(document).on('click', '.tabs_nav-link', function (e) {
 });
 
 //Burger menu
-  $(document).on('click','.nav-togle',function(){
+  $(document).on('click', '.nav-togle', function(){
     $(this).toggleClass('active');
     $(this).next('.navigation').slideToggle(400);
   }); 

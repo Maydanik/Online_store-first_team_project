@@ -2,96 +2,365 @@
 
 /* Белая полоса с самого верха */
 .header_top{
-    background-color: $white;
-    height: 90px;
+  background-color: $white;
+  min-height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  }
+
+  .fix-for-phone{
+   display: flex;   
+  }
+
+  .header_top--fix{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+
+  .logo{
+    height: 40px;
+    width: 140px;
+    background: url(/images/logo.png);
+    display: block;
+  }
+
+  .header_top_rigth{
+    display: flex;
     align-items: center;
-  
+    justify-content: flex-end;
+
+    .text--red{
+      color: $red;
+    }
+    
+    .btn--login{
+      background-color: $main-color;
+      margin-left: 26px;
+      border: none;
+    }
+    
+    .btn--register{
+      background-color: $red;
+      margin-left: 7px; 
+      border: none;
+    }
+    
+    .btn--circle{
+      min-width: 35px;
+      height: 35px;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      margin-left: 26px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $f-size-base;
+    }
+    
+    .btn--circle::before{
+      width: 18px;
+      height: 18px;
+      background-color: $red;
+      border-radius: 50%;
+      position: absolute;
+      //top: 0;
+      //margin-top: 20px;
+      margin-top: -15px;
+      margin-left: 9px;
+      z-index: 1;
+      content:'8';
+      text-align: center;
+      padding-top: 1px;
+      }  
+  }
+
+  @media (max-width: 479px){
+
+    .header_top_rigth{
+      display: block;
+      margin: 0 auto;
+    }
+    
     .header_top--fix{
       display: flex;
       justify-content: space-between;
       flex-basis: 100%;
-    }
-  
-    .logo{
-      height: 40px;
-      width: 140px;
-      background: url(/images/logo.png);
-      display: block;
-    }
-  
-    .header_top_rigth{
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      .text--red{
-        color: $red;
-        
-      }
-      .btn--login{
-        background-color: $main-color;
-        margin-left: 26px;
-      }
+      flex-wrap: wrap;
+      // margin-bottom: 10px;
+      margin-top: 5px;
       
-      .btn--register{
-        background-color: $red;
-        margin-left: 7px;
-        
-      }
-      .btn--circle{
-        width: 35px;
-        height: 35px;
-        background-color: #f5f5f5;
-        border-radius: 50%;
-        margin-left: 26px;
-        color: #a0a0a0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: $f-size-base;
-      }
-      
-      .btn--circle::before{
-        width: 18px;
-        height: 18px;
-        background-color: $red;
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        margin-top: 20px;
-        margin-left: 9px;
-        z-index: 1;
-        content:'8';
-        text-align: center;
-        padding-top: 1px;
-        }  
     }
+    .text--top{
+      padding: 5px 0;
+      justify-content: center;
+     }
+    
+    .fix-for-phone{
+      padding: 5px 0;
+      justify-content: center;
+    }
+    
+    .logo--forphone{
+      margin: 5px auto ;
+      }
+  }
+
+.popup{
+  display:flex;
+  justify-content: center;
+
+  .container_popup{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &_close{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 28px;
+    color:white;
   }
   
-  /* Синяя полоса навигации */
-  .header_nav{
-    background-color: #263238;
-    height: 60px;
+  .window_login_popup{
+    position: relative;
+    max-width: 730px;
+    width: 100%;
+    background-color: $main-color;
+    
+    .mfp-close{
+      
+      &::before{
+        content: '\f00d';
+        font: 24px 'FontAwesome';
+        color:white;
+      }
+    }
+
+    input{
+      border-style: none;
+      padding: 15px 0;
+      margin: 4px 0;
+    }
+
+    .span_in_input{
+      position: relative;
+      text-align: center;
+      
+      input{
+      max-width: 400px;
+      width: 100%;
+      padding-left: 40px;
+      background-color: #76ae36;
+      }
+
+      input::placeholder{
+      font-family: $f-family-base;
+      color: white;
+      font-weight: 500;
+      font-size: 14px;
+      }
+      
+      span{
+        position: absolute;
+        margin: auto 0;
+        margin-top: 15px;
+        margin-left: 17px;
+        color: white;
+      }
+    }
+  }
+
+  &_main_text{
+      font-family: $f-family-base;
+      font-size: 48px;
+      font-weight: 700;
+      color: white;
+      line-height: 30px;
+      color: $white;
+      text-align: center;
+      padding-top: 57px;
+      padding-bottom: 40px;
+  }
+
+  &_two_buttons{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+
+    .span_in_input{
+      position: relative;
+
+      span{
+        position: absolute;
+      }
+
+      .fa-pencil-square-o{
+        padding-left: 18px;
+      }
+
+      .btn--create{
+        height: 48px;
+        width: 250px;
+        background-color: #76ae36;
+        border-style: none;
+        font-family: $f-family-base;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+
+    .btn--submit{
+      background-color: white;
+      width: 140px;
+      height: 48px;
+      border-style: none;
+      box-shadow: 1px 2px 0 #53951f;
+      font-family: $f-family-base;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .popup_text{
+    padding-top: 27px;
+    padding-bottom: 114px;
+    font-family: $f-family-base;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+/* Синяя полоса навигации */
+.header_nav{
+  background-color: #263238;
+  height: 60px;
   
-    .navigation{
-  
-       ul{
-         display: flex;
-         flex-wrap: wrap;
-         padding-top: 22px;
-  
-         li{
-           padding-right: 40px;
-            
-           .nav-item{
-            font-family: $f-family-base;
-            font-size: $f-size-base;
-            font-weight: 500;
-           }
+  .navigation{
+
+     ul{
+       display: flex;
+       flex-wrap: wrap;
+       padding-top: 22px;
+
+       li{
+         padding-right: 40px;
+          
+         .nav-item{
+          font-family: $f-family-base;
+          font-size: $f-size-base;
+          font-weight: 500;
          }
        }
-        
-    }
+     }   
   }
+
+  .nav-togle{
+    display: none;
+  }
+
+  @media (max-width: 479px) {
+
+      #container_mobile{
+        display: flex;
+        padding-top: 14px;
+        justify-content: flex-end;
+         position: relative;
+      }
+
+    
+   /* Three lines of menu */
   
+    .nav-togle{
+      display: block;
+      position: relative;
+      height: 30px;
+      width: 30px;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background-color: $product-name_color;
+
+      &::before,
+      &::after{
+        content: '';
+        transition: transform .3s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: white;
+      }
+
+      &::before{
+        top: 0;  
+      }
+      &::after{
+        top: 28px;
+      }
+  
+      span 
+      {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: white;
+        top: 14px;
+      }
+
+      /* Animation to press menu */
+      &.active::before{
+        transform: rotate(45deg);
+        top: 14px;
+      }
+      
+      &.active::after{
+        transform: rotate(-45deg);
+        top: 14px;
+      }
+      
+      &.active span{
+        display: none;
+    }
+      /***************************/     
+    }
+
+    /* Menu */
+    .navigation{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $main-color;
+      z-index: 9;
+      display: none;
+
+      ul{
+        padding-top: 0;
+
+        li{
+          padding: 5px 15px;
+          text-align: center;
+          border: darkgreen 1px solid;
+
+          a{
+            color: #FFF;
+            font-size: 16px;
+          }   
+        }
+      }
+
+      .top-menu{
+        display: block;
+      }
+    }   
+  }
+}
