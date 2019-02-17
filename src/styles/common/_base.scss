@@ -343,6 +343,7 @@ ul{
 }
 
 .carousel{
+  
   &:not(:first-child){
     padding-left: 31px;
   }
@@ -416,7 +417,7 @@ ul{
     font-family: $f-family-base;
   }
 
-    p {
+    >p {
     color: #b0bec5;
     margin: 0 0 20px 0;
     font-size: 15px;
