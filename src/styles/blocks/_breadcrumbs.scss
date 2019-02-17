@@ -3,7 +3,6 @@
     padding: 15px 0;
     align-items: center;
 
-
     &_item {
         text-transform: capitalize;
         font-size: 15px;
@@ -16,8 +15,8 @@
         color: #bec9cf;
         position: relative;
         padding-right: 24px;
-        
-        &:after {
+
+        &:after{
             content: '-';
             color: $main-color;
             position: absolute;
@@ -27,4 +26,3 @@
         }    
     }
 }
-

@@ -1,39 +1,39 @@
-.irs {
-    height: 50px;
+.irs{
 
-    
-    &--round {
-        
+    &--round{
+        height: 80px;
 
-        .irs_bar {
-        background-color: #fff;
+        .irs-bar{
+            background-color: #37474f;
+            height: 5px;
         }
 
-        .irs_handle {
-            background-color: $main-color;
+        .irs-handle{
+            border-color: $main-color;
             width: 18px;
             height: 18px;
             top: 29px;
             cursor: grab;
         }
 
-        .irs_line {
+        .irs-line{
             height: 5px;
             background-color: #f2f5f8;
         }
+
         .irs-from,
         .irs-to,
-        .irs-single {
+        .irs-single{
             top: 50px;
             background-color: transparent;
             color: #78909c;
             font-size: 15px;
             padding-top: 8px;
 
-            &:before {
-                display: none;
-            }
-
+        &:before{
+            display: none;
         }
     }
+}
+   
 }
