@@ -7,6 +7,12 @@ $(document).on('click', '.tabs_nav-link', function (e) {
   $(tabId).siblings('.tabs_tab').hide(400);
 });
 
+//Burger menu
+  $(document).on('click','.nav-togle',function(){
+    $(this).toggleClass('active');
+    $(this).next('.navigation').slideToggle(400);
+  }); 
+
 $(document).ready(function () {
   if ($('.carousel').length > 0) {
     $('.carousel').slick({
@@ -49,6 +55,16 @@ $(document).ready(function () {
       }
     });
   }
+  
+  if($('.js_register-popup').length>0){
+            $('.js_register-popup').magnificPopup({
+                items: {
+                    src: '#popup_register',
+                    type: 'inline',
+                    
+                }
+              });
+              }
 
   if ($(window).width() < 768) {
     $(document).on('click', '.js_collapse', function(){

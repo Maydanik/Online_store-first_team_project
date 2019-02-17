@@ -62,7 +62,6 @@
       }   
     }
   
-
     &_main{
       padding: 30px 0;
 
@@ -116,7 +115,6 @@
         font-size: 16px;
         border-radius: 1px;
         transition: opacity .5s;
-        
         
         &:before {
           content: '';
@@ -176,8 +174,7 @@
         height: 42px;
         font-size: 14px;
         background-color: #2f3c43;
-        padding: 7px 14px;
-        
+        padding: 7px 14px; 
       }
 
       button {
@@ -200,8 +197,7 @@
         @media(max-width: 767px){
           display: none;
         }
-    }
-    
+    }  
 }
   .copy {
     border-top: 1px solid #424d53;
@@ -213,7 +209,6 @@
   }
   
   /*-media*/
-
 
 @media(max-width: 1023px){
 
@@ -265,4 +260,3 @@
     }
   }
 }  
-   

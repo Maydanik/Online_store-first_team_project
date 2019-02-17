@@ -21,22 +21,26 @@
             <div class="header_top">
                 <div class="container">
                     <span class="header_top--fix">
-                        <a href="#" class="logo"></a>
+                        <div class="logo--forphone">
+                            <a href="#" class="logo"></a>
+                        </div>
                         <span class="header_top_rigth">
-                            <div class="text--top"><span class="text--red">Need help?</span> Talk to an expert: +61 3
-                                8376 6284</div>
+                            <div class="text--top"><span class="text--red">Need help?</span><span>Talk to an expert: +61 3 8376 6284</span></div>
+                      <div class="fix-for-phone"></div>//???
                             <div class="btn--circle"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                            <div class="btn btn--login text--top"><a href="#">Login</a></div>
-                            <div class="btn btn--register text--top"><a href="#">Register</a></div>
+                            <button class="btn btn--login text--top js_login-popup">Login</button>
+                            <button class="btn btn--register text--top js_register-popup">Register</button>
+                        </div>
                         </span>
                     </span>
                 </div>
             </div>
             <!--Синяя полоса навигации-->
             <div class="header_nav">
-                <div class="container">
+                <div class="container" id="container_mobile">
+                    <button class="nav-togle"><span></span></button>
                     <div class="navigation">
-                        <ul>
+                        <ul class="top-menu">
                             <li><a class="nav-item" href="#">Home</a> </li>
                             <li><a class="nav-item" href="#">About</a></li>
                             <li><a class="nav-item" href="#">WordPress</a></li>
@@ -144,11 +148,13 @@
                                                     <div class="product_card-price">$15</div>
                                                 </div>
                                             </div>
-                                            <!--Info on footer of product-->
-                                            <div class="product_card-footer">
-                                                <a href="" class="product_author">
-                                                    <div class="product_author-icon"></div>
-                                                    <div class="product_author-name">PsdBosS</div>
+                                    </div>
+                                    <!-- The Post Grip Pro -->
+                                    <div class="flex_col--1-4">
+                                        <div class="flex_col-holder">
+                                            <div class="product_card">
+                                                <a class="product_card-img">
+                                                    <img src="https://via.placeholder.com/440x250/d4d4d4" alt="image desription">
                                                 </a>
                                                 <div class="product_rating">
                                                     <ul class="product_rating-stars">
@@ -2546,11 +2552,41 @@
                 </div>
             </div>
         </footer>
+<!-- Login window by PopUp -->
+    <div id="popup" class="popup mfp-hide">
+        <div class="window_login_popup">
+            <button class="mfp-close-btn-in mfp-close">
+                <!-- <span class="popup_close"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+            </button>
+            <div class="container_popup">
+                <div class="popup_main_text">LOGIN</div>
+                <div class="span_in_input popup_input_name">
+                    <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="span_in_input popup_input_password">
+                    <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    <input type="text" placeholder="Password">
+                </div>
+                <div class="popup_two_buttons">
+                    <button class=" btn--submit">SUBMIT</button>
+                    <div class="span_in_input create_an_account">
+                        <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                        <button class="btn--create">Create An Account?</button>
+                    </div>
+                </div>
+                <div class="popup_text">Lost Password?</div>
+            </div>
+        </div>
+    </div>
+    <!-- Register window by PopUp -->
+    <div id="popup_register" class="popup mfp-hide">
+            <div class="popup_main_text">Will be soon</div>
+    </div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="../js/app.min.js"></script>
-
 </html>
