@@ -70,21 +70,21 @@ ul{
   list-style: none;
 
   /* мне в навигации мешает */
-/*
-  >li{
-    padding-left: 20px;
-    position: relative;
-      &:before{
-        content: '\f105';
-        font-family: 'FontAwesome';
-        position: absolute;
-        left: 0;
-        top: 50%;
+
+  // >li{
+  //   padding-left: 20px;
+  //   position: relative;
+  //     &:before{
+  //       content: '\f105';
+  //       font-family: 'FontAwesome';
+  //       position: absolute;
+  //       left: 0;
+  //       top: 50%;
         
-        transform: translateY(-50%);
-        color: $main-color;
-      }
-  }*/
+  //       transform: translateY(-50%);
+  //       color: $main-color;
+  //     }
+  // }
 }
 
 .btn{
