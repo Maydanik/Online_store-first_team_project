@@ -1,30 +1,28 @@
-.breadcrumbs{
-
+.breadcrumbs {
     display: flex;
-    align-items: center;
     padding: 15px 0;
+    align-items: center;
 
-    &_item{
-        
+    &_item {
         text-transform: capitalize;
         font-size: 15px;
-        color:$product-name-color;
+        color: $main-text-color;
     }
 
-    &_link{
+    &_link {
         display: block;
         text-decoration: none;
-        color:#bec9cf;
+        color: #bec9cf;
         position: relative;
         padding-right: 24px;
 
         &:after{
-            content:'-';
-            color:$main-color;
+            content: '-';
+            color: $main-color;
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);    
+            transform: translateY(-50%);
             right: 10px;
-        }
-    }  
+        }    
+    }
 }

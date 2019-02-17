@@ -1,20 +1,21 @@
 .irs{
-        
+  
     &--round{
         height: 80px;
+
         .irs-bar{
             background-color: #37474f;
             height: 5px;
         }
 
         .irs-handle{
-            border-color:$main-color;
+            border-color: $main-color;
             width: 18px;
-            height:18px;
-            top:29px;
-            cursor:pointer;
+            height: 18px;
+            top: 29px;
+            cursor: grab;
         }
-        
+
         .irs-line{
             height: 5px;
             background-color: #f2f5f8;
@@ -23,17 +24,62 @@
         .irs-from,
         .irs-to,
         .irs-single{
+            top: 50px;
             background-color: transparent;
-            top:50px;
-            color:#78909c;
+            color: #78909c;
             font-size: 15px;
             padding-top: 8px;
 
             &:before{
                 display: none;
-                
             }
+        }
+    }   
+}
 
+.form{
+    background-color: $white;
+    border: 1px solid $form-border-color;
+
+    &_title {
+        border-bottom: 1px solid $form-border-color;
+        padding: 20px 30px;
+        line-height: 1;
+        color: $input-text-color;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    &_main{
+        padding: 40px 45px;
+    }
+
+    &_block{
+        display: flex;
+        align-items: center;
+    }
+
+    &_label{
+        min-width: 175px;
+        padding-right: 5px;
+    }
+
+    &_input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 1.32em;
+
+        &-holder{
+            background-color: $input-body-bg;
+            border: 1px solid $input-border-color;
+            padding: 10px 35px 10px 15px;
         }
     }
 }
