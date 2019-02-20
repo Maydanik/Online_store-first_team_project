@@ -54,6 +54,7 @@ h2{
 }
 
 @media (max-width: 479px){
+
   h2{
     padding-top: 30px;
     text-align: center;
@@ -228,7 +229,7 @@ main{
           font-weight: 700;
         }
       }
-     } 
+    } 
   }
 
   @media (max-width: 479px){
@@ -335,6 +336,7 @@ main{
       }
     }
   }
+
    &_author{
     display: flex;
     flex-wrap: wrap;
@@ -520,6 +522,7 @@ main{
 /* -----------Media quaries styles-----------------------*/ 
 
 @media (max-width: 1023px){
+
   /*why choose start*/
   .why-choose-container {
     padding: 60px 0 70px;
@@ -605,8 +608,6 @@ main{
   align-items: center;
   display: flex;
   background-color: #f4f6f5;
-  
-  
 }
 
 .section_author-grey{
@@ -736,20 +737,20 @@ max-width: 600px;
     font-size: 8px;
   }
 
-    .author_text{
-      font-size: 12px;
-    }
+  .author_text{
+    font-size: 12px;
+  }
 
-    .free_text{
-      font-size: 15px;
-      text-align: center;
-    }
+  .free_text{
+    font-size: 15px;
+    text-align: center;
+  }
 
-    .tutorial{
-      max-width: 110px;
-      height: 75px;
-      justify-content: center; 
-     }
+  .tutorial{
+    max-width: 110px;
+    height: 75px;
+    justify-content: center; 
+  }
 
   .tutorial_info{
     max-width: 110px;
