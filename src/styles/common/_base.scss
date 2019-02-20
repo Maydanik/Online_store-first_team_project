@@ -193,22 +193,20 @@ main{
     justify-content: center;
     align-items: center;
     display: flex;
-//       vertical-align: middle;
-//       margin-right: auto;
-//       margin-left: auto;
-//       white-space: nowrap;
-//       position: relative;
-//       padding-top: 57px;
-//       max-width: 670px;
-//       width: 100%;
       
       .lupa{
         position: absolute;
-        //right: 65px;
+        //right: 0;
         color: #78909c;
+        padding-right: 20px;
         //margin-right: 137px;
         padding-left: 630px;
       } 
+      @media (max-width: 479px){
+        .lupa{
+          right: 0;
+        }
+      }
       
       #search{
         background: $white;
@@ -771,20 +769,69 @@ max-width: 600px;
   }
 }
 
-/* Popap */
+/* Popup */
 .popup{
-  position: relative;
-  background-color: #fff;
-  height: 300px;
-  width: 300px;
-  padding: 30px;
+  display:flex;
+  justify-content: center;
 
-  .mfp-close{
-    color: $black;
+  .container_popup{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-    &:before{
-      content: '\f00d';
-      font: 24px 'FontAwesome';
+  &_close{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 28px;
+    color:white;
+  }
+
+  .window_login_popup{
+    position: relative;
+    max-width: 730px;
+    width: 100%;
+    background-color: $main-color;
+    .mfp-close{
+      &::before{
+        content: '\f00d';
+        font: 24px 'FontAwesome';
+        color:white;
+      }
+    }
+
+    input{
+      border-style: none;
+      padding: 15px 0;
+      margin: 4px 0;
+    }
+
+    .span_in_input{
+      position: relative;
+      text-align: center;
+
+      input{
+      max-width: 400px;
+      width: 100%;
+      padding-left: 40px;
+      background-color: #76ae36;
+      }
+
+      input::placeholder{
+      font-family: $f-family-base;
+      color: white;
+      font-weight: 500;
+      font-size: 14px;
+      }
+      
+      span{
+        position: absolute;
+        margin: auto 0;
+        margin-top: 15px;
+        margin-left: 17px;
+        color: white;
+      }
     }
   }
 }
