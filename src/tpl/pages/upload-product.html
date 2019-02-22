@@ -34,10 +34,10 @@
                             </div>
                             <div class="form_main">
                                     <div class="form_row">
-                                            <div class="form_block">
+                                            <div class="form_block required">
                                                 <label for="categories" class="form_label">select categories</label>
-                                                <div class="form_input-holder">
-                                                    <select name="categories" id="categories" class="form_input">
+                                                <div class="form_input-holder form_select-holder">
+                                                    <select name="categories" id="categories" class="form_input form_select">
                                                         <option value="category 1">category 1</option>
                                                         <option value="category 2">category 2</option>
                                                         <option value="category 3">category 3</option>
@@ -46,16 +46,50 @@
                                             </div>
                                         </div>
                                 <div class="form_row">
-                                    <div class="form_block">
+                                    <div class="form_block required">
                                         <label for="name" class="form_label">product name</label>
                                         <div class="form_input-holder">
                                             <input type="text" id="name" class="form_input">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form_row">
+                                        <div class="form_block">
+                                            <label for="desc" class="form_label">product description</label>
+                                            <div class="form_input-holder">
+                                                <textarea name="desc" id="" cols="30" rows="10" class="form_input form_textarea"></textarea>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="form_row">
+                                        <div class="form_block">
+                                            <label for="mainFile" class="form_label">upload main file</label>
+                                            <div class="form_input-holder form_file-holder">
+                                                <div class="form_file-fake">
+                                                    choose file
+                                                    <input id="mainFile" type="file" class="form_input form_file">
+                                                </div>
+                                                <span class="form_file-val">no file choosen</span>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="form_row">
+                                    <div class="form_block">
+                                        <label for="screenshots" class="form_label">upload screenshots</label>
+                                        <div class="form_input-holder form_file-holder">
+                                            <div class="form_file-fake">
+                                                choose file
+                                                <input id="screenshots" type="file" class="form_input form_file">
+                                            </div>
+                                            <span class="form_file-val">no file choosen</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
+             
+
                     <div class="main_holder">
                         <aside class="sidebar">
                             <div class="sidebar_block">

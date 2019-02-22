@@ -27,8 +27,8 @@
                                 <div class="text--top"><span class="text--red">Need help?</span><span> Talk to an expert: +61 3 8376 6284</span></div>
                                 <div class="fix-for-phone">
                                     <div class="btn--circle"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                                    <div class="btn btn--login text--top"><a href="#">Login</a></div>
-                                    <div class="btn btn--register text--top"><a href="#">Register</a></div>
+                                    <button class="btn btn--login text--top js_login-popup">Login</button>
+                                    <button class="btn btn--register text--top js_register-popup">Register</button>
                                 </div>
                             </span>
                         </span>
@@ -383,9 +383,46 @@
             </footer>
         </div>
     </div>
+            <!-- Login window by PopUp -->
+            <div id="popup" class="popup mfp-hide">
+                <div class="window_login_popup">
+                    <button class="mfp-close-btn-in mfp-close">
+                        <!-- <span class="popup_close"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+                    </button>
+                    <div class="container_popup">
+                        <div class="popup_main_text">LOGIN</div>
+                        <div class="span_in_input popup_input_name">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="span_in_input popup_input_password">
+                            <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+                            <input type="text" placeholder="Password">
+                        </div>
+                        <div class="popup_two_buttons">
+                            <button class=" btn--submit">SUBMIT</button>
+                            <div class="span_in_input create_an_account">
+                                <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                <button class="btn--create">Create An Account?</button>
+                            </div>
+                        </div>
+                        <div class="popup_text">Lost Password?</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Register window by PopUp -->
+            <div id="popup_register" class="popup mfp-hide">
+                <div class="popup_main_text">Will be soon</div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="flex_container"></div>
+        </div>
+        
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="../js/app.min.js"></script>
 
 </html>
