@@ -48,6 +48,7 @@ h2{
   font-weight: 700;
   color: $product-name_color;
   display: flex;
+  text-align: center;
   justify-content: center;
   padding-top: 120px;
   margin: 0;
@@ -86,7 +87,7 @@ h2{
 
 ul{
   margin: 0;
-  padding-top: 60px;
+  padding-top: 10px;
   list-style: none;
 }
 
@@ -114,8 +115,6 @@ main{
 .tabs{
   
   &_tab{
-    //display: flex;
-    //margin-left: 30px;
 
     &:active{
     display: flex;
@@ -197,28 +196,30 @@ main{
       
       .lupa{
         position: absolute;
-        //right: 0;
         color: #78909c;
         padding-right: 20px;
-        //margin-right: 137px;
         padding-left: 630px;
-      } 
-      @media (max-width: 479px){
+      }
+
+      @media (max-width: 767px){
         .lupa{
-          right: 0;
+          right: 10;
         }
+      }
+
+        @media (max-width: 479px){
+          .lupa{
+            right: 0;
+          }
       }
       
       #search{
         background: $white;
-//         max-width: 670px;
-//         width: 100%;
         height: 56px;
         border:none;
         width: 100%;
         max-width: 670px;
         padding-left: 22px;
-        //box-shadow: 0 0 10px 2px $main-color;
         box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);
         
         #search::placeholder{
@@ -248,12 +249,17 @@ main{
     margin-left: 15PX;
     margin-bottom: 30px;
     position: relative;
-    border: 1px solid #e7ecf2;
+    //border: 1px solid #e7ecf2;
     background-color: $white;
     
     /* Before footer of product */
     &-img{
-      display:block;
+      display: block;
+      //width: 100%; //my
+
+      // img{
+      //   width: 100%; //my
+      // }
     }
 
     &-info{
@@ -401,6 +407,7 @@ main{
     font-size: 16px;
     line-height: 1.6;
     font-weight: 300;
+    box-shadow: 1px 0px 3px rgba(204, 216, 228, .75);
   }
 }
 
@@ -600,8 +607,8 @@ main{
 /*блок "стать автором" кнопкой*/
  
 .section_author{
-  padding:15px;
-  height:554px;
+  padding: 15px;
+  height: 554px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -614,9 +621,9 @@ main{
   justify-content: center;
   align-items: center;
   display: flex;
- height: 300px;
-width: 100%;
-max-width: 600px;
+  height: 300px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .section_author-green{
@@ -686,7 +693,7 @@ max-width: 600px;
 
 .info_text{
   text-align: center;
-  padding-top:20px;
+  padding-top: 20px;
   font-size: 15px;
 }
 
@@ -727,7 +734,7 @@ max-width: 600px;
 
   .section_author-green{
     max-width: 200px;
-    height:100px;
+    height: 100px;
   }
 
   .become_author{
