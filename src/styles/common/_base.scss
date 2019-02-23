@@ -72,7 +72,7 @@ h2{
     transition: all 0.3s linear 0s;
   }
 
-  li > a:hover {
+ li > a:hover {
    color:$main-color;
  }
 }
@@ -89,10 +89,6 @@ ul{
   margin: 0;
   padding-top: 10px;
   list-style: none;
-}
-
-main{
-  background-color: $background_color;
 }
 
 .btn{
@@ -465,6 +461,7 @@ main{
   border-color: none;
   }
 
+
 /*-----------------------why choose start-------------*/
 
 .why_choose-wrapper {
@@ -523,6 +520,7 @@ main{
   display: inline-flex;
 }
 /*-----------------------why choose end-------------*/
+
 
 /* -----------Media quaries styles-----------------------*/ 
 
@@ -671,108 +669,100 @@ main{
   padding-bottom: 50px;
   text-align: center;
   font-size: 22px;
+  
 }
 
 .tutorials{
   margin: 0 auto;
-  max-width: 690px;    /*на адаптиве задавал скролл*/
-  justify-content:space-between;
+  justify-content: space-around;
+  
 }
 
 .tutorial{
   background-color: #d4d4d4;
-  width: 220px;
+  width: 180px;
   height: 150px;
+  display: block;
 }
 
 .tutorial_info{
-  width: 220px;
+  font-size: 14px;
+  max-width: 180px;
   height: 50px;
   background-color: #f8f8f8;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .info_text{
   text-align: center;
   padding-top: 20px;
   font-size: 15px;
+  
 }
-
-// .tutorials{
-//   display: flex;
-//   margin: 0 auto;
-//   //max-width: 690px;    /*на адаптиве задавал скролл*/
-//   justify-content:space-between;
-// }
-
-// .tutorial{
-//   background-color: #d4d4d4;
-//   width: 375px;
-//   height: 270px;
-//   display: block;
-// }
-
-// .tutorial_info{
-//   margin: 0;
-//   display: block;
-//   max-width: 180px;
-//   height: 50px;
-//   background-color: #f8f8f8;
-// }
-
-// .info_text{
-//   text-align: center;
-//   padding-top:20px;
-//   font-size: 15px;
-// }
 
 @media (max-width:767px) {
 
-  .section_author-grey{
-    max-width: 300px;
-    height: 200px;
-  }
+.section_author{
+  height:300px;
+}
 
-  .section_author-green{
-    max-width: 200px;
-    height: 100px;
-  }
+.section_author-grey{
+  max-width: 300px;
+  height: 150px;
+}
 
-  .become_author{
-    max-width: 50px;
-    font-size: 8px;
-  }
+.section_author-green{
+  max-width: 200px;
+  height:80px;
+}
+
+.become_author{
+  max-width: 50px;
+  font-size: 8px;
+  height: 30px;
+}
 
   .author_text{
     font-size: 12px;
   }
 
-  .free_text{
-    font-size: 15px;
-    text-align: center;
+  .section_free{
+    padding-bottom: 20px;
   }
 
+  .free_text{
+    font-size: 15px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom:10px;
+  }
+  
   .tutorial{
     max-width: 110px;
     height: 75px;
     justify-content: center; 
-  }
+   }
 
-  .tutorial_info{
-    max-width: 110px;
-    height: 25px;
-  }
+.tutorial_info{
+  max-width: 110px;
+  height: 25px;
+  font-size: 10px;
+  padding-top: 5px;
+}
 
-  .info_text{
-    text-align: center;
-    padding-top:10px;
-    font-size: 10px;
-  }
+.info_text{
+  text-align: center;
+  padding-top:10px;
+  font-size: 10px;
+}
 
-  .free_text{
-    font-size: 12px;
-  }
-
-  .text_on_header{
+.free_text{
+  font-size: 12px;
+}
+  
+   .text_on_header{
     font-size: 10px;
   }
 }
@@ -840,6 +830,17 @@ main{
         margin-left: 17px;
         color: white;
       }
+    }
+  }
+}
+
+.js_grid-list {
+
+  .flex_row {
+    display: block;
+
+    [class^="flex_col"]{
+      width: 100%;
     }
   }
 }
