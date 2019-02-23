@@ -10,56 +10,222 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <title>Document</title>
 </head>
-
-    
-    <body>
-            <div class="wraper">
-                    <header>
-                        <!--Белая полоса с самого верха-->
-                        <div class="header_top">
-                            <div class="container">
-                                <span class="header_top--fix">
-                                    <div class="logo--forphone">
-                                        <a href="#" class="logo"></a>
-                                    </div>
-                                    <span class="header_top_rigth">
-                                        <div class="text--top"><span class="text--red">Need help?</span><span> Talk to an expert:
-                                                +61
-                                                3 8376 6284</span></div>
-                                        <div class="fix-for-phone">
-                                            <div class="btn--circle"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                                            <button class="btn btn--login text--top js_login-popup">Login</button>
-                                            <button class="btn btn--register text--top js_register-popup">Register</button>
-                                        </div>
-                                    </span>
-                                </span>
+  
+<body>
+    <div class="wrapper_flexfix">
+        <div class="wrapper">
+            <header class="header">
+                <!--Белая полоса с самого верха-->
+                <!-- <div class="header_top">
+                    <div class="flex_container">
+                        <span class="header_top--fix">
+                            <div class="logo--forphone">
+                                <a href="#" class="logo"></a>
                             </div>
+                            <span class="header_top_rigth">
+                                <div class="text--top"><span class="text--red">Need help?</span><span> Talk to an
+                                        expert:
+                                        +61 3 8376 6284</span></div>
+                            </span>
+                        </span>
+                    </div>
+                </div> -->
+                <div class="logo"><a href=""><img src="" alt=""></a>
+                </div>
+                <div class="header_content">
+                    <div class="header_help"></div>
+                    <button class="js_tools-opener"></button>
+                    <ul class="header_tools">
+                        <li class="header_tools-item"><button class="js_drop-opener"></button>
+                            <div class="header_tools-drop">
+                                <ul class="header_tools-list">
+                                    <li class="header_tools-message"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header_tools-item"><button class="js_drop-opener"></button>
+                            <div class="header_tools-drop">
+                                <ul class="header_tools-list">
+                                    <li class="header_tools-message"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header_tools-item"><button class="js_drop-opener"></button>
+                            <div class="header_tools-drop">
+                                <ul class="header_tools-basket">
+                                    <li class="header_tools-goods"></li>
+                                </ul>
+                                <dl class="basket_sum">
+                                    <dt></dt>
+                                    <dd></dd>
+                                </dl>
+                                <div class="basket_btns">
+                                    <button class="btn_basket--main"></button>
+                                    <button class="btn_basket--warn"></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header_tools-item"><button class="js_user-opener"></button>
+                            <div class="header_tools-drop">
+                                <ul class="header_user-drop">
+                                    <li class="header_user-item"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header_tools-item">
+                            <button class="btn btn--warn">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+                <!--Синяя полоса навигации-->
+                <div class="header_nav">
+                    <div class="container" id="container_mobile">
+                        <button class="nav-togle"><span></span></button>
+                        <div class="navigation">
+                            <ul class="top-menu">
+                                <li><a class="nav-item" href="#">Home</a> </li>
+                                <li><a class="nav-item" href="#">About</a></li>
+                                <li><a class="nav-item" href="#">WordPress</a></li>
+                                <li><a class="nav-item" href="#">Joomla</a></li>
+                                <li><a class="nav-item" href="#">PSD</a></li>
+                                <li><a class="nav-item" href="#">Plugins</a></li>
+                                <li><a class="nav-item" href="#">Components</a></li>
+                                <li><a class="nav-item" href="#">Pages</a></li>
+                                <li><a class="nav-item" href="#">Contact</a></li>
+                                <li><a class="nav-item" href="#">Help</a></li>
+                            </ul>
                         </div>
-                        <!--Синяя полоса навигации-->
-                        <div class="header_nav">
-                            <div class="container" id="container_mobile">
-                                <button class="nav-togle"><span></span></button>
-                                <div class="navigation">
-                                    <ul class="top-menu">
-                                        <li><a class="nav-item" href="#">Home</a> </li>
-                                        <li><a class="nav-item" href="#">About</a></li>
-                                        <li><a class="nav-item" href="#">WordPress</a></li>
-                                        <li><a class="nav-item" href="#">Joomla</a></li>
-                                        <li><a class="nav-item" href="#">PSD</a></li>
-                                        <li><a class="nav-item" href="#">Plugins</a></li>
-                                        <li><a class="nav-item" href="#">Components</a></li>
-                                        <li><a class="nav-item" href="#">Pages</a></li>
-                                        <li><a class="nav-item" href="#">Contact</a></li>
-                                        <li><a class="nav-item" href="#">Help</a></li>
-                                    </ul>
+                    </div>
+                </div>
+            </header>
+            <!--Серая полоса с поиском-->
+            <div class="header_search">
+                <div class="container">
+                    <div class="area_header_search">
+                        <div class="text_on_header">Welcome To Foxtar Market Place!</div>
+                        <div class="text--top">Premium WordPress Themes, Web Templates and Many More ...</div>
+                        <div class="search_box">
+                            <span class="lupa"><i class="fa fa-search"></i></span>
+                            <input type="search" id="search" placeholder="Search Your Keywords . . .">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main class="main">
+                <div class="flex_container">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item">
+                            <a href="" class="breadcrumbs_link">home</a>
+                        </li>
+                        <li class="breadcrumbs_item">
+                            <span class="breadcrumbs_current">product page</span>
+                        </li>
+                    </ul>
+                    <div class="main_holder">
+                        <div class="flex_row">
+                            <div class="content"></div>
+                            <aside class="sidebar"></aside>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer_inner">
+                    <div class="flex_container">
+                        <div class="flex_row">
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">About Company</button>
+                                    <div class="footer_col-main">
+                                        <div class="corporate-top_text">
+                                            Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen
+                                            disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
+                                        </div>
+                                        <ul class="corporate-address">
+                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a
+                                                    href="adress:PO Box 16122 Collins Street West Victoria 8007 Australia">PO
+                                                    Box 16122 Collins Street West Victoria 8007 Australia</a></li>
+                                            <li><i class="fa fa-phone" aria-hidden="true"></i><a
+                                                    href="tel: +61 3 8376 6284">+61
+                                                    3 8376 6284</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">Join Our Community </button>
+                                    <div class="footer_col-main">
+                                        <ul class="footer-links">
+                                            <li><a href="" class="footer-item"> Home</a></li>
+                                            <li><a href="" class="footer-item"> Forums</a></li>
+                                            <li><a href="" class="footer-item"> Become an Author</a></li>
+                                            <li><a href="" class="footer-item"> Community Meetups</a></li>
+                                            <li><a href="" class="footer-item"> Become an Affiliate</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">Need Help?</button>
+                                    <div class="footer_col-main">
+                                        <ul class="footer-links">
+                                            <li><a href="" class="footer-item">Help Center</a></li>
+                                            <li><a href="" class="footer-item">Foxtar Market Terms</a></li>
+                                            <li><a href="" class="footer-item">Author Terms</a></li>
+                                            <li><a href="" class="footer-item">Foxtar Licenses</a></li>
+                                            <li><a href="" class="footer-item">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">Follow Us On</button>
+                                    <div class="footer_col-main">
+                                        <ul class="footer-social">
+                                            <li><a href="" class="social-item"><i class="fa fa-facebook"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-twitter"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-youtube-play"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-pinterest"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-linkedin"
+                                                        aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        <div class="newsletter-form">
+                                            <h3 class="newsletter-text">Newsletter Sign Up!</h3>
+                                            <div class="input-form">
+                                                <input type="text" placeholder="E-mail Address" class="input-col">
+                                                <span class="input-button">
+                                                    <button type="submit">
+                                                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
-                    </header>
+                    </div>
+                </div>
+                <div class="copy">
+                    <div class="flex_container">
+                        <div class="footer_text">
+                            © 2017 Foxtar market place. Trademarks and brands are the property of their respective
+                            owners.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/app.min.js"></script>
 
-    </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../js/app.min.js"></script>
-    
-    </html>
+</html>

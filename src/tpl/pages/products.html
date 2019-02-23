@@ -15,19 +15,21 @@
 <body>
     <div class="wrapper_flexfix">
         <div class="wrapper">
-            <header>
+            <header class="header">
                 <!--Белая полоса с самого верха-->
                 <div class="header_top">
                     <div class="container">
                         <span class="header_top--fix">
-                            <a href="#" class="logo"></a>
+                                <div class="logo--forphone">
+                                    <a href="#" class="logo"></a>
+                                </div>
                             <span class="header_top_rigth">
-                                <div class="text--top"><span class="text--red">Need help?</span> Talk to an expert: +61
-                                    3
-                                    8376 6284</div>
-                                <div class="btn--circle"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                                <div class="btn btn--login text--top"><a href="#">Login</a></div>
-                                <div class="btn btn--register text--top"><a href="#">Register</a></div>
+                                <div class="text--top"><span class="text--red">Need help?</span><span> Talk to an expert: +61 3 8376 6284</span></div>
+                                <div class="fix-for-phone">
+                                    <div class="btn--circle"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                                    <div class="btn btn--login text--top"><a href="#">Login</a></div>
+                                    <div class="btn btn--register text--top"><a href="#">Register</a></div>
+                                </div>
                             </span>
                         </span>
                     </div>
@@ -76,7 +78,21 @@
                         </li>
                     </ul>
                     <div class="main_holder">
+                       <!-- Боковое меню -->
                         <aside class="sidebar">
+                            <!-- Категории -->
+                            <div class="sidebar_block">
+                                <div class="sidebar_title">categories</div>
+                                <ul class="sidebar_links">
+                                    <li><a href="">WordPress</a><span>(150)</span></li>
+                                    <li><a href="">Joomla</a><span>(100)</span></li>
+                                    <li><a href="">PSD</a><span>(50)</span></li>
+                                    <li><a href="">Plugins</a><span>(60)</span></li>
+                                    <li><a href="">Components</a><span>(40)</span></li>
+                                </ul>
+
+                            </div>
+                            <!-- Фильтр цены -->
                             <div class="sidebar_block">
                                 <div class="sidebar_title">price range</div>
                                 <div class="sidebar_content">
@@ -84,6 +100,15 @@
                                         <input type="text" class="js_range" name="my_range" value="" />
                                     </div>
                                 </div>
+                                <button class="sidebar_btn">
+                                    <span class="lupa"><i class="fa fa-search"></i></span> <span class="text_in_btn">Search</span> 
+                                </button>
+                            </div>
+                            <div class="sidebar_block">
+                                <div class="sidebar_title">top 10 sellers</div>
+                                <button class="sidebar_btn">
+                                    <span class="text_in_btn">View All</span> 
+                                </button>
                             </div>
                         </aside>
                         <div class="content">
