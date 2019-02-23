@@ -43,12 +43,15 @@
 
     &_title {
         border-bottom: 1px solid $form-border-color;
+        color: $black;
         padding: 20px 30px;
         line-height: 1;
-        color: $input-text-color;
+        //color: $input-text-color;
         font-size: 24px;
         font-weight: 500;
         text-transform: capitalize;
+
+        
     }
 
     &_main{
@@ -113,7 +116,7 @@
             border: 1px solid $input-border-color;
             padding: 10px 15px;
             position: relative;
-
+            color:#828282;
             &:after{
                 position: absolute;
                 right: 20px;
@@ -181,4 +184,20 @@
             padding: 6px 10px;
         }
     }
+}
+
+.submit_button{
+    
+        font-family: $f-family-base;
+        font-size: 12px;
+        width: 100%;
+        max-width:124px;
+        color: $white;
+        background-color:$main-color;
+        border: none;
+        height: 46px;
+        text-align: center;
+        margin-left: 220px;
+        margin-bottom: 50px;
+
 }
