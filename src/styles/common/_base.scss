@@ -251,11 +251,11 @@ ul{
     /* Before footer of product */
     &-img{
       display: block;
-      //width: 100%; //my
+      width: 100%; //my
 
-      // img{
-      //   width: 100%; //my
-      // }
+       img{
+        width: 100%; //my
+       }
     }
 
     &-info{
@@ -619,19 +619,19 @@ ul{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 300px;
+  height: 440px;
   width: 100%;
-  max-width: 600px;
+  max-width: 1100px;
 }
 
 .section_author-green{
   background-color: $main-color;
-  max-width:450px;
+  max-width: 660px;
   justify-content: center;
   align-items: center;
   display: flex;
   width: 100%;
-  height: 150px;
+  height: 220px;
 }
 
 .author_text{
@@ -651,6 +651,7 @@ ul{
   border: none;
   height: 50px;
 }
+
 .author_text p{
   margin: 0;
 }
@@ -669,36 +670,34 @@ ul{
   padding-bottom: 50px;
   text-align: center;
   font-size: 22px;
-  
 }
 
 .tutorials{
-  margin: 0 auto;
   justify-content: space-around;
-  
 }
 
 .tutorial{
   background-color: #d4d4d4;
-  width: 180px;
-  height: 150px;
+  max-width: 375px;
+  height: 275px;
   display: block;
+  margin: 0 18px;
 }
 
 .tutorial_info{
   font-size: 14px;
-  max-width: 180px;
+  max-width: 375px;
   height: 50px;
   background-color: #f8f8f8;
   text-align: center;
   padding-top: 15px;
+  margin: 0 18px;
 }
 
 .info_text{
   text-align: center;
   padding-top: 20px;
   font-size: 15px;
-  
 }
 
 @media (max-width:767px) {
@@ -733,17 +732,20 @@ ul{
 
   .free_text{
     font-size: 15px;
-    text-align: left;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom:10px;
   }
+
+  .tutorials{
+    padding-left: calc(50% - 55px);
   
   .tutorial{
     max-width: 110px;
     height: 75px;
     justify-content: center; 
-   }
+  }
+}
 
 .tutorial_info{
   max-width: 110px;
