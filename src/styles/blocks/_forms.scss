@@ -57,6 +57,13 @@
     &_main{
         padding: 40px 45px;
     }
+    
+    &_row{
+
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+    }
 
     &_row{
         &:not(:last-of-type){
@@ -72,11 +79,10 @@
             .form_label{
 
                 &:after{
-                    content:'*';
+                    content: '*';
                 }
             }
         }
-
     }
 
     &_label{
@@ -85,9 +91,9 @@
         text-transform: capitalize;
 
         &:after{
-            color:$main-color;
-            line-height: 1;
+            color: $main-color;
             font-size: 24px;
+            line-height: 1;
         }
     }
 
@@ -105,20 +111,19 @@
         z-index: 2;
 
         &-holder{
+            flex-grow: 1;
             background-color: $input-body-bg;
             border: 1px solid $input-border-color;
             padding: 10px 15px;
-            flex-grow: 1;
             position: relative;
             color:#828282;
             &:after{
                 position: absolute;
                 right: 20px;
-                top:50%;
+                top: 50%;
                 transform: translateY(-50%);
-                color:#444;
-
-            }
+                color: #4444;
+          }
         }
     }
 
@@ -132,9 +137,10 @@
         }
 
         &-holder{
+
             &:after{
-                content:'\f0d7';
-                font:14px 'FontAwesome'
+                content: '\f0d7';
+                font: 14px 'FontAwesome';
             }
         }
     }
@@ -142,21 +148,21 @@
     &_textarea{
         resize: none;
         min-height: 148px;
-        overflow: hidden;
+        width: 100%;
+        overflow: hidden; 
     }
 
     &_file{
         padding: 0;
         opacity: 0;
         position: absolute;
-        top:0;
+        top: 0;
         right: 0;
-        left: 0;
         bottom: 0;
-
+        left: 0;
 
         &-fake{
-            width:90px;
+            width: 90px;
             height: 25px;
             position: relative;
             border: 1px solid $input-border-color;
@@ -171,13 +177,11 @@
 
         &-val{
             font-size: 12px;
-            color:#707070;
+            color: #707070;
         }
-        
+
         &-holder{
             padding: 6px 10px;
-            
-
         }
     }
 }

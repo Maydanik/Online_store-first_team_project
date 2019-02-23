@@ -27,17 +27,11 @@ $(document).ready(function () {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
             slidesToShow: 2
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1
           }
@@ -105,8 +99,6 @@ $(document).ready(function () {
     })
   }
 
-  
-
   $('.form_file').on('change', function(){
     var $el = $(this),
         fileName,
@@ -119,5 +111,4 @@ $(document).ready(function () {
     fileName = $el.val().slice(i);
     $block.html(fileName);
   });
-
 });
