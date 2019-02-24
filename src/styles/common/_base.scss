@@ -53,7 +53,6 @@ h2{
   padding-top: 120px;
   padding-bottom: 60px; //- добавил, так как везде по h2 padding-bottom: 60px
   margin: 0;
-  text-align: center; // - добавил так как при адаптиве текст уходит влево
 }
 
 
@@ -61,7 +60,6 @@ h2{
 
   h2{
     padding-top: 30px;
-    //text-align: center; - можно убрать, так как все h2 у нас по центру (вроде как)
     padding-bottom: 10px;
   }
 }
@@ -75,7 +73,7 @@ h2{
     transition: all 0.3s linear 0s;
   
   
-    &:hover {                           /* меньше кода если прописать hover в "а"*/
+    &:hover {           /* меньше кода если прописать hover в "а"*/
       color:$main-color;
     }
   }
@@ -91,7 +89,6 @@ h2{
 
 ul{
   margin: 0;
-  //padding-top: 10px;   ???????
   list-style: none;
 }
 
@@ -112,15 +109,20 @@ ul{
   background-color: $background_color;
 }
 
-.tabs{
-  
-  &_tab{
-
-    &:active{
-    display: flex;
+.active{
+  display: flex;
     justify-content: center;
     margin-left: 30px;
-    }
+    padding: 12px 23px;
+    margin-top: -10px;
+    background-color: #e74c3c;
+    color: $white;
+    box-shadow: 2px 1px 5px rgba(202, 215, 228, .75);
+}
+
+.tabs{
+
+  &_tab{
 
     /* Скрыте блоки до нажатия таба */
      &:not(:first-child){
@@ -136,24 +138,14 @@ ul{
     margin-bottom: 50px;
    
     &-item{
-     
       background-color: white;
+      color: $product-name_color;
       padding: 12px 23px;
       margin: 5px 3px ;
     }
 
-    &-item:hover{
-      background-color: #e74c3c;
-    }
-
-    &-link:hover{
-      color:white;
-    }
-
     &-link{
-
       font-family: $f-family-base;
-      color: $product-name_color;
       font-weight: 500;
       font-size: 14px;
     }
@@ -249,13 +241,13 @@ ul{
     margin-left: 15PX;
     margin-bottom: 30px;
     position: relative;
-    //border: 1px solid #e7ecf2;
     background-color: $white;
     
     &:hover { // hover по макету. В home 3я карточка в hovere
       box-shadow: -1px 16px 26px -1px rgba(205, 214, 222, 0.75);
       transition: box-shadow .7s;
     }
+
     /* Before footer of product */
     &-img{
       display:block;
@@ -265,6 +257,7 @@ ul{
         width: 100%;
       }
     }
+
     &-content {
       padding: 30px 30px 18px;
     }
@@ -272,7 +265,7 @@ ul{
     &-info{
       display: flex;
       border-bottom: 1px solid #e7ecf2;
-      padding: 30px 30px 18px; //изменил как по макету. было 25px 25px 15px
+      padding: 30px 30px 18px; 
       justify-content: space-between;
     }
 
@@ -281,7 +274,6 @@ ul{
       font-size: 18px;
       font-weight: 500;
       color: $product-name_color;
-      //padding-top: 5px; - безсмысленный
     }
 
     &-type{
@@ -290,7 +282,6 @@ ul{
       font-weight: 500;
       color: $main-color;
       padding-top: 16px;
-      //padding-bottom: 5px; - не нужен
     }
 
     &-footer{
@@ -298,8 +289,7 @@ ul{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-     padding: 18px 34px 22px 32px; //строго по макету
-      //padding: 25px 25px 15px; - было так 
+      padding: 18px 34px 22px 32px; 
     }
 
     &-price{
@@ -357,9 +347,6 @@ ul{
   }
 
   &_author-icon{
-    /*margin-top: 20px; - не правильно как по мне эллементам задавать, если можно на контейнер повесить
-    margin-bottom: 20px; 
-    margin-left: 30px;*/
     background-color: #b5b5b5;
     height: 30px;
     width: 30px;
@@ -387,8 +374,7 @@ ul{
       display: flex;
       color: $stars_color;
       padding-right: 12px; // уменьшил на -2 так как между звездами padding-right: 2px (ниже)
-      padding-left: 6px; // уменьшил до 6 чтобы не падали звезды на первой карте при разрешении 1366
-      //padding-bottom: 5px; - не нужен. 
+      padding-left: 6px; // уменьшил до 6 чтобы не падали звезды на первой карте при разрешении 1366 
     
     }
     &-star { //добавил так как заданы растояние и величиы по макету
@@ -812,8 +798,11 @@ ul{
     max-width: 730px;
     width: 100%;
     background-color: $main-color;
+
     .mfp-close{
+
       &::before{
+
         content: '\f00d';
         font: 24px 'FontAwesome';
         color:white;
