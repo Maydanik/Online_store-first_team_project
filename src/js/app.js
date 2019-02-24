@@ -93,7 +93,7 @@ $(document).ready(function () {
   if($('.js_products-table').length > 0){
     $('.js_products-table').on('click', function(){
       $(this).toggleClass('grid_active');
-      $(this).siblings().find('.products_grid-btn').removeClass('grid_active');
+      $(this).siblings().find('.products_list-btn').removeClass('grid_active');
       $('.products_grid').removeClass('js_grid-list');
       $('.products_grid').addClass('js_grid-table');
     })

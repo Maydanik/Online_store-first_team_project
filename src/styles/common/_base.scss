@@ -843,14 +843,3 @@ ul{
     }
   }
 }
-
-.js_grid-list {
-
-  .flex_row {
-    display: block;
-
-    [class^="flex_col"]{
-      width: 100%;
-    }
-  }
-}
