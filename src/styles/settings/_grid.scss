@@ -34,12 +34,18 @@
         }
 
         &--1-3{
-            width: calc(100%/3);
+            width: calc(100% / 3);
+
+            @media(max-width: 1023px){
+                width: 100%;
+                
+            }
+          
             @media(max-width: 767px){
                 width:100%;
                 padding: 10px;
-                
-        }
+                flex-direction: column;          
+            }
         }
 
         &--1-4{
@@ -57,12 +63,25 @@
     }
 }
 
-.content{
-    width: 100%;
-    min-width: calc(100%-300px);
+.main {
+  
+    .content {
+        width: 100%;
+        min-width: calc(100% - 270px);
 
-    &:only-child{
-        min-width: 100%;
+        &:only-child {
+            min-width: 100%;
+        }
     }
-}
+      
+//     .js_grid-list{
 
+//         .flex_row{
+//           display: block;
+        
+//           [class^="flex_col"]{
+//             width: 100%;
+//           }
+//         }
+//     }
+// }
