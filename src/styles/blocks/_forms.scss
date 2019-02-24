@@ -37,18 +37,26 @@
     }   
 }
 
+.upload_main{
+    background-color: $background_color;
+    padding-bottom: 110px;
+}
+
 .form{
     background-color: $white;
     border: 1px solid $form-border-color;
 
     &_title {
         border-bottom: 1px solid $form-border-color;
+        color: $black;
         padding: 20px 30px;
         line-height: 1;
-        color: $input-text-color;
+        //color: $input-text-color;
         font-size: 24px;
         font-weight: 500;
         text-transform: capitalize;
+
+        
     }
 
     &_main{
@@ -57,6 +65,12 @@
     
     &_row{
 
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+    }
+
+    &_row{
         &:not(:last-of-type){
             margin-bottom: 20px;
         }
@@ -107,14 +121,14 @@
             border: 1px solid $input-border-color;
             padding: 10px 15px;
             position: relative;
-
+            color:#828282;
             &:after{
                 position: absolute;
                 right: 20px;
                 top: 50%;
                 transform: translateY(-50%);
                 color: #4444;
-            }
+          }
         }
     }
 
@@ -175,4 +189,20 @@
             padding: 6px 10px;
         }
     }
+}
+
+.submit_button{
+    
+        font-family: $f-family-base;
+        font-size: 12px;
+        width: 100%;
+        max-width:124px;
+        color: $white;
+        background-color:$main-color;
+        border: none;
+        height: 46px;
+        text-align: center;
+        margin-left: 220px;
+        margin-bottom: 50px;
+
 }

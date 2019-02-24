@@ -48,11 +48,11 @@ h2{
   font-weight: 700;
   color: $product-name_color;
   display: flex;
+  text-align: center;
   justify-content: center;
   padding-top: 120px;
   padding-bottom: 60px; //- добавил, так как везде по h2 padding-bottom: 60px
   margin: 0;
-  text-align: center; // - добавил так как при адаптиве текст уходит влево
 }
 
 
@@ -60,7 +60,6 @@ h2{
 
   h2{
     padding-top: 30px;
-    //text-align: center; - можно убрать, так как все h2 у нас по центру (вроде как)
     padding-bottom: 10px;
   }
 }
@@ -74,13 +73,10 @@ h2{
     transition: all 0.3s linear 0s;
   
   
-    &:hover {                           /* меньше кода если прописать hover в "а"*/
+    &:hover {           /* меньше кода если прописать hover в "а"*/
       color:$main-color;
     }
   }
-  /* li > a:hover {                - данную запись можно сделать как я выше. Немного сократим код
-    color:$main-color;
-   }*/
 }
 
 .text--top{
@@ -93,12 +89,7 @@ h2{
 
 ul{
   margin: 0;
-  //padding-top: 60px; - не в том месте отступы поставил. слетают все улки
   list-style: none;
-}
-
-main{
-  background-color: $background_color;
 }
 
 .btn{
@@ -118,17 +109,20 @@ main{
   background-color: $background_color;
 }
 
-.tabs{
-  
-  &_tab{
-    //display: flex;
-    //margin-left: 30px;
-
-    &:active{
-    display: flex;
+.active{
+  display: flex;
     justify-content: center;
     margin-left: 30px;
-    }
+    padding: 12px 23px;
+    margin-top: -10px;
+    background-color: #e74c3c;
+    color: $white;
+    box-shadow: 2px 1px 5px rgba(202, 215, 228, .75);
+}
+
+.tabs{
+
+  &_tab{
 
     /* Скрыте блоки до нажатия таба */
      &:not(:first-child){
@@ -144,24 +138,14 @@ main{
     margin-bottom: 50px;
    
     &-item{
-     
       background-color: white;
+      color: $product-name_color;
       padding: 12px 23px;
       margin: 5px 3px ;
     }
 
-    &-item:hover{
-      background-color: #e74c3c;
-    }
-
-    &-link:hover{
-      color:white;
-    }
-
     &-link{
-
       font-family: $f-family-base;
-      color: $product-name_color;
       font-weight: 500;
       font-size: 14px;
     }
@@ -204,28 +188,30 @@ main{
       
       .lupa{
         position: absolute;
-        //right: 0;
         color: #78909c;
         padding-right: 20px;
-        //margin-right: 137px;
         padding-left: 630px;
-      } 
-      @media (max-width: 479px){
+      }
+
+      @media (max-width: 767px){
         .lupa{
-          right: 0;
+          right: 10;
         }
+      }
+
+        @media (max-width: 479px){
+          .lupa{
+            right: 0;
+          }
       }
       
       #search{
         background: $white;
-//         max-width: 670px;
-//         width: 100%;
         height: 56px;
         border:none;
         width: 100%;
         max-width: 670px;
         padding-left: 22px;
-        //box-shadow: 0 0 10px 2px $main-color;
         box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);
         
         #search::placeholder{
@@ -255,24 +241,22 @@ main{
     margin-left: 15PX;
     margin-bottom: 30px;
     position: relative;
-    border: 1px solid #e7ecf2;
     background-color: $white;
     
     &:hover { // hover по макету. В home 3я карточка в hovere
       box-shadow: -1px 16px 26px -1px rgba(205, 214, 222, 0.75);
       transition: box-shadow .7s;
     }
+
     /* Before footer of product */
     &-img{
       display:block;
-      width: 100%; //добавил для картинки на весь блок
+      width: 100%; 
 
-      img {  //-чтобы картинка была на весь блок
+      img {  
         width: 100%;
       }
     }
-
-    
 
     &-content {
       padding: 30px 30px 18px;
@@ -281,7 +265,7 @@ main{
     &-info{
       display: flex;
       border-bottom: 1px solid #e7ecf2;
-      padding: 30px 30px 18px; //изменил как по макету. было 25px 25px 15px
+      padding: 30px 30px 18px; 
       justify-content: space-between;
     }
 
@@ -290,7 +274,6 @@ main{
       font-size: 18px;
       font-weight: 500;
       color: $product-name_color;
-      //padding-top: 5px; - безсмысленный
     }
 
     &-type{
@@ -299,7 +282,6 @@ main{
       font-weight: 500;
       color: $main-color;
       padding-top: 16px;
-      //padding-bottom: 5px; - не нужен
     }
 
     &-footer{
@@ -307,8 +289,7 @@ main{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-     padding: 18px 34px 22px 32px; //строго по макету
-      //padding: 25px 25px 15px; - было так 
+      padding: 18px 34px 22px 32px; 
     }
 
     &-price{
@@ -366,9 +347,6 @@ main{
   }
 
   &_author-icon{
-    /*margin-top: 20px; - не правильно как по мне эллементам задавать, если можно на контейнер повесить
-    margin-bottom: 20px; 
-    margin-left: 30px;*/
     background-color: #b5b5b5;
     height: 30px;
     width: 30px;
@@ -396,8 +374,7 @@ main{
       display: flex;
       color: $stars_color;
       padding-right: 12px; // уменьшил на -2 так как между звездами padding-right: 2px (ниже)
-      padding-left: 6px; // уменьшил до 6 чтобы не падали звезды на первой карте при разрешении 1366
-      //padding-bottom: 5px; - не нужен. 
+      padding-left: 6px; // уменьшил до 6 чтобы не падали звезды на первой карте при разрешении 1366 
     
     }
     &-star { //добавил так как заданы растояние и величиы по макету
@@ -431,6 +408,7 @@ main{
     font-size: 16px;
     line-height: 1.6;
     font-weight: 300;
+    box-shadow: 1px 0px 3px rgba(204, 216, 228, .75);
   }
 }
 
@@ -487,6 +465,7 @@ main{
   background-color: $main-color;
   border-color: none;
   }
+
 
 /*-----------------------why choose start-------------*/
 
@@ -546,6 +525,7 @@ main{
   display: inline-flex;
 }
 /*-----------------------why choose end-------------*/
+
 
 /* -----------Media quaries styles-----------------------*/ 
 
@@ -630,8 +610,8 @@ main{
 /*блок "стать автором" кнопкой*/
  
 .section_author{
-  padding:15px;
-  height:554px;
+  padding: 15px;
+  height: 554px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -644,19 +624,19 @@ main{
   justify-content: center;
   align-items: center;
   display: flex;
- height: 300px;
-width: 100%;
-max-width: 600px;
+  height: 440px;
+  width: 100%;
+  max-width: 1100px;
 }
 
 .section_author-green{
   background-color: $main-color;
-  max-width:450px;
+  max-width: 660px;
   justify-content: center;
   align-items: center;
   display: flex;
   width: 100%;
-  height: 150px;
+  height: 220px;
 }
 
 .author_text{
@@ -676,6 +656,7 @@ max-width: 600px;
   border: none;
   height: 50px;
 }
+
 .author_text p{
   margin: 0;
 }
@@ -697,105 +678,98 @@ max-width: 600px;
 }
 
 .tutorials{
-  margin: 0 auto;
-  max-width: 690px;    /*на адаптиве задавал скролл*/
-  justify-content:space-between;
+  justify-content: space-around;
 }
 
 .tutorial{
   background-color: #d4d4d4;
-  width: 220px;
-  height: 150px;
+  max-width: 375px;
+  height: 275px;
+  display: block;
+  margin: 0 18px;
 }
 
 .tutorial_info{
-  width: 220px;
+  font-size: 14px;
+  max-width: 375px;
   height: 50px;
   background-color: #f8f8f8;
+  text-align: center;
+  padding-top: 15px;
+  margin: 0 18px;
 }
 
 .info_text{
   text-align: center;
-  padding-top:20px;
+  padding-top: 20px;
   font-size: 15px;
 }
 
-// .tutorials{
-//   display: flex;
-//   margin: 0 auto;
-//   //max-width: 690px;    /*на адаптиве задавал скролл*/
-//   justify-content:space-between;
-// }
-
-// .tutorial{
-//   background-color: #d4d4d4;
-//   width: 375px;
-//   height: 270px;
-//   display: block;
-// }
-
-// .tutorial_info{
-//   margin: 0;
-//   display: block;
-//   max-width: 180px;
-//   height: 50px;
-//   background-color: #f8f8f8;
-// }
-
-// .info_text{
-//   text-align: center;
-//   padding-top:20px;
-//   font-size: 15px;
-// }
-
 @media (max-width:767px) {
 
-  .section_author-grey{
-    max-width: 300px;
-    height: 200px;
-  }
+.section_author{
+  height:300px;
+}
 
-  .section_author-green{
-    max-width: 200px;
-    height:100px;
-  }
+.section_author-grey{
+  max-width: 300px;
+  height: 150px;
+}
 
-  .become_author{
-    max-width: 50px;
-    font-size: 8px;
-  }
+.section_author-green{
+  max-width: 200px;
+  height:80px;
+}
+
+.become_author{
+  max-width: 50px;
+  font-size: 8px;
+  height: 30px;
+}
 
   .author_text{
     font-size: 12px;
   }
 
-  .free_text{
-    font-size: 15px;
-    text-align: center;
+  .section_free{
+    padding-bottom: 20px;
   }
 
+  .free_text{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom:10px;
+  }
+
+  .tutorials{
+    padding-left: calc(50% - 55px);
+  
   .tutorial{
     max-width: 110px;
     height: 75px;
     justify-content: center; 
   }
+}
 
-  .tutorial_info{
-    max-width: 110px;
-    height: 25px;
-  }
+.tutorial_info{
+  max-width: 110px;
+  height: 25px;
+  font-size: 10px;
+  padding-top: 5px;
+}
 
-  .info_text{
-    text-align: center;
-    padding-top:10px;
-    font-size: 10px;
-  }
+.info_text{
+  text-align: center;
+  padding-top:10px;
+  font-size: 10px;
+}
 
-  .free_text{
-    font-size: 12px;
-  }
-
-  .text_on_header{
+.free_text{
+  font-size: 12px;
+}
+  
+   .text_on_header{
     font-size: 10px;
   }
 }
@@ -824,8 +798,11 @@ max-width: 600px;
     max-width: 730px;
     width: 100%;
     background-color: $main-color;
+
     .mfp-close{
+
       &::before{
+
         content: '\f00d';
         font: 24px 'FontAwesome';
         color:white;
@@ -863,6 +840,17 @@ max-width: 600px;
         margin-left: 17px;
         color: white;
       }
+    }
+  }
+}
+
+.js_grid-list {
+
+  .flex_row {
+    display: block;
+
+    [class^="flex_col"]{
+      width: 100%;
     }
   }
 }

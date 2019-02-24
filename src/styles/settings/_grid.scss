@@ -6,11 +6,8 @@
         width: 100%;
         padding: 0 15px;
         margin: 0 auto;
-        
         &--fw{
             max-width: 9999px;
-            width: 100%;
-            background-color: #f4f6f5;
         }
     }
 
@@ -30,6 +27,7 @@
     &_col{
         padding: 0 15px;
         width: 100%;
+        
 
         &--1-2{
             width: 50%;
@@ -52,26 +50,21 @@
 
         &--1-4{
             width: 25%;
-
-            @media(max-width: 1023px){
-                width: 50%;
-            }
-            
             @media(max-width: 767px){
-                width: 100%;
-            }  
+                width:100%;
+            }
+
         }
 
-        &-holder{
-            display: flex;
-            flex-wrap: wrap;
-        }
+        // &-holder{
+        //     display: flex;
+        //     flex-wrap: wrap;
+        // }
     }
 }
 
 .main {
-    
-
+  
     .content {
         width: 100%;
         min-width: calc(100% - 270px);
@@ -80,18 +73,15 @@
             min-width: 100%;
         }
     }
+      
+//     .js_grid-list{
 
+//         .flex_row{
+//           display: block;
         
-    .js_grid-list{
-
-        .flex_row{
-          display: block;
-        
-          [class^="flex_col"]{
-            width: 100%;
-          }
-        }
-    }
-}
-
-
+//           [class^="flex_col"]{
+//             width: 100%;
+//           }
+//         }
+//     }
+// }
