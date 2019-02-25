@@ -1,0 +1,29 @@
+.mobile-hidden{
+
+    @media(max-width: $desktop-df){
+        display: none;
+    }
+}
+
+.desktop-hidden{
+
+    @media(min-width: $desktop){
+        display: none;
+    }
+}
+
+.bg-orange{
+    background-color: $orange;
+}
+
+.bg-yellow{
+    background-color: $yellow;
+}
+
+.bg-green{
+    background-color: $main-color;
+}
+
+.bg-red{
+    background-color: $red;
+}
