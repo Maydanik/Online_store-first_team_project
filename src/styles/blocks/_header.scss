@@ -377,12 +377,16 @@
 
 .header{
   position: relative;
-  padding: 15px 0;
+  padding-top: 15px;
 
   &_container{
     @extend .flex_container;
     display: flex;
     justify-content: space-between;
+
+    .logo{
+      margin-top: 25px;
+    }
   }
 
   &-content{
@@ -392,6 +396,19 @@
 
   &_help{
     margin-right: 35px;
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Roboto, Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #263238;
+    line-height: 24px;
+    padding-left: 270px;
+
+    .text--red{
+      color: $red;
+    }
   }
 
   &_tools{
@@ -512,7 +529,7 @@
 
     &-name{
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1;
       margin-bottom: 8px;
     }
