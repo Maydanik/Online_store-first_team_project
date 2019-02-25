@@ -33,18 +33,18 @@
                                 upload your item
                             </div>
                             <div class="form_main">
-                                    <div class="form_row">
-                                            <div class="form_block required">
-                                                <label for="categories" class="form_label">select categories</label>
-                                                <div class="form_input-holder form_select-holder">
-                                                    <select name="categories" id="categories" class="form_input form_select">
-                                                        <option value="category 1">category 1</option>
-                                                        <option value="category 2">category 2</option>
-                                                        <option value="category 3">category 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                <div class="form_row">
+                                    <div class="form_block required">
+                                        <label for="categories" class="form_label">Select categories</label>
+                                        <div class="form_input-holder form_select-holder">
+                                            <select name="Regular" id="categories" class="form_input form_select">
+                                                <option value="category 1">category 1</option>
+                                                <option value="category 2">category 2</option>
+                                                <option value="category 3">category 3</option>
+                                            </select>
                                         </div>
+                                    </div>
+                                </div>
                                 <div class="form_row">
                                     <div class="form_block required">
                                         <label for="name" class="form_label">product name</label>
@@ -54,73 +54,40 @@
                                     </div>
                                 </div>
                                 <div class="form_row">
-                                        <div class="form_block">
-                                            <label for="desc" class="form_label">product description</label>
-                                            <div class="form_input-holder">
-                                                <textarea name="desc" id="" cols="30" rows="10" class="form_input form_textarea"></textarea>
-                                            </div>
+                                    <div class="form_block">
+                                        <label for="desc" class="form_label">product description</label>
+                                        <div class="form_input-holder">
+                                            <textarea name="desc" id="desc" class="form_input form_textarea"></textarea>
                                         </div>
-                                </div>
-                                <div class="form_row">
-                                        <div class="form_block">
-                                            <label for="mainFile" class="form_label">upload main file</label>
-                                            <div class="form_input-holder form_file-holder">
-                                                <div class="form_file-fake">
-                                                    choose file
-                                                    <input id="mainFile" type="file" class="form_input form_file">
-                                                </div>
-                                                <span class="form_file-val">no file choosen</span>
-                                            </div>
-                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form_row">
                                     <div class="form_block">
-                                        <label for="screenshots" class="form_label">upload screenshots</label>
+                                        <label for="mainFile" class="form_label">upload main file</label>
                                         <div class="form_input-holder form_file-holder">
                                             <div class="form_file-fake">
                                                 choose file
-                                                <input id="screenshots" type="file" class="form_input form_file">
+                                                <input id="mainFile" type="file" class="form_input form_file">
                                             </div>
-                                            <span class="form_file-val">no file choosen</span>
+                                            <span class="form_file-val">No file choosen</span>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form_row">
+                                        <div class="form_block">
+                                            <label for="screenshots" class="form_label">upload screenshots</label>
+                                            <div class="form_input-holder form_file-holder">
+                                                <div class="form_file-fake">
+                                                    choose file
+                                                    <input id="screnshots" type="file" class="form_input form_file">
+                                                </div>
+                                                <span class="form_file-val">No file choosen</span>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </form>
-             
-
-                    <div class="main_holder">
-                        <aside class="sidebar">
-                            <div class="sidebar_block">
-                                <div class="sidebar_title">price range</div>
-                                <div class="sidebar_content">
-                                    <div class="range_holder">
-                                        <input type="text" class="js_range" name="my_range" value="">
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
-                        <div class="content">
-                            <div class="products">
-                                <div class="products_header">
-                                    <div class="products_header-left"></div>
-                                    <div class="products_header-right">
-                                        <ul class="products_grid-tools">
-                                            <li class="products_grid-item">
-                                                <button class="products_grid-btn js_products-table grid_ative"><i
-                                                        class="fa fa-th-large" aria-hidden="true"></i></button>
-                                            </li>
-                                            <li class="products_grid-item">
-                                                <button class="products_grid-btn js_products-list"><i
-                                                        class="fa fa-th-list" aria-hidden="true"></i></button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </main>
         </div>
@@ -130,4 +97,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
 <script src="../js/app.min.js"></script>
+
 </html>
