@@ -19,6 +19,7 @@
 .main {
 	flex-grow: 1;
   width: 100%;
+  background-color: $background_color;
 
   &_holder{
     display: flex;

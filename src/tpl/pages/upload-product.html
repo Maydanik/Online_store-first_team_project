@@ -17,6 +17,101 @@
 <body>
     <div class="wrapper_flexfix">
         <div class="wrapper">
+            <header class="header">
+                <div class="header_container">
+                    <!--Белая полоса с самого верха-->
+                    <div class="logo"><a href="#"></a></div>
+                    <div class="header_content">
+                        <div class="header_help">
+                            <span class="text--red">Need help? </span>
+                            <span>Talk to an expert: +6138376 6284</span>
+                        </div>
+                        <button class="js_tools-opener desktop-hidden"></button>
+                        <ul class="header_tools">
+                            <li class="header_tools-item">
+                                <button class="js_drop-opener header_tools-round">
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                    <span class="header_tools-count bg-orange">8</span>
+                                </button>
+                                <div class="header_tools-drop">
+                                    <ul class="header_tools-list">
+                                        <li class="header_tools-message"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header_tools-item">
+                                <button class="js_drop-opener header_tools-round">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <span class="header_tools-count bg-red">5</span>
+                                </button>
+                                <div class="header_tools-drop">
+                                    <ul class="header_tools-list">
+                                        <li class="header_tools-message"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header_tools-item">
+                                <button class="js_drop-opener header_tools-round">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span class="header_tools-count bg-green">8</span>
+                                </button>
+                                <div class="header_tools-drop">
+                                    <ul class="header_tools-basket">
+                                        <li class="header_tools-goods"></li>
+                                    </ul>
+                                    <dl class="basket_sum">
+                                        <dt></dt>
+                                        <dd></dd>
+                                    </dl>
+                                    <div class="basket_btns">
+                                        <button class="btn_basket--main"></button>
+                                        <button class="btn_basket--warn"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header_tools-item">
+                                <button class="js_drop-opener header_user-opener">
+                                    <div class="header_user-icon"></div>
+                                    <div class="header_user-info">
+                                        <div class="header_user-name">Mike Hussy</div>
+                                        <div class="header_user-money">$171.00</div>
+                                    </div>
+                                </button>
+                                <div class="header_tools-drop">
+                                    <ul class="header_user-drop">
+                                        <li class="header_user-item"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header_tools-item header_tools-item--logout">
+                                <button class="btn btn--warn">
+                                    <i class="fa fa-sign-out desktop-hidden" aria-hidden="true"></i>
+                                    <span class="mobile-hidden">Logout</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Синяя полоса навигации-->
+                <div class="header_nav">
+                    <div class="container">
+                        <div class="navigation">
+                            <ul>
+                                <li><a class="nav-item" href="#">Home</a> </li>
+                                <li><a class="nav-item" href="#">About</a></li>
+                                <li><a class="nav-item" href="#">WordPress</a></li>
+                                <li><a class="nav-item" href="#">Joomla</a></li>
+                                <li><a class="nav-item" href="#">PSD</a></li>
+                                <li><a class="nav-item" href="#">Plugins</a></li>
+                                <li><a class="nav-item" href="#">Components</a></li>
+                                <li><a class="nav-item" href="#">Pages</a></li>
+                                <li><a class="nav-item" href="#">Contact</a></li>
+                                <li><a class="nav-item" href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
             <!--Серая полоса с поиском-->
             <div class="header_search">
                 <div class="container">
@@ -161,82 +256,81 @@
                 </div>
             </main>
             <footer class="footer">
-                    <div class="footer_inner">
-                        <div class="flex_container">
-                            <div class="flex_row">
-                                <div class="flex_col flex_col--1-4">
-                                    <div class="flex_col-content">
-                                        <button class="footer_col-title js_collapse">About Company</button>
-                                        <div class="footer_col-main">
-                                            <div class="corporate-top_text">
-                                                Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen
-                                                disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
-                                            </div>
-                                            <ul class="corporate-address">
-                                                <li><i class="fa fa-map-marker" aria-hidden="true"></i><a
-                                                        href="adress:PO Box 16122 Collins Street West Victoria 8007 Australia">PO
-                                                        Box 16122 Collins Street West Victoria 8007 Australia</a></li>
-                                                <li><i class="fa fa-phone" aria-hidden="true"></i><a
-                                                        href="tel: +61 3 8376 6284">+61
-                                                        3 8376 6284</a></li>
-                                            </ul>
+                <div class="footer_inner">
+                    <div class="flex_container">
+                        <div class="flex_row">
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">About Company</button>
+                                    <div class="footer_col-main">
+                                        <div class="corporate-top_text">
+                                            Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen
+                                            disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
                                         </div>
+                                        <ul class="corporate-address">
+                                            <li><i class="fa fa-map-marker" aria-hidden="true"></i><a
+                                                    href="adress:PO Box 16122 Collins Street West Victoria 8007 Australia">PO
+                                                    Box 16122 Collins Street West Victoria 8007 Australia</a></li>
+                                            <li><i class="fa fa-phone" aria-hidden="true"></i><a
+                                                    href="tel: +61 3 8376 6284">+61
+                                                    3 8376 6284</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="flex_col flex_col--1-4">
-                                    <div class="flex_col-content">
-                                        <button class="footer_col-title js_collapse">Join Our Community </button>
-                                        <div class="footer_col-main">
-                                            <ul class="footer-links">
-                                                <li><a href="" class="footer-item"> Home</a></li>
-                                                <li><a href="" class="footer-item"> Forums</a></li>
-                                                <li><a href="" class="footer-item"> Become an Author</a></li>
-                                                <li><a href="" class="footer-item"> Community Meetups</a></li>
-                                                <li><a href="" class="footer-item"> Become an Affiliate</a></li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">Join Our Community </button>
+                                    <div class="footer_col-main">
+                                        <ul class="footer-links">
+                                            <li><a href="" class="footer-item"> Home</a></li>
+                                            <li><a href="" class="footer-item"> Forums</a></li>
+                                            <li><a href="" class="footer-item"> Become an Author</a></li>
+                                            <li><a href="" class="footer-item"> Community Meetups</a></li>
+                                            <li><a href="" class="footer-item"> Become an Affiliate</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="flex_col flex_col--1-4">
-                                    <div class="flex_col-content">
-                                        <button class="footer_col-title js_collapse">Need Help?</button>
-                                        <div class="footer_col-main">
-                                            <ul class="footer-links">
-                                                <li><a href="" class="footer-item">Help Center</a></li>
-                                                <li><a href="" class="footer-item">Foxtar Market Terms</a></li>
-                                                <li><a href="" class="footer-item">Author Terms</a></li>
-                                                <li><a href="" class="footer-item">Foxtar Licenses</a></li>
-                                                <li><a href="" class="footer-item">Contact Us</a></li>
-                                            </ul>
-                                        </div>
+                            </div>
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">Need Help?</button>
+                                    <div class="footer_col-main">
+                                        <ul class="footer-links">
+                                            <li><a href="" class="footer-item">Help Center</a></li>
+                                            <li><a href="" class="footer-item">Foxtar Market Terms</a></li>
+                                            <li><a href="" class="footer-item">Author Terms</a></li>
+                                            <li><a href="" class="footer-item">Foxtar Licenses</a></li>
+                                            <li><a href="" class="footer-item">Contact Us</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="flex_col flex_col--1-4">
-                                    <div class="flex_col-content">
-                                        <button class="footer_col-title js_collapse">Follow Us On</button>
-                                        <div class="footer_col-main">
-                                            <ul class="footer-social">
-                                                <li><a href="" class="social-item"><i class="fa fa-facebook"
-                                                            aria-hidden="true"></i></a></li>
-                                                <li><a href="" class="social-item"><i class="fa fa-twitter"
-                                                            aria-hidden="true"></i></a></li>
-                                                <li><a href="" class="social-item"><i class="fa fa-youtube-play"
-                                                            aria-hidden="true"></i></a></li>
-                                                <li><a href="" class="social-item"><i class="fa fa-pinterest"
-                                                            aria-hidden="true"></i></a></li>
-                                                <li><a href="" class="social-item"><i class="fa fa-linkedin"
-                                                            aria-hidden="true"></i></a></li>
-                                            </ul>
-                                            <div class="newsletter-form">
-                                                <h3 class="newsletter-text">Newsletter Sign Up!</h3>
-                                                <div class="input-form">
-                                                    <input type="text" placeholder="E-mail Address" class="input-col">
-                                                    <span class="input-button">
-                                                        <button type="submit">
-                                                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                                        </button>
-                                                    </span>
-                                                </div>
+                            </div>
+                            <div class="flex_col flex_col--1-4">
+                                <div class="flex_col-content">
+                                    <button class="footer_col-title js_collapse">Follow Us On</button>
+                                    <div class="footer_col-main">
+                                        <ul class="footer-social">
+                                            <li><a href="" class="social-item"><i class="fa fa-facebook"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-twitter"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-youtube-play"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-pinterest"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li><a href="" class="social-item"><i class="fa fa-linkedin"
+                                                        aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        <div class="newsletter-form">
+                                            <h3 class="newsletter-text">Newsletter Sign Up!</h3>
+                                            <div class="input-form">
+                                                <input type="text" placeholder="E-mail Address" class="input-col">
+                                                <span class="input-button">
+                                                    <button type="submit">
+                                                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                                    </button>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -244,14 +338,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="copy">
-                        <div class="flex_container">
-                            <div class="footer_text">
-                                © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
-                            </div>
+                </div>
+                <div class="copy">
+                    <div class="flex_container">
+                        <div class="footer_text">
+                            © 2017 Foxtar market place. Trademarks and brands are the property of their respective
+                            owners.
                         </div>
                     </div>
-                </footer>
+                </div>
+            </footer>
         </div>
     </div>
 </body>
