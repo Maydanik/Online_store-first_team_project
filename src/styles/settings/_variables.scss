@@ -10,6 +10,8 @@ $light-grey: #f9f9f9;
 $product-name_color: #263238;
 $stars_color: #ffa726;
 $background_color: #f4f6f5;
+$yellow: #fcb362;
+$orange: #ef6c00;
 
 
 
@@ -56,8 +58,8 @@ $link-main-color: $add-color;
 $link-main-hover: $main-color;
 $link-active-hover: darken($link-main-color, 20%);
 
-$nav-color: $white;
-// $nav-hover: darken($nav-color, 20%);
+$nav-color: $main-color;
+$nav-hover: darken($nav-color, 20%);
 
 	// 2.7 Buttons
 $btn-main-color: $white;
@@ -67,4 +69,7 @@ $btn-main-bg: $green;
 
 $btn-add-color: $white;
 $btn-add-bg: $red;
+
+$btn-warn-bg: $red;
+$btn-warn-hover: $dark-grey;
 

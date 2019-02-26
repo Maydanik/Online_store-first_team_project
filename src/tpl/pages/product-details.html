@@ -14,41 +14,80 @@
 <body>
     <div class="wrapper_flexfix">
         <div class="wrapper">
-            <header>
-                <!--Белая полоса с самого верха-->
-                <div class="header_top">
-                    <div class="container">
-                        <span class="header_top--fix">
-                                <div class="logo--forphone">
-                                    <a href="#" class="logo"></a>
+            <header class="header">
+                <div class="header_container">
+                    <!--Белая полоса с самого верха-->
+                    <div class="logo"><a href="#"></a></div>
+                    <div class="header_content">
+                        <div class="header_help">
+                            <span class="text--red">Need help? </span>
+                            <span>Talk to an expert: +6138376 6284</span>
+                        </div>
+                        <button class="js_tools-opener desktop-hidden"></button>
+                    <!-- </div> -->
+                    <ul class="header_tools">
+                        <li class="header_tools-item">
+                            <button class="js_drop-opener header_tools-round">
+                                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                <span class="header_tools-count bg-orange">8</span>
+                            </button>
+                            <div class="header_tools-drop">
+                                <ul class="header_tools-list">
+                                    <li class="header_tools-message"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header_tools-item">
+                            <button class="js_drop-opener header_tools-round">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <span class="header_tools-count bg-red">5</span>
+                            </button>
+                            <div class="header_tools-drop">
+                                <ul class="header_tools-list">
+                                    <li class="header_tools-message"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header_tools-item">
+                            <button class="js_drop-opener header_tools-round">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class="header_tools-count bg-green">8</span>
+                            </button>
+                            <div class="header_tools-drop">
+                                <ul class="header_tools-basket">
+                                    <li class="header_tools-goods"></li>
+                                </ul>
+                                <dl class="basket_sum">
+                                    <dt></dt>
+                                    <dd></dd>
+                                </dl>
+                                <div class="basket_btns">
+                                    <button class="btn_basket--main"></button>
+                                    <button class="btn_basket--warn"></button>
                                 </div>
-                            <span class="header_top_rigth">
-                                <div class="text--top"><span class="text--red">Need help?</span><span> Talk to an expert: +61 3 8376 6284</span></div>
-                                <div class="fix-for-phone">
-
-
-
-                                    <button class="js_drop-opener">
-                                        <div class="header_user-icon"></div>
-                                        <div class="header_user-info">
-                                            <div class="header_user-name">Mike Hussy</div>
-                                            <div class="header_user-money">$171.00</div>
-                                        </div>
-                                    </button>
-                                    <button class="btn btn--warn"><i class="fa fa-sign-out dekstop-hidden" aria-hidden="true"></i>logout</button>
-
-
-
-
-                                    <div class="btn--circle drop-bell"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
-                                    <div class="btn--circle drop-envelope"><i class="fa fa-envelope-o" aria-hidden="true"></i></i></div>
-                                    <div class="btn--circle drop-shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                                    
-                                    <!-- <button class="btn btn--login text--top js_login-popup">Logout</button> -->
-                                    <button class="btn btn--register text--top ">Logout</button>
+                            </div>
+                        </li>
+                        <li class="header_tools-item">
+                            <button class="js_drop-opener header_user-opener">
+                                <div class="header_user-icon"></div>
+                                <div class="header_user-info">
+                                    <div class="header_user-name">Mike Hussy</div>
+                                    <div class="header_user-money">$171.00</div>
                                 </div>
-                            </span>
-                        </span>
+                            </button>
+                            <div class="header_tools-drop">
+                                <ul class="header_user-drop">
+                                    <li class="header_user-item"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header_tools-item header_tools-item--logout">
+                            <button class="btn btn--warn">
+                                <i class="fa fa-sign-out desktop-hidden" aria-hidden="true"></i>
+                                <span class="mobile-hidden">Logout</span>
+                            </button>
+                        </li>
+                    </ul>
                     </div>
                 </div>
                 <!--Синяя полоса навигации-->
