@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 270px;
     
+    
     &_block{
         padding: 25px 27px;
         border: 1px solid #dcdcdc;
@@ -73,17 +74,45 @@
       }
     } 
 
+   
+
+    &_details_btn{
+        justify-content: center;
+        background-color: $main-color;
+        margin-top: 20px;
+
+    }
+
+    &_details_btn-blue{
+        background-color:#42a5f5;
+        margin-top: 8px;
+    }
+
+    &_details_btn-gray{
+        background-color: #546e7a;
+        margin-top: 8px;
+       
+    }
+
+    &_products_btn{
+        padding: 14px 58px;
+        justify-content: flex-start;
+        background-color: $main-color;
+       
+        
+    }
+
+    
+
     &_btn{
         width: 205px;
         height: 46px;
-        background-color: $main-color;
         border-style: none;
         display: flex;
         margin-left: 4px;
-        justify-content: flex-start;
-        padding: 14px 58px;
-        margin-top: 20px;
+      
 
+        
         .lupa{
             color:white;
         }
@@ -99,7 +128,210 @@
             text-align: center;
             padding-left: 9px;
         }
+
+        .text_in_btn-2{
+            font-family: $f-family-base;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: white;
+            text-align: center;
+            
+        }
     }
+
+    &_two_elements{
+
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .element_price{
+            font-family: $f-family-base;
+            font-size: 22px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: #e74c3c;
+        }
+
+        .element_choice{
+            border-style: solid 1px gray;
+            &::after{
+                font-family: 'FontAwesome';
+                content: '\f0d7';
+                font-size: 18px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                line-height: 1;
+            }
+        }
+    }
+
+
+    &_three_elements{
+        display: flex;
+        padding-top: 25px;
+
+        .product_author_photo{
+        width: 73px;
+        height: 63px;
+        background-color: gray;
+        }
+
+        &-two_elements{
+            padding-left: 14px;
+
+            .two_elements-text{
+                font-family: $f-family-base;
+                font-size: 18px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                letter-spacing: normal;
+                color: #263238;
+                padding-bottom: 13px;
+            }
+            .two_elements-btn{
+                width: 92px;
+                height: 28px;
+                border-style: solid 1px #fff;
+                
+
+                &>span{
+                    font-family: $f-family-base;
+                    font-size: 13px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    letter-spacing: normal;
+                    color: #707070;
+                }
+            }
+        }
+    } 
+
+    &_shields{
+       display: flex;
+       padding-top: 24px;
+       justify-content: space-between;
+       
+       .shield{
+            flex-grow: 1;
+            height: 37px;
+            max-width: 34px;
+            background-repeat: no-repeat;
+            position: relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            font-size: 18px;
+
+           i{
+           // position: absolute;
+           }
+       }
+
+        .shield-1{
+            background-image: url("/images/shield1.png");
+        }
+        .shield-2{
+            background-image: url("/images/shield2.png");
+        }
+        .shield-3{
+            background-image: url("/images/shield3.png");
+        }
+        .shield-4{
+            background-image: url("/images/shield4.png");
+        }
+        .shield-5{
+            background-image: url("/images/shield5.png");
+        }
+    }
+
+    /* Sales */
+
+    &_sales-3element{
+        
+
+        i{
+            font-size: 20px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            
+            letter-spacing: normal;
+            color: #a6b5bb;
+            padding-right: 19px;
+        }
+
+        .sales-3element-counter{
+            font-family: $f-family-base;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            
+            letter-spacing: normal;
+            color: #263238;
+            padding-right: 14px;
+          }
+        
+        .sales-3element-Sales{
+            font-family: $f-family-base;
+            font-size: 16px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 3.75;
+            letter-spacing: normal;
+            text-align: left;
+            color: #707070;
+
+        }
+
+    }
+
+    /* Product information */
+    &_product_information{
+
+        padding-top: 24px;
+        .point_of_information{
+            font-family: $f-family-base;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            color: black;
+            padding-bottom: 20px;
+
+            .thin_text{
+                color: #70838d;
+                font-weight: 400;
+            }
+        }
+        .point_of_information:last-of-type{
+            padding-bottom: 10px;
+        }
+        .thin_text{
+            color: #70838d;
+            font-family: $f-family-base;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            padding-bottom: 20px;
+        }
+    }
+
+    
 }
 
 

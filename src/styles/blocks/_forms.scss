@@ -71,18 +71,19 @@
     }
 
     &_row{
+      
         &:not(:last-of-type){
             margin-bottom: 20px;
         }
     }
 
     &_block{
-        display: flex;
+        display: flex; 
 
         &.required{
 
             .form_label{
-
+                
                 &:after{
                     content: '*';
                 }
@@ -188,6 +189,7 @@
         &-holder{
             padding: 6px 10px;
         }
+        
     }
 }
 
