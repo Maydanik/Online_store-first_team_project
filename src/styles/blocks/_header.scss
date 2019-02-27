@@ -270,7 +270,7 @@
      ul{
        display: flex;
        flex-wrap: wrap;
-       padding-top: 22px;
+       padding-top: 17px;
 
        li{
          padding-right: 40px;
@@ -398,7 +398,7 @@
 
 .header{
   position: relative;
-  padding-top: 15px;
+  //padding-top: 15px;
 
   @media(max-width: desktop-df){
     border-bottom: 1px solid #dcdcdc;

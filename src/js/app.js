@@ -149,11 +149,11 @@ $(window).on('resize orientationchange', function() {
     $('.header_drop-opener').addClass('js_drop-opener');
   }
 
-  if (winWidth < 1024 && $('.js_tools-opener').hasClass('opened')) {
+  if (winWidth < 1024 && $('.js_tools-opener').hasClass('.opened')) {
     $('.header_tools').css('display', 'block');
   }
 
-  if (winWidth < 1024 && $('.header_tools-item'.hasClass('drop-opened'))) {
+  if (winWidth < 1024 && $('.header_tools-item').hasClass('.drop-opened')) {
     $(this).next('.header_tools-drop').css('display', 'none');
   }
 
