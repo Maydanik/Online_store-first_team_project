@@ -1,6 +1,12 @@
+body{
+  font-family: $f-family-base;
+}
+
+input,
+textarea,
+select,
 button{
-  font-family: 'Roboto' , sans-serif;
-  font-weight: 500;
+  font-family: $f-family-base;
 }
 
 .wrapper {
@@ -108,6 +114,20 @@ ul{
   &_tab{
 
     display: flex;
+
+
+.active{
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+  padding: 12px 23px;
+  margin-top: -10px;
+  background-color: #e74c3c;
+  color: $white;
+  box-shadow: 2px 1px 5px rgba(202, 215, 228, .75);
+  margin: -12px -23px;
+}
+
 
     &:first-child{
       margin-left: 30px;

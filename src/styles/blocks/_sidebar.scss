@@ -23,9 +23,36 @@
         font-weight: bold;
         line-height: 1;
         padding-bottom: 20px;
+        margin-bottom: 20px;
         border-bottom: 1px solid #dcdcdc;
     }
 
+    //Некоторые изминения стилей карточки для sidebar
+    &-product{
+
+        &_rating-stars{
+            padding: 0;
+        }
+    
+        &_card-type{
+            padding-top: 12px;
+        }
+
+        &_card-price{
+            font-size: 16px;
+        }
+    
+        &_card-info{
+        padding: 30px 0 18px;
+        border-bottom: none;
+        }
+    
+        &_card-footer{
+            padding: 18px 0 22px 0; 
+        }
+    }
+  
+ 
     /* Категории */
     &_links {
         margin: 0;
@@ -233,7 +260,7 @@
             font-size: 18px;
 
            i{
-           // position: absolute;
+             position: absolute;
            }
        }
 
