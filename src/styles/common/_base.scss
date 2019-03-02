@@ -30,7 +30,6 @@ button{
 .main {
 	flex-grow: 1;
   width: 100%;
-  background-color: $background_color;
 
   &_holder{
     display: flex;
@@ -54,28 +53,6 @@ a {
   transition: all 0.3s linear 0s;
 }
 
-h2{
-  font-family: $f-family-base;
-  font-size: 36px;
-  font-weight: 700;
-  color: $product-name_color;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  padding-top: 120px;
-  padding-bottom: 60px; //- добавил, так как везде по h2 padding-bottom: 60px
-  margin: 0;
-}
-
-
-@media (max-width: 479px){
-
-  h2{
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-}
-
 //Не удалять этот блок
 .navigation{
 
@@ -83,12 +60,11 @@ h2{
     color:$white;
     text-decoration: none;
     transition: all 0.3s linear 0s;
-  
-  
-    &:hover {           /* меньше кода если прописать hover в "а"*/
-      color:$main-color;
-    }
   }
+
+ li > a:hover {
+   color:$main-color;
+ }
 }
 
 .text--top{
@@ -101,7 +77,25 @@ h2{
 
 ul{
   margin: 0;
+  padding: 0;
   list-style: none;
+
+  /* мне в навигации мешает */
+/*
+  >li{
+    padding-left: 20px;
+    position: relative;
+      &:before{
+        content: '\f105';
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        
+        transform: translateY(-50%);
+        color: $main-color;
+      }
+  }*/
 }
 
 .btn{
@@ -115,11 +109,12 @@ ul{
    color: $white;
 }
 
-/* Контент  */
+.tabs{
 
-// .fix-backgroung_color{
-//   background-color: $background_color;
-// }
+  &_tab{
+
+    display: flex;
+
 
 .active{
   display: flex;
@@ -133,35 +128,113 @@ ul{
   margin: -12px -23px;
 }
 
-.tabs{
 
-  &_tab{
+    &:first-child{
+      margin-left: 30px;
+    }
 
-    /* Скрыте блоки до нажатия таба */
-     &:not(:first-child){
-       display: none;
-     }
+  
+
+    &:not(:first-child){
+      display: none;
+    }
+  }
+}
+
+/* Header */
+
+/* Белая полоса с самого верха */
+.header_top{
+  background-color: $white;
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .header_top--fix{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
   }
 
-  &_nav{
+  .logo{
+    height: 40px;
+    width: 140px;
+    background: url(/images/logo.png);
+    display: block;
+  }
 
+  .header_top_rigth{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-   
-    &-item{
-      background-color: white;
-      color: $product-name_color;
-      padding: 12px 23px;
-      margin: 5px 3px ;
+    align-items: center;
+    justify-content: flex-end;
+    .text--red{
+      color: $red;
+      
     }
+    .btn--login{
+      background-color: $main-color;
+      margin-left: 26px;
+    }
+    
+    .btn--register{
+      background-color: $red;
+      margin-left: 7px;
+      
+    }
+    .btn--circle{
+      width: 35px;
+      height: 35px;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+      margin-left: 26px;
+      color: #a0a0a0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $f-size-base;
+    }
+    
+    .btn--circle::before{
+      width: 18px;
+      height: 18px;
+      background-color: $red;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      margin-top: 20px;
+      margin-left: 9px;
+      z-index: 1;
+      content:'8';
+      text-align: center;
+      padding-top: 1px;
+      }
+      
+  }
+}
 
-    &-link{
-      font-family: $f-family-base;
-      font-weight: 500;
-      font-size: 14px;
-    }
+/* Синяя полоса навигации */
+.header_nav{
+  background-color: #263238;
+  height: 60px;
+
+  .navigation{
+
+     ul{
+       display: flex;
+       flex-wrap: wrap;
+       padding-top: 22px;
+
+       li{
+         padding-right: 40px;
+          
+         .nav-item{
+          font-family: $f-family-base;
+          font-size: $f-size-base;
+          font-weight: 500;
+         }
+       }
+     }
+      
   }
 }
 
@@ -176,7 +249,7 @@ ul{
     font-size: 48px;
     font-weight: 700;
     color: #263238;
-    line-height: 40px;
+    line-height: 30px;
     color: $white;
     padding-bottom: 35px;
     padding-top: 156px;
@@ -198,25 +271,12 @@ ul{
     justify-content: center;
     align-items: center;
     display: flex;
-      
       .lupa{
         position: absolute;
+        right: 65px;
         color: #78909c;
-        padding-right: 20px;
-        padding-left: 630px;
-      }
-
-      @media (max-width: 767px){
-        .lupa{
-          right: 10;
-        }
-      }
-
-        @media (max-width: 479px){
-          .lupa{
-            right: 0;
-          }
-      }
+        margin-right: 137px;
+      } 
       
       #search{
         background: $white;
@@ -225,6 +285,7 @@ ul{
         width: 100%;
         max-width: 670px;
         padding-left: 22px;
+        //box-shadow: 0 0 10px 2px $main-color;
         box-shadow: 1px 1px 10px rgba(139, 195, 74, .75);
         
         #search::placeholder{
@@ -233,52 +294,39 @@ ul{
           font-weight: 700;
         }
       }
-    } 
-  }
-
-  @media (max-width: 479px){
-
-    .text_on_header{
-      
-      padding-top: 126px;
-    }
+     } 
   }
 }
 
 /* Product card */
 
+.tabs{
+
+  &_tab{
+
+    &:not(:first-child){
+      display: none;
+    }
+  }
+}
+
 .product{
 
   &_card{
-    margin-right: 15px;
-    margin-left: 15PX;
+    margin-right: 30px;
     margin-bottom: 30px;
     position: relative;
-    background-color: $white;
+    border: 1px solid #e7ecf2;
     
-    &:hover { // hover по макету. В home 3я карточка в hovere
-      box-shadow: -1px 16px 26px -1px rgba(205, 214, 222, 0.75);
-      transition: box-shadow .7s;
-    }
-
     /* Before footer of product */
     &-img{
-      display:block;
-      width: 100%; 
-
-      img {  
-        width: 100%;
-      }
-    }
-
-    &-content {
-      padding: 30px 30px 18px;
+      display:block
     }
 
     &-info{
       display: flex;
       border-bottom: 1px solid #e7ecf2;
-      padding: 30px 30px 18px; 
+      padding: 25px 25px 15px;
       justify-content: space-between;
     }
 
@@ -287,6 +335,7 @@ ul{
       font-size: 18px;
       font-weight: 500;
       color: $product-name_color;
+      padding-top: 5px;
     }
 
     &-type{
@@ -295,14 +344,13 @@ ul{
       font-weight: 500;
       color: $main-color;
       padding-top: 16px;
+      padding-bottom: 5px;
     }
 
     &-footer{
-      width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 18px 34px 22px 32px; 
     }
 
     &-price{
@@ -353,13 +401,15 @@ ul{
       }
     }
   }
-
    &_author{
     display: flex;
     flex-wrap: wrap;
   }
 
   &_author-icon{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
     background-color: #b5b5b5;
     height: 30px;
     width: 30px;
@@ -386,17 +436,13 @@ ul{
     &-stars{
       display: flex;
       color: $stars_color;
-      padding-right: 12px; // уменьшил на -2 так как между звездами padding-right: 2px (ниже)
-      padding-left: 6px; // уменьшил до 6 чтобы не падали звезды на первой карте при разрешении 1366 
-    
-    }
-    &-star { //добавил так как заданы растояние и величиы по макету
-      padding-right: 2px;
-      font-size: 12px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-bottom: 5px;
     }
 
     &-views{
-      //padding-right: 30px;
+      padding-right: 30px;
       font-family: $f-family-base;
       font-weight: 400;
       color: $product-name_color;
@@ -404,83 +450,7 @@ ul{
   }
 }
 
-.tabs_btn{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-left: calc(50% - 172px);
-
-  &-all,
-  &-popular{
-    width: 165px;
-    height: 55px;
-    background-color: $white;
-    border: none;
-    margin-right: 12px;
-    margin-bottom: 110px; 
-    font-size: 16px;
-    line-height: 1.6;
-    font-weight: 300;
-    box-shadow: 1px 0px 3px rgba(204, 216, 228, .75);
-  }
-}
-
-/*-------------Carousel styles----------*/
-
-.trending-products {
-  max-height: 824px;
-}
-
-.flex_title-text {
-  padding-bottom: 24px;
-  padding-top: 94px;
-  font-size: 36px;
-  font-family: $f-family-base;
-  text-align: center;
-  font-weight: 700;
-}
-
-.carousel{
-  
-  &:not(:first-child){
-    padding-left: 31px;
-  }
-}
-
-.slick-dots {
-  list-style: none;
-  padding: 40px 0 120px;
-  text-align: center;
-  margin: 0;
-  }
-  
-  .slick-dots li {
-  display: inline-block;
-  margin-right: -4px;
-  vertical-align: top;
-  padding: 0 7px;
-  }
-  
-  .slick-dots li button {
-  background-color: #e8e8e8;
-  border: 1px solid transparent;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  font-size: 0;
-  margin: 0;
-  padding: 0;
-  color: transparent;
-  outline: 0;
-  }
-  
-  .slick-dots li.slick-active button {
-  background-color: $main-color;
-  border-color: none;
-  }
-
-
-/*-----------------------why choose start-------------*/
+/*why choose*/
 
 .why_choose-wrapper {
     width: 100%;
@@ -490,24 +460,25 @@ ul{
 .why-choose-container {
     background: #263238;
     color: $white;
-    min-height: 618px;
-    padding: 0 0 114px;
+    height: 618px;
+    padding: 92px 0 114px;
 }
 
 .white_title-text {
     font-size: 36px;
     font-family: $f-family-base;
-    text-align: center;
-    font-weight: 700;
-    padding-bottom: 86px;
     color: $white;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 86px;
 }
+
 
 .why-choose-col {
     padding: 0 42px;
     text-align: center;
   
-    h3 {
+    h3 a {
     font-size: 24px;
     color: $white;
     font-weight: 500;
@@ -524,111 +495,32 @@ ul{
     line-height: 24px;
   }
 }
-
- .why-chose-icon {
-  margin-bottom: 14px;
-  background: #d4d4d4;
-  color: $white;
-  font-size: 56px;
-  height: 114px;
-  width: 114px;
-  line-height: 114px;
-  border-radius: 50%;
-  text-decoration: none;
-  display: inline-flex;
-}
-/*-----------------------why choose end-------------*/
-
-
-/* -----------Media quaries styles-----------------------*/ 
-
-@media (max-width: 1023px){
-
-  /*why choose start*/
-  .why-choose-container {
-    padding: 60px 0 70px;
-  }
-
-  .white_title-text {
-    font-size: 28px;
-    padding-bottom: 34px;
-    font-weight: 500;
-  }
-
-  .why-choose-col h3 {
-    font-size: 20px;
-  }
-  .why-choose-col p {
-    line-height: 20px;
-  }
+ .link_icon {
+    margin-bottom: 14px;
+    background: #d4d4d4;
+    color: $white;
+    font-size: 56px;
+    height: 114px;
+    width: 114px;
+    line-height: 114px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: inline-flex;
+    /*border: 2px solid $main-color;*/
   
-/*why choose end*/
-
-/*carousel start*/
-  .flex_title-text {
-    font-weight: 500;
-    font-size: 28px;
-    padding: 44px 0 24px;
-  }
-
-  .slick-dots {
-    padding: 6px 0 50px;
-  }
-
-  .slick-dots li button {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-/*carousel end*/
-
-@media (max-width: 767px){ 
-
-  /*@media why choose start*/
-
-  .why-choose-container {
-    padding: 50px 0 60px;
-  }
-
-  .white_title-text {
-    font-size: 28px;
-    padding-bottom: 30px;
-    
-  }
-
-/*@media why choose end*/
-
-/*@media carousel start*/
-
-  .flex_title-text {
-    font-weight: 500;
-    font-size: 28px;
-    padding: 36px 0 20px;
-  }
-
-  .slick-dots {
-    padding: 4px 0 34px;
-  }
-
-  .slick-dots li button {
-    width: 8px;
-    height: 8px;
-  }
-}
-/*@media carousel end*/
-
-/*--------- Media quaries styles end -----------*/ 
+ }
 
 /*блок "стать автором" кнопкой*/
  
 .section_author{
-  padding: 15px;
-  height: 554px;
+  padding:15px;
+  height:554px;
   justify-content: center;
   align-items: center;
   display: flex;
   background-color: #f4f6f5;
+  
+  
 }
 
 .section_author-grey{
@@ -637,20 +529,22 @@ ul{
   justify-content: center;
   align-items: center;
   display: flex;
-  height: 440px;
-  width: 100%;
-  max-width: 1100px;
+ height: 300px;
+width: 100%;
+max-width: 600px;
 }
 
 .section_author-green{
   background-color: $main-color;
-  max-width: 660px;
+  max-width:450px;
   justify-content: center;
   align-items: center;
   display: flex;
   width: 100%;
-  height: 220px;
+  height: 150px;
 }
+
+
 
 .author_text{
   padding-right:20px;
@@ -669,7 +563,6 @@ ul{
   border: none;
   height: 50px;
 }
-
 .author_text p{
   margin: 0;
 }
@@ -688,34 +581,44 @@ ul{
   padding-bottom: 50px;
   text-align: center;
   font-size: 22px;
+  
 }
 
 .tutorials{
-  justify-content: space-around;
+  margin: 0 auto;
+  justify-content: space-around
+  
 }
 
 .tutorial{
   background-color: #d4d4d4;
-  max-width: 375px;
-  height: 275px;
+  width: 180px;
+  height: 150px;
   display: block;
-  margin: 0 18px;
 }
 
 .tutorial_info{
   font-size: 14px;
-  max-width: 375px;
+  max-width: 180px;
   height: 50px;
   background-color: #f8f8f8;
   text-align: center;
   padding-top: 15px;
-  margin: 0 18px;
 }
 
 .info_text{
   text-align: center;
-  padding-top: 20px;
+  padding-top:20px;
   font-size: 15px;
+  
+}
+
+.carousel_slide{
+  padding:0 20px;
+}
+
+.products{
+
 }
 
 @media (max-width:767px) {
@@ -750,20 +653,19 @@ ul{
 
   .free_text{
     font-size: 15px;
+    text-align: left;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom:10px;
   }
 
-  .tutorials{
-    padding-left: calc(50% - 55px);
   
+
   .tutorial{
     max-width: 110px;
     height: 75px;
     justify-content: center; 
-  }
-}
+   }
 
 .tutorial_info{
   max-width: 110px;
@@ -781,78 +683,19 @@ ul{
 .free_text{
   font-size: 12px;
 }
-  
-   .text_on_header{
-    font-size: 10px;
-  }
+
+
+
+
 }
 
-/* Popup */
-.popup{
-  display:flex;
-  justify-content: center;
+.js_grid-list {
 
-  .container_popup{
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
-  }
+  .flex_row {
+    display: block;
 
-  &_close{
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 20px;
-    padding-right: 28px;
-    color:white;
-  }
-
-  .window_login_popup{
-    position: relative;
-    max-width: 730px;
-    width: 100%;
-    background-color: $main-color;
-
-    .mfp-close{
-
-      &::before{
-
-        content: '\f00d';
-        font: 24px 'FontAwesome';
-        color:white;
-      }
-    }
-
-    input{
-      border-style: none;
-      padding: 15px 0;
-      margin: 4px 0;
-    }
-
-    .span_in_input{
-      position: relative;
-      text-align: center;
-
-      input{
-      max-width: 400px;
+    [class^="flex_col"]{
       width: 100%;
-      padding-left: 40px;
-      background-color: #76ae36;
-      }
-
-      input::placeholder{
-      font-family: $f-family-base;
-      color: white;
-      font-weight: 500;
-      font-size: 14px;
-      }
-      
-      span{
-        position: absolute;
-        margin: auto 0;
-        margin-top: 15px;
-        margin-left: 17px;
-        color: white;
-      }
     }
   }
 }
