@@ -116,4 +116,26 @@ $(document).ready(function () {
     $(this).addClass('opened');
     $(this).next('.header_tools').slideToggle(400);
   });
+
+  $('.js_drop-opener').on('click',function(){
+    $(this).parent().toggleClass('drop-opened');
+    $(this).next('.header_tools-drop').slideToggle(400);
+    $(this).parent().siblings().find('.header_tools-drop').slideUp(400);
+    $(this).parent().siblings().removeClass('drop-opened');
+
+  })
+});
+
+$(window).on('resize orientationchange',function(){
+  var winWidth = $(window).outerWidth();
+if(winWidth >= 1024){
+  $('.header_tools').css('display','flex');
+  $('.header_tools-item').removeClass('.drop-opened');
+  $('.header_tools-drop').css('display','block');
+} else if(winWidth  < 1024){
+  $('.header_tools').css('display','none');
+  $('.header_tools-drop').css('display','none');
+}
+
+
 });
