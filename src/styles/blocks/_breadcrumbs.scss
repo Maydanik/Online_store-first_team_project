@@ -16,13 +16,14 @@
         position: relative;
         padding-right: 24px;
 
-        &:after{
-            content: '-';
-            color: $main-color;
+        &:before {
+            content: '\f105';
+            font-family: 'FontAwesome';
             position: absolute;
+            left: 0;
             top: 50%;
             transform: translateY(-50%);
-            right: 10px;
-        }    
+            color: $main-color;
+          }
     }
 }

@@ -114,7 +114,6 @@ $(document).ready(function() {
     $block.html(fileName);
   });
 
-
   if (winWidth < 1024) {
     $('.header_tools-opener').addClass('js_tools-opener');
     $('.header_drop-opener').addClass('js_drop-opener');
