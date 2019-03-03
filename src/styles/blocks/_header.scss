@@ -543,6 +543,34 @@
   
       }
 
+
+      &-list-notifications{
+        background-color: $white;
+        height: 282px;
+        width: 270px;
+
+        li{
+          align-items: center;
+          display: flex;
+          justify-content: space-around;
+          border:1px solid #d3d3d3; 
+          height: 94px;
+        }
+        .active-icon{
+          color:#ef6c00;
+        }
+
+        
+       i{
+        font-size: 20px;
+        margin: 0;
+        color:#d3d3d3; 
+       }
+  
+      }
+
+      
+
       &-user-menu{
         margin: 23px 15px;
         font-family: $f-family-base;
@@ -640,6 +668,21 @@
       background-color: #f5f5f5;
     }
   }
+
+  &-list-notifications{
+    background-color: $white;
+    height: 282px;
+    width: 270px;
+
+    li{
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      border:1px solid #d3d3d3; 
+      height: 94px;
+    }
+  }
+
   }
 
   &_user{
@@ -720,4 +763,3 @@
     }
   }
 }
-
