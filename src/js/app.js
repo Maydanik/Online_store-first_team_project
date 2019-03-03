@@ -163,8 +163,8 @@ $(window).on('resize orientationchange', function() {
 $(document).on('click', '.tabs_details-link', function(e){
   e.preventDefault();
   var tabId = $(this).attr('href');
-  $(this).addClass ('active');
-  $(this).parent('li').siblings().find('.tabs_details-link').removeClass('active');
+  $(this).addClass ('active2');
+  $(this).parent('li').siblings().find('.tabs_details-link').removeClass('active2');
   $(tabId).show(400);
   $(tabId).siblings('.tabs-content').hide(400);
 });
