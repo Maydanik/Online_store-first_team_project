@@ -122,12 +122,12 @@ $(document).ready(function() {
       $(this).next('.header_tools').slideToggle(400);
     });
 
-    // $('.js_drop-opener').on('click', function() {
-    //   $(this).parent().toggleClass('drop-opened');
-    //   $(this).next('.header_tools-drop').slideToggle(400);
-    //   $(this).parent().siblings().find('.header_tools-drop').slideUp(400);
-    //   $(this).parent().siblings().removeClass('drop-opened');
-    // });
+    $('.js_drop-opener').on('click', function() {
+      $(this).parent().toggleClass('drop-opened');
+      $(this).next('.header_tools-drop').slideToggle(400);
+      $(this).parent().siblings().find('.header_tools-drop').slideUp(400);
+      $(this).parent().siblings().removeClass('drop-opened');
+    });
   }
 });
 

@@ -68,13 +68,11 @@
     .btn--circle::before{
       width: 18px;
       height: 18px;
-      //background-color: $red;
       border-radius: 50%;
       position: absolute;
       margin-top: -15px;
       margin-left: 9px;
       z-index: 1;
-      //content:'8';
       text-align: center;
       padding-top: 1px;
       color:white;
@@ -83,13 +81,13 @@
       .btn--circle:nth-child(1){
         &::before {
         content:'8';
-        background-color: #fcb322;
+        background-color: $red;
         }
       }
       .btn--circle:nth-child(2){
         &::before{
         content:'5';
-        background-color: #ef6c00;
+        background-color: $orange;
         }
       }
       .btn--circle:nth-child(3){
@@ -530,7 +528,15 @@
       margin-top: 10px;
       border-top: 1px solid $grey;
 
-      
+      @media(max-width:1023px){
+        width: 50%;
+        margin-left: 260px;
+      }
+
+      @media(max-width:767px){
+        width: 50%;
+        margin-left: 200px;
+      }
     }
 
     &-list-basket{
@@ -539,6 +545,16 @@
       width: 270px;
       margin-top: 12px;
       margin-left: -220px;
+
+      @media(max-width:1023px){
+        width: 50%;
+        margin-left: 260px;
+      }
+
+      @media(max-width:767px){
+        width: 50%;
+        margin-left: 200px;
+      }
 
       li{
         align-items: center;
@@ -556,6 +572,16 @@
         width: 270px;
         margin-top: 12px;
         margin-left: -220px;
+
+        @media(max-width:1023px){
+          width: 50%;
+          margin-left: 260px;
+        }
+
+        @media(max-width:767px){
+          width: 50%;
+          margin-left: 200px;
+        }
 
         li{
           align-items: center;
@@ -583,6 +609,16 @@
         width: 270px;
         margin-top: 12px;
         margin-left: -220px;
+
+        @media(max-width:1023px){
+          width: 50%;
+          margin-left: 260px;
+        }
+
+        @media(max-width:767px){
+          width: 50%;
+          margin-left: 200px;
+        }
 
         li{
           align-items: center;

@@ -1,6 +1,11 @@
 .sidebar{
     width: 100%;
-    max-width: 270px;    
+    max-width: 270px;   
+    
+    @media(max-width:767px){
+        min-width: 100%;
+        
+    }
     
     &_block{
         padding: 25px 27px;
@@ -355,9 +360,7 @@
             letter-spacing: normal;
             padding-bottom: 20px;
         }
-    }
-
-    
+    }    
 }
 
 
