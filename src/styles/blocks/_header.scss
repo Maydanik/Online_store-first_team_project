@@ -462,6 +462,20 @@
       border: solid #dcdcdc;
     }
 
+    &-total{
+      padding-left: 29px;
+      padding-right: 41px;
+      padding-top: 17px;
+      display: flex;
+      justify-content: space-between;
+
+      &-style{
+        font-size: 16px;
+        font-weight: bold;
+        color: #263238;
+      }
+    }
+
     &-item{
       padding: 30px 8px;
       position: relative;
@@ -515,6 +529,25 @@
       width: 160px;
       margin-top: 10px;
       border-top: 1px solid $grey;
+
+      
+    }
+
+    &-list-basket{
+      background-color: $white;
+      height: 300px;
+      width: 270px;
+      margin-top: 12px;
+      margin-left: -220px;
+
+      li{
+        align-items: center;
+        display: flex;
+        //justify-content: space-around;
+        border:1px solid #d3d3d3; 
+        height: 100px;
+      }
+
     }
 
       &-list-message{
@@ -718,6 +751,16 @@
       }
     }
 
+    &-icon_square{
+      width: 73px;
+      height: 57px;
+      overflow: hidden;
+      margin-right: 15px;
+      margin-left: 22px;
+      text-align: center;
+      background-color: $grey;
+    }
+
     &-icon{
       width: 35px;
       height: 35px;
@@ -727,6 +770,8 @@
       text-align: center;
       background-color: $grey;
     }
+
+
 
     &-info{
       text-align: left;
@@ -745,6 +790,11 @@
       }
     }
 
+    &-name_goods{
+      font-size: 15px;
+      font-weight: 500;
+    }
+
     &-money{
       padding-bottom:5px; 
       color: $main-color;
@@ -756,6 +806,12 @@
         display: none;
       }
     }
+
+    &-money_goods{
+      font-size: 12px;
+      font-weight: normal;
+    }
+
     &-date{
       font-family: $f-family-base;
       font-size: 13px;
@@ -763,5 +819,35 @@
       line-height: 1;
 
     }
+
+    &-date_goods{
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+  }
+}
+
+.basket_btns{
+  padding: 15px 17px 0 17px;
+
+  .btn_basket{
+    border-style: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f4f6f5;
+    height: 35px;
+
+  }
+  .btn_basket--main{
+    background-color: $main-color;
+    padding-left: 18px;
+    padding-right: 23px;
+  }
+  .btn_basket--warn{
+    background-color: #e85647;
+    padding-left: 12px;
+    padding-right: 14px;
   }
 }
