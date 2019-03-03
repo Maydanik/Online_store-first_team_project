@@ -266,11 +266,14 @@
   height: 60px;
   
   .navigation{
+    margin-left: 100px;
 
      ul{
-       display: flex;
-       flex-wrap: wrap;
-       padding-top: 17px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding-top: 17px;
 
        li{
          padding-right: 40px;
@@ -496,18 +499,22 @@
 
       &:hover{
 
-        .header_tools-drop{
+        .header_tools{
+          
+          &-drop{
           visibility: visible;
           opacity: 1;
-        }
-      }
+        } 
+       }  
+     }
     }
 
     &-list-user{
       background-color:$white;
       height: 320px;
       width: 160px;
-      padding-top:1px;
+      margin-top: 10px;
+      border-top: 1px solid $grey;
     }
 
       &-list-message{
@@ -525,7 +532,6 @@
         .active-icon{
           color:#ef6c00;
         }
-
         
        i{
         font-size: 20px;
@@ -556,9 +562,6 @@
         }
 
     }
-
-    
-
 
     &-round{
       width: 34px;

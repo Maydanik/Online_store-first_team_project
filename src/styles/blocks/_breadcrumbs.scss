@@ -1,6 +1,6 @@
 .breadcrumbs {
     display: flex;
-    padding: 15px 0;
+    padding: 42px 0;  // 42px по макету, 
     align-items: center;
 
     &_item {
@@ -17,10 +17,10 @@
         padding-right: 24px;
 
         &:before {
-            content: '\f105';
+            content: '-';
             font-family: 'FontAwesome';
             position: absolute;
-            left: 0;
+            left: 50px;
             top: 50%;
             transform: translateY(-50%);
             color: $main-color;
