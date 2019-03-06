@@ -63,6 +63,11 @@
 
         &--1-4{
             width: 25%;
+
+            @media(max-width: 1023px){ // для карточек добавил
+                width:50%;
+            }
+
             @media(max-width: 767px){
                 width:100%;
             }

@@ -55,7 +55,7 @@ a {
   transition: all 0.3s linear 0s;
 }
 
-h2{
+h2 {
   font-family: $f-family-base;
   font-size: 36px;
   font-weight: 700;
@@ -68,6 +68,19 @@ h2{
   margin: 0;
 }
 
+@media (max-width: 1023px){  // добавил так как h везде одинакова, но не везде одинаковы падинги
+  h2 {
+    padding-top: 80px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px){  // добавил так как h везде одинакова, но не везде одинаковы падинги
+  h2 {
+    padding-top: 50px;
+    font-weight: 500;
+    font-size: 28px;
+  }
+}
 
 @media (max-width: 479px){
 
@@ -131,7 +144,8 @@ ul{
 } 
 
 .tabs{
-
+  padding: 0 18px 46px; //добавил отступы на блок по макету
+  
   &_tab{
 
     /* Скрыте блоки до нажатия таба */
@@ -159,6 +173,20 @@ ul{
       font-weight: 500;
       font-size: 14px;
     }
+  }
+}
+@media (max-width: 767px){
+  .header_nav{
+    
+    .navigation{
+      margin-left: 10px;
+    }
+    .navigation ul li {  //чуть подправил навигацию
+      padding-right: 26px;
+    }
+  }
+  .tabs{
+    padding: 0 10px;
   }
 }
 
@@ -236,7 +264,6 @@ ul{
   @media (max-width: 479px){
 
     .text_on_header{
-      
       padding-top: 126px;
     }
   }
@@ -425,13 +452,13 @@ ul{
 /*-------------Carousel styles----------*/
 
 .trending-products {
-  max-height: 824px;
+  //max-height: 824px; - убрал т.к. выпадает 
   background-color: $white;
 }
 
 .flex_title-text {
-  padding-bottom: 24px;
-  padding-top: 94px;
+  padding-bottom: 56px; // изменил как по макету
+  padding-top: 112px; // изменил как по макету
   font-size: 36px;
   font-family: $f-family-base;
   text-align: center;
@@ -439,10 +466,7 @@ ul{
 }
 
 .carousel{
-  
-  &:not(:first-child){
-    padding-left: 31px;
-  }
+  padding: 0 30px;
 }
 
 .slick-dots {
@@ -457,6 +481,7 @@ ul{
   margin-right: -4px;
   vertical-align: top;
   padding: 0 7px;
+  
   }
   
   .slick-dots li button {
@@ -470,6 +495,7 @@ ul{
   padding: 0;
   color: transparent;
   outline: 0;
+  box-shadow: 0px 0px 1px rgba(0,0,0,.42); //добавил
   }
   
   .slick-dots li.slick-active button {
@@ -489,7 +515,7 @@ ul{
     background: #263238;
     color: $white;
     min-height: 618px;
-    padding: 0 0 114px;
+    padding-bottom: 114px; // изменил на bottom так как добавил на h-ки стили 
 }
 
 .white_title-text {
@@ -545,7 +571,7 @@ ul{
   /*why choose start*/
 
   .why-choose-container {
-    padding: 60px 0 70px;
+    padding-bottom: 70px;
   }
 
   .white_title-text {
@@ -561,9 +587,12 @@ ul{
     line-height: 20px;
   }
   
+
+  
 /*why choose end*/
 
 /*carousel start*/
+
   .flex_title-text {
     font-weight: 500;
     font-size: 28px;
@@ -587,7 +616,8 @@ ul{
   /*@media why choose start*/
 
   .why-choose-container {
-    padding: 50px 0 60px;
+    padding-top: 30px;
+    padding-bottom: 60px;
   }
 
   .white_title-text {
@@ -600,10 +630,14 @@ ul{
 
 /*@media carousel start*/
 
+  .carousel{
+    padding: 0 10px;
+  }
+
   .flex_title-text {
     font-weight: 500;
     font-size: 28px;
-    padding: 36px 0 20px;
+    padding: 50px 0 40px;
   }
 
   .slick-dots {
@@ -628,6 +662,7 @@ ul{
   align-items: center;
   display: flex;
   background-color: #f4f6f5;
+  margin: 62px 0; // добавил хоть какоето межрастояние
 }
 
 .section_author-grey{
@@ -639,8 +674,8 @@ ul{
   height: 440px;
   width: 100%;
   max-width: 1100px;
-  box-shadow: 12px 0px 29px rgba(0, 0, 0, .35);
-}
+  box-shadow: 0 0 60px rgba(0,0,0,0.22); //подправил тень
+ }
 
 .section_author-green{
   background-color: $main-color;
@@ -650,24 +685,25 @@ ul{
   display: flex;
   width: 100%;
   height: 220px;
+  padding: 10px; // при адаптиве чтобы не сплюснуло
 }
 
 .author_text{
-  padding-right:20px;
+  padding-right: 45px;
   font-family: $f-family-base;
-  font-size: 18px;
+  font-size: 30px;
   color: $white;
-  max-width: 180px;
+  //max-width: 180px; - зачем? убрать
 }
 
 .become_author{
   font-family: $f-family-base;
-  font-size: 12px;
-  width:150px;
+  font-size: 18px; // исправил по макету
+  width: 224px; // исправил по макету
   color:#263238;
   background-color: $white;
   border: none;
-  height: 50px;
+  height: 64px; // исправил по макету
 }
 
 .author_text p{
@@ -680,16 +716,16 @@ ul{
   font-family: $f-family-base;
   color: $black;
   font-weight: 600;
-  padding-bottom: 100px;
+  padding-bottom: 120px; // по макету 120
   background-color: $white;
 }
 
-.free_text{
+/*.free_text{ - не нужен
   padding-top: 80px;
   padding-bottom: 50px;
   text-align: center;
   font-size: 36px;
-}
+}*/
 
 .tutorials{
   justify-content: space-around;
@@ -701,20 +737,23 @@ ul{
   height: 275px;
   display: block;
   margin: 0 18px;
-
-  &:hover{
+  /*&:hover{
   box-shadow: 12px 0px 29px rgba(0, 0, 0, .35);
-  }
+  }*/ //зачем здесь ховер? темболее такой? )
 }
 
 .tutorial_info{
   font-size: 24px;
   max-width: 375px;
-  height: 50px;
+  height: 102px;  // высота по макету 102. откуда 50?
   background-color: #f8f8f8;
-  text-align: center;
-  padding-top: 15px;
+  //text-align: center;
+  //padding-top: 38px; 
   margin: 0 18px;
+  // исправляем по центру:
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .info_text{
@@ -725,92 +764,98 @@ ul{
 
 @media(max-width:1023px) {
   
-    .tutorials{
+  .tutorials{
     
     .tutorial{
-      width: 375px;
-      height: 275px;
-      justify-content: center; 
-  }
+      min-width: 375px;
+      min-height: 275px;
+    }
   
-  .tutorial_info{
-    width: 375px;
-    height: 50px;
+    .tutorial_info{
+      min-width: 375px;
+      min-height: 50px;
+      font-size: 18px;
+    }
+    
   }
+  .author_text {
+    padding-right: 30px;
+    font-size: 26px;
   }
-}
-  
-
-@media(max-width:767px) {
-
-.section_author{
-  height:300px;
-}
-
-.section_author-grey{
-  max-width: 300px;
-  height: 150px;
-}
-
-.section_author-green{
-  max-width: 200px;
-  height:80px;
-}
-
-.become_author{
-  max-width: 50px;
-  font-size: 8px;
-  height: 30px;
-}
-
-  .author_text{
-    font-size: 12px;
-  }
-
-  .section_free{
-    padding-bottom: 20px;
-  }
-
-  .free_text{
-    font-size: 15px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom:10px;
-  }
-
-  .tutorials{
-    //padding-left: calc(50% - 55px);
-  
-  .tutorial{
-    width: 375px;
-    height: 75px;
-    justify-content: center; 
-  }
-}
-
-.tutorial_info{
-  max-width: 110px;
-  height: 25px;
-  font-size: 10px;
-  padding-top: 5px;
-}
-
-.info_text{
-  text-align: center;
-  padding-top:10px;
-  font-size: 10px;
-}
-
-.free_text{
-  font-size: 12px;
 }
   
-   .text_on_header{
-    font-size: 10px;
-  }
-}
+
+// @media(max-width:767px) {
+
+// .section_author{
+//   height:300px;
+// }
+
+// .section_author-grey{
+//   max-width: 300px;
+//   height: 150px;
+// }
+
+// .section_author-green{
+//   max-width: 200px;
+//   height:80px;
+// }
+
+// .become_author{
+//   max-width: 50px;
+//   font-size: 8px;
+//   height: 30px;
+// }
+
+//   .author_text{
+//     font-size: 12px;
+//   }
+
+//   .section_free{
+//     padding-bottom: 20px;
+//   }
+
+//  /* .free_text{   // не нужен так как есть классы на h2
+//     font-size: 15px;
+//     padding-left: 20px;
+//     padding-top: 10px;
+//     padding-bottom:10px;
+//   }*/  
+
+//   .tutorials{
+//     //padding-left: calc(50% - 55px);
+  
+//   .tutorial{
+//     width: 375px;
+//     height: 75px;
+//     justify-content: center; 
+//   }
+// }
+
+// .tutorial_info{
+//   max-width: 110px;
+//   height: 25px;
+//   font-size: 10px;
+//   padding-top: 5px;
+// }
+
+// .info_text{
+//   text-align: center;
+//   padding-top:10px;
+//   font-size: 10px;
+// }
+
+// .free_text{
+//   font-size: 12px;
+// }
+  
+//    .text_on_header{
+//     font-size: 10px;
+//   }
+// }
 
 /* Popup */
+
 .popup{
   display:flex;
   justify-content: center;
@@ -1233,9 +1278,13 @@ ul{
 @media (max-width: $tablet-df) {
 
   .sidebar{
-    margin-left: -30px;
+    margin-left: 0;
     width: 100%;
     min-width: 290px;
+  }
+  
+  .sidebar_block {
+    margin-left: 0;
   }
 
   .breadcrumbs {
@@ -1302,9 +1351,11 @@ ul{
 
     .product-tag {
       padding: 0 0 10px;
+
       ul {
         justify-content: center;
       }
+
       .social-item li a {
         height: 40px;
         line-height: 40px;
