@@ -12,13 +12,6 @@
         }
     }
 
-    // &_container_free{
-    //     max-width: 600px;
-    //     width: 100%;
-    //     padding: 0 15px;
-    //     margin: 0 auto;
-    // }
-
     &_row{
         margin: 0 -15px;
         display: flex;
@@ -47,10 +40,7 @@
                 justify-content: center; 
             }
           
-            @media(max-width: 767px){
-                // width:100%;
-                // padding: 10px;
-                // flex-direction: column;   
+            @media(max-width: 767px){ 
                 width: 100%;
                 padding: 10px;
                 flex-direction: column;
@@ -64,7 +54,7 @@
         &--1-4{
             width: 25%;
 
-            @media(max-width: 1023px){ // для карточек добавил
+            @media(max-width: 1023px){ 
                 width:50%;
             }
 

@@ -64,17 +64,17 @@ h2 {
   text-align: center;
   justify-content: center;
   padding-top: 120px;
-  padding-bottom: 60px; //- добавил, так как везде по h2 padding-bottom: 60px
+  padding-bottom: 60px; 
   margin: 0;
 }
 
-@media (max-width: 1023px){  // добавил так как h везде одинакова, но не везде одинаковы падинги
+@media (max-width: 1023px){  
   h2 {
     padding-top: 80px;
     font-size: 30px;
   }
 }
-@media (max-width: 767px){  // добавил так как h везде одинакова, но не везде одинаковы падинги
+@media (max-width: 767px){  
   h2 {
     padding-top: 50px;
     font-weight: 500;
@@ -99,7 +99,7 @@ h2 {
     transition: all 0.3s linear 0s;
   
   
-    &:hover {           /* меньше кода если прописать hover в "а"*/
+    &:hover {           
       color:$main-color;
     }
   }
@@ -144,7 +144,7 @@ ul{
 } 
 
 .tabs{
-  padding: 0 18px 46px; //добавил отступы на блок по макету
+  padding: 0 18px 46px; 
   
   &_tab{
 
@@ -181,7 +181,7 @@ ul{
     .navigation{
       margin-left: 10px;
     }
-    .navigation ul li {  //чуть подправил навигацию
+    .navigation ul li {  
       padding-right: 26px;
     }
   }
@@ -269,196 +269,15 @@ ul{
   }
 }
 
-/* Product card */
-.product{
-
-  &_card{
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    background-color: $white;
-    
-    &:hover { // hover по макету. В home 3я карточка в hovere
-      box-shadow: -1px 16px 26px -1px rgba(205, 214, 222, 0.75);
-      transition: box-shadow .7s;
-    }
-
-    /* Before footer of product */
-    &-img{
-      display:block;
-      width: 100%; 
-
-      img {  
-        width: 100%;
-      }
-    }
-
-    &-content {
-      padding: 30px 30px 18px;
-    }
-
-    &-info{
-      display: flex;
-      border-bottom: 1px solid #e7ecf2;
-      padding: 20px 20px 8px; 
-      justify-content: space-between;
-    }
-
-    &-heading{
-      font-family: $f-family-base;
-      font-size: 18px;
-      font-weight: 500;
-      color: $product-name_color;
-    }
-
-    &-type{
-      font-family: $f-family-base;
-      font-size: $f-size-base;
-      font-weight: 500;
-      color: $main-color;
-      padding-top: 16px;
-    }
-
-    &-footer{
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      //padding: 18px 34px 22px 32px; 
-      padding: 20px 15px 25px 15px;
-    }
-
-    &-price{
-      display: flex;
-      align-items: center;
-      font-family: $f-family-base;
-      font-weight: 700;
-      color: $product-name_color;
-      font-size: 20px;
-    }
-  }
-
-  &_label{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    width: 64px;
-    height: 64px;
-
-    &:before{
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 64px 64px 0 0;
-    }
-      
-    &:after{
-      color: $white;
-      font-family: "FontAwesome";
-    }
-
-    &--hit{
-
-      &::before{
-      border-color: $main-color transparent transparent transparent;
-      }
-
-      &::after{
-        content: '\f0e7 ';
-        position: absolute;
-        top: 12px;
-        left: 15px;
-      }
-    }
-  }
-
-   &_author{
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &_author-icon{
-    background-color: #b5b5b5;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-  }
-  
-  &_author-name{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-left: 14px;
-    font-family: $f-family-base;
-    font-size: $f-size-base;
-    font-weight: 500;
-    color: #546e7a;
-  }
-      
-  &_rating{
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    
-    &-stars{
-      display: flex;
-      color: $stars_color;
-      padding-right: 12px; // уменьшил на -2 так как между звездами padding-right: 2px (ниже)
-      padding-left: 10px; // уменьшил до 6 чтобы не падали звезды на первой карте при разрешении 1366 
-    
-    }
-    &-star { //добавил так как заданы растояние и величиы по макету
-      padding-right: 2px;
-      font-size: 12px;
-    }
-
-    &-views{
-      //padding-right: 30px;
-      font-family: $f-family-base;
-      font-weight: 400;
-      color: $product-name_color;
-    }
-  }
-}
-
-.tabs_btn{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-  &-all,
-  &-popular{
-    width: 165px;
-    height: 55px;
-    background-color: $white;
-    border: none;
-    margin-right: 12px;
-    margin-bottom: 110px; 
-    font-size: 16px;
-    line-height: 1.6;
-    font-weight: 300;
-    box-shadow: 1px 0px 3px rgba(204, 216, 228, .75);
-  }
-}
-
 /*-------------Carousel styles----------*/
 
-.trending-products {
-  //max-height: 824px; - убрал т.к. выпадает 
+.trending-products { 
   background-color: $white;
 }
 
 .flex_title-text {
-  padding-bottom: 56px; // изменил как по макету
-  padding-top: 112px; // изменил как по макету
+  padding-bottom: 56px; 
+  padding-top: 112px; 
   font-size: 36px;
   font-family: $f-family-base;
   text-align: center;
@@ -495,14 +314,13 @@ ul{
   padding: 0;
   color: transparent;
   outline: 0;
-  box-shadow: 0px 0px 1px rgba(0,0,0,.42); //добавил
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, .42); 
   }
   
   .slick-dots li.slick-active button {
   background-color: $main-color;
   border-color: none;
   }
-
 
 /*-----------------------why choose start-------------*/
 
@@ -515,7 +333,7 @@ ul{
     background: #263238;
     color: $white;
     min-height: 618px;
-    padding-bottom: 114px; // изменил на bottom так как добавил на h-ки стили 
+    padding-bottom: 114px;  
 }
 
 .white_title-text {
@@ -662,7 +480,7 @@ ul{
   align-items: center;
   display: flex;
   background-color: #f4f6f5;
-  margin: 62px 0; // добавил хоть какоето межрастояние
+  margin: 62px 0; 
 }
 
 .section_author-grey{
@@ -674,7 +492,7 @@ ul{
   height: 440px;
   width: 100%;
   max-width: 1100px;
-  box-shadow: 0 0 60px rgba(0,0,0,0.22); //подправил тень
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.22); 
  }
 
 .section_author-green{
@@ -685,7 +503,7 @@ ul{
   display: flex;
   width: 100%;
   height: 220px;
-  padding: 10px; // при адаптиве чтобы не сплюснуло
+  padding: 10px; 
 }
 
 .author_text{
@@ -693,17 +511,16 @@ ul{
   font-family: $f-family-base;
   font-size: 30px;
   color: $white;
-  //max-width: 180px; - зачем? убрать
 }
 
 .become_author{
   font-family: $f-family-base;
-  font-size: 18px; // исправил по макету
-  width: 224px; // исправил по макету
-  color:#263238;
+  font-size: 18px; 
+  width: 224px; 
+  color:$product-name_color;
   background-color: $white;
   border: none;
-  height: 64px; // исправил по макету
+  height: 64px; 
 }
 
 .author_text p{
@@ -716,16 +533,9 @@ ul{
   font-family: $f-family-base;
   color: $black;
   font-weight: 600;
-  padding-bottom: 120px; // по макету 120
+  padding-bottom: 120px; 
   background-color: $white;
 }
-
-/*.free_text{ - не нужен
-  padding-top: 80px;
-  padding-bottom: 50px;
-  text-align: center;
-  font-size: 36px;
-}*/
 
 .tutorials{
   justify-content: space-around;
@@ -737,20 +547,18 @@ ul{
   height: 275px;
   display: block;
   margin: 0 18px;
-  /*&:hover{
-  box-shadow: 12px 0px 29px rgba(0, 0, 0, .35);
-  }*/ //зачем здесь ховер? темболее такой? )
+
+    &:hover{
+      box-shadow: 0px 12px 29px 0px rgba(0, 0, 0, 0.35);
+  } 
 }
 
 .tutorial_info{
   font-size: 24px;
   max-width: 375px;
-  height: 102px;  // высота по макету 102. откуда 50?
-  background-color: #f8f8f8;
-  //text-align: center;
-  //padding-top: 38px; 
+  height: 102px;  
+  background-color: #f8f8f8; 
   margin: 0 18px;
-  // исправляем по центру:
   justify-content: center;
   display: flex;
   align-items: center;
@@ -783,76 +591,6 @@ ul{
     font-size: 26px;
   }
 }
-  
-
-// @media(max-width:767px) {
-
-// .section_author{
-//   height:300px;
-// }
-
-// .section_author-grey{
-//   max-width: 300px;
-//   height: 150px;
-// }
-
-// .section_author-green{
-//   max-width: 200px;
-//   height:80px;
-// }
-
-// .become_author{
-//   max-width: 50px;
-//   font-size: 8px;
-//   height: 30px;
-// }
-
-//   .author_text{
-//     font-size: 12px;
-//   }
-
-//   .section_free{
-//     padding-bottom: 20px;
-//   }
-
-//  /* .free_text{   // не нужен так как есть классы на h2
-//     font-size: 15px;
-//     padding-left: 20px;
-//     padding-top: 10px;
-//     padding-bottom:10px;
-//   }*/  
-
-//   .tutorials{
-//     //padding-left: calc(50% - 55px);
-  
-//   .tutorial{
-//     width: 375px;
-//     height: 75px;
-//     justify-content: center; 
-//   }
-// }
-
-// .tutorial_info{
-//   max-width: 110px;
-//   height: 25px;
-//   font-size: 10px;
-//   padding-top: 5px;
-// }
-
-// .info_text{
-//   text-align: center;
-//   padding-top:10px;
-//   font-size: 10px;
-// }
-
-// .free_text{
-//   font-size: 12px;
-// }
-  
-//    .text_on_header{
-//     font-size: 10px;
-//   }
-// }
 
 /* Popup */
 
@@ -1145,7 +883,7 @@ ul{
 
   ul {
     padding-top: 0;
-    flex-wrap: wrap; // перебеваю ту ul для всего проэкта, которая дает падин топ 60
+    flex-wrap: wrap; 
   }
 
   li {
@@ -1194,7 +932,7 @@ ul{
   margin-bottom: 28px;
   border: 1px solid #e7ecf2;
   background: $white;
-  box-shadow: 1px 1px 2px rgba(205,214,222,.7);
+  box-shadow: 1px 1px 2px rgba(205, 214, 222, .7);
   align-items: stretch;
   flex-wrap: wrap;
 

@@ -400,7 +400,6 @@
 
 .header{
   position: relative;
-  //padding-top: 15px;
 
   @media(max-width: desktop-df){
     border-bottom: 1px solid #dcdcdc;
@@ -422,8 +421,6 @@
     align-items: center;
   
   }
-
-  
 
   &_help{
     margin-right: 35px;
@@ -559,7 +556,6 @@
       li{
         align-items: center;
         display: flex;
-        //justify-content: space-around;
         border:1px solid #d3d3d3; 
         height: 100px;
       }
@@ -599,9 +595,7 @@
         margin: 0;
         color:#d3d3d3; 
        }
-  
       }
-
 
       &-list-notifications{
         background-color: $white;
@@ -631,16 +625,12 @@
           color:#ef6c00;
         }
 
-        
        i{
         font-size: 20px;
         margin: 0;
         color:#d3d3d3; 
        }
-  
       }
-
-      
 
       &-user-menu{
         margin: 23px 15px;
@@ -661,7 +651,6 @@
           transform: translateY(-50%);
           color: $main-color;
         }
-
     }
 
     &-round{
@@ -753,8 +742,7 @@
       height: 94px;
     }
   }
-
-  }
+}
 
   &_user{
 
@@ -807,8 +795,6 @@
       background-color: $grey;
     }
 
-
-
     &-info{
       text-align: left;
     }
@@ -853,7 +839,6 @@
       font-size: 13px;
       color:#838383;
       line-height: 1;
-
     }
 
     &-date_goods{
@@ -861,7 +846,6 @@
       font-size: 16px;
       font-weight: 500;
     }
-
   }
 }
 
